@@ -30,11 +30,12 @@ body {
 
 main {
   display: flex;
-  flex: 1 0 auto;
+  flex: 1;
   flex-direction: column;
   align-items: center;
   background-color: var(--backgroundColor);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .main-container {
@@ -54,6 +55,12 @@ input {
   background-color: var(--textBackground);
   border-style: none;
   border-radius: 8px;
+}
+
+input[type="text"] {
+  width: 200px;
+  height: 30px;
+  padding: 5px;
 }
 
 section {
@@ -110,13 +117,6 @@ header {
 
 .section-1 label {
   justify-self: end; /* Align labels to the right */
-}
-
-.section-1 input {
-  width: 200px; /* Set the desired width of input fields */
-  height: 30px; /* Set the desired height of input fields */
-  padding: 5px; /* Optional: Add some padding for better appearance */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 /* Section 2 */
@@ -243,7 +243,7 @@ textarea:focus {
   flex-direction: column;
   align-items: center;
   width: 80%;
-  background-color: var(--textBackground);
+  border: solid black 1px;
   border-radius: 8px;
   min-height: 70px;
 }
@@ -282,9 +282,8 @@ textarea:focus {
 
 /* Footer  */
 
-.sticky-bottom {
-  position: fixed;
-  bottom: 0;
+footer {
+  position: sticky;
   width: 100%;
   padding: 10px;
   background-color: var(--primaryColor);
@@ -292,6 +291,7 @@ textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  bottom: 0;
 }
 
 .persistent-note {
@@ -316,4 +316,9 @@ textarea#persistent-notes {
   margin: 6px;
   border-style: none;
   border-radius: 6px;
+}
+
+/* Transaction Forms */
+.transaction {
+  padding: 10px;
 }
