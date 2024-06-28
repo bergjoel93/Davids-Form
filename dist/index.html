@@ -3,105 +3,195 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webpack App</title>
+    <title>David's Form</title>
   <script defer src="bundle.js"></script></head>
   <body>
-    <header></header>
-    <div class="main-container">
-      <div class="main-form-container">
-        <div class="text-box">
-          <label for="cosmo-whisper">Cosmo Whisper:</label>
-          <input type="text" id="cosmo-whisper" />
+    <header>
+      <div class="nav-form">Form</div>
+      <div class="nav-saved">Saved</div>
+    </header>
+
+    <main>
+      <div class="main-container">
+        <div class="main-form-container">
+          <section class="section-1">
+            <label for="cosmo-whisper">Cosmo Whisper:</label>
+            <input type="text" id="cosmo-whisper" />
+
+            <label for="client-name">Client Name:</label>
+            <input type="text" id="client-name" />
+
+            <label for="additional-callers">Additional Callers:</label>
+            <input type="text" id="additional-callers" />
+
+            <label for="internal-FC">Internal/FC:</label>
+            <input type="text" id="internal-FC" />
+          </section>
+
+          <section class="section-2">
+            <div class="checkbox-container-title">Verification</div>
+            <div class="checkboxes">
+              <div class="checkbox">
+                <label for="MVV">MVV:</label>
+                <input type="checkbox" id="MVV" />
+              </div>
+
+              <div class="checkbox">
+                <label for="OBV">OBV:</label>
+                <input type="checkbox" id="OBV" />
+              </div>
+
+              <div class="checkbox">
+                <label for="ManV">ManV:</label>
+                <input type="checkbox" id="ManV" />
+              </div>
+
+              <div class="checkbox">
+                <label for="EMV">EMV:</label>
+                <input type="checkbox" id="EMV" />
+              </div>
+
+              <div class="checkbox">
+                <label for="OTPV">OTPV:</label>
+                <input type="checkbox" id="OTPV" />
+              </div>
+
+              <div class="checkbox">
+                <label for="GC">GC:</label>
+                <input type="checkbox" id="GC" />
+              </div>
+
+              <div class="checkbox">
+                <label for="HRT">HRT:</label>
+                <input type="checkbox" id="HRT" />
+              </div>
+
+              <div class="checkbox">
+                <label for="UCN">UCN:</label>
+                <input type="checkbox" id="UCN" />
+              </div>
+            </div>
+          </section>
+
+          <section class="section-3">
+            <div class="text-box">
+              <label for="AccountNum">Account#:</label>
+              <input type="text" id="accountNum" />
+            </div>
+            <div class="radio-box">
+              <label for="restrictions">Restrictions?</label>
+              <div class="radios">
+                <div class="radio">
+                  <input
+                    type="radio"
+                    id="restrictions-yes"
+                    name="restrictions"
+                  />
+                  <label for="restrictions-yes">Yes</label>
+                </div>
+                <div class="radio">
+                  <input
+                    type="radio"
+                    id="restrictions-no"
+                    name="restrictions"
+                  />
+                  <label for="restrictions-no">No</label>
+                </div>
+              </div>
+            </div>
+            <div class="text-box">
+              <label for="MID">MID:</label>
+              <input type="text" id="MID" />
+            </div>
+            <div class="text-box">
+              <label for="COTM">COTM:</label>
+              <input type="text" id="COTM" />
+            </div>
+          </section>
         </div>
-        <div class="text-box">
-          <label for="client-name">Client Name:</label>
-          <input type="text" id="client-name" />
-        </div>
-        <div class="text-box">
-          <label for="additional-callers">Additional Callers</label>
-          <input type="text" id="additional-callers" />
-        </div>
-        <div class="text-box">
-          <label for="internal-FC">Internal/FC:</label>
-          <input type="text" id="internal-FC" />
-        </div>
-        <div class="checkbox-container">
-          <div class="checkbox-container-title">Verification</div>
-          <div class="checkboxes">
-            <div class="checkbox">
-              <label for="MVV">MVV:</label>
-              <input type="checkbox" id="MVV" />
-            </div>
 
-            <div class="checkbox">
-              <label for="OBV">OBV:</label>
-              <input type="checkbox" id="OBV" />
-            </div>
-
-            <div class="checkbox">
-              <label for="ManV">ManV:</label>
-              <input type="checkbox" id="ManV" />
-            </div>
-
-            <div class="checkbox">
-              <label for="EMV">EMV:</label>
-              <input type="checkbox" id="EMV" />
-            </div>
-
-            <div class="checkbox">
-              <label for="OTPV">OTPV:</label>
-              <input type="checkbox" id="OTPV" />
-            </div>
-
-            <div class="checkbox">
-              <label for="GC">GC:</label>
-              <input type="checkbox" id="GC" />
-            </div>
-
-            <div class="checkbox">
-              <label for="HRT">HRT:</label>
-              <input type="checkbox" id="HRT" />
-            </div>
-
-            <div class="checkbox">
-              <label for="UCN">UCN:</label>
-              <input type="checkbox" id="UCN" />
-            </div>
+        <div class="notes-container">
+          <div class="notes">
+            <label for="notes">Notes</label>
+            <textarea id="notes" placeholder="Notes..."></textarea>
+          </div>
+          <div class="notes">
+            <label for="SF-notes">SF Notes</label>
+            <textarea
+              name="Sf-notes"
+              id="SF-notes"
+              placeholder="SF Notes"
+            ></textarea>
           </div>
         </div>
-        <div class="text-box">
-          <label for="AccountNum">Account#:</label>
-          <input type="text" id="accountNum" />
+      </div>
+      <div class="second-container">
+        <div class="add-transaction">
+          <button class="add-transaction-button">+ Add Transaction</button>
         </div>
-        <div class="radio-box">
-          <label for="resctrictions">Restrictions?</label>
-          <input type="radio" id="restrictions-yes" />
-          <input type="radio" id="restrictions-no" />
-        </div>
-        <div class="text-box">
-          <label for="MID">MID:</label>
-          <input type="text" id="MID" />
-        </div>
-        <div class="text-box">
-          <label for="COTM">COTM:</label>
-          <input type="text" id="COTM" />
+        <div class="buttons-container"></div>
+
+        <div class="transaction" id="moving-money">
+          <label for="accountNum2">Account #</label>
+          <input type="text" id="accountNum2" />
+
+          <div class="radio-box">
+            <label for="alerts-and-restrictions">Restrictions?</label>
+            <div class="radios">
+              <div class="radio">
+                <input type="radio" id="alerts-and-restrictions-yes" />
+                <label for="alerts-and-restrictions-yes">Yes</label>
+              </div>
+              <div class="radio">
+                <input type="radio" id="alerts-and-restrictions-no" />
+                <label for="alerts-and-restrictions-no">No</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="radio-box">
+            <label for="authorized-to-trade">Restrictions?</label>
+            <div class="radios">
+              <div class="radio">
+                <input type="radio" id="authorized-to-trade-yes" />
+                <label for="authorized-to-trade-yes">Yes</label>
+              </div>
+              <div class="radio">
+                <input type="radio" id="authorized-to-trade-no" />
+                <label for="authorized-to-trade-no">No</label>
+              </div>
+            </div>
+          </div>
+
+          <select id="auto-investments" name="auto-investments">
+            <option value="adjusted">adjusted</option>
+            <option value="discussed-no-changes">discussed, no changes</option>
+            <option value="na">NA</option>
+          </select>
+
+          <label for="action">Action</label>
+          <select id="action" name="action">
+            <option value="deposit">Deposit</option>
+            <option value="withdrawal">Withdrawal</option>
+            <option value="journal">Journal</option>
+          </select>
         </div>
       </div>
-      <div class="notes-container">
-        <div class="notes">
-          <label for="notes">Notes</label>
-          <textarea id="notes">
-        </div>
-        <div class="SF-notes">
-          <label for="SF-notes">SF Notes</label>
-        </div>
-        <div class="persistent-notes">
-          <label for="persistent-notes">Persistent Notes</label>
-          <textarea id="persistent-notes"></textarea
-          >
-        </div>
+    </main>
+
+    <footer class="sticky-bottom">
+      <div class="important-buttons">
+        <button id="save-button">Save</button>
+        <button id="reset-button">Reset</button>
       </div>
-    </div>
-    <div class="select-transaction-bar"></div>
+
+      <div class="notes persistent-note">
+        <label for="persistent-notes">Persistent Notes</label>
+        <textarea
+          id="persistent-notes"
+          placeholder="Persistant Notes..."
+        ></textarea>
+      </div>
+    </footer>
   </body>
 </html>
