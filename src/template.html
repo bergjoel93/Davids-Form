@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <header>
+      <div class="nav-form">Form</div>
+      <div class="nav-saved">Saved</div>
+    </header>
+    <div class="main-container">
+      <div class="main-form-container">
+        <div class="text-box">
+          <label for="cosmo-whisper">Cosmo Whisper:</label>
+          <input type="text" id="cosmo-whisper" />
+        </div>
+        <div class="text-box">
+          <label for="client-name">Client Name:</label>
+          <input type="text" id="client-name" />
+        </div>
+        <div class="text-box">
+          <label for="additional-callers" style="font-size: 0.85rem"
+            >Additional Callers:</label
+          >
+          <input type="text" id="additional-callers" />
+        </div>
+        <div class="text-box">
+          <label for="internal-FC">Internal/FC:</label>
+          <input type="text" id="internal-FC" />
+        </div>
+        <div class="checkbox-container">
+          <div class="checkbox-container-title">Verification</div>
+          <div class="checkboxes">
+            <div class="checkbox">
+              <label for="MVV">MVV:</label>
+              <input type="checkbox" id="MVV" />
+            </div>
+
+            <div class="checkbox">
+              <label for="OBV">OBV:</label>
+              <input type="checkbox" id="OBV" />
+            </div>
+
+            <div class="checkbox">
+              <label for="ManV">ManV:</label>
+              <input type="checkbox" id="ManV" />
+            </div>
+
+            <div class="checkbox">
+              <label for="EMV">EMV:</label>
+              <input type="checkbox" id="EMV" />
+            </div>
+
+            <div class="checkbox">
+              <label for="OTPV">OTPV:</label>
+              <input type="checkbox" id="OTPV" />
+            </div>
+
+            <div class="checkbox">
+              <label for="GC">GC:</label>
+              <input type="checkbox" id="GC" />
+            </div>
+
+            <div class="checkbox">
+              <label for="HRT">HRT:</label>
+              <input type="checkbox" id="HRT" />
+            </div>
+
+            <div class="checkbox">
+              <label for="UCN">UCN:</label>
+              <input type="checkbox" id="UCN" />
+            </div>
+          </div>
+        </div>
+        <div class="text-box">
+          <label for="AccountNum">Account#:</label>
+          <input type="text" id="accountNum" />
+        </div>
+        <div class="radio-box">
+          <label for="resctrictions">Restrictions?</label>
+          <div class="radios">
+            <div class="radio">
+              <label for="restrictions-yes">Yes</label>
+              <input type="radio" id="restrictions-yes" />
+            </div>
+            <div class="radio">
+              <label for="restrictions-no">No</label>
+              <input type="radio" id="restrictions-no" />
+            </div>
+          </div>
+        </div>
+        <div class="text-box">
+          <label for="MID">MID:</label>
+          <input type="text" id="MID" />
+        </div>
+        <div class="text-box">
+          <label for="COTM">COTM:</label>
+          <input type="text" id="COTM" />
+        </div>
+      </div>
+      <div class="notes-container">
+        <div class="notes">
+          <label for="notes">Notes</label>
+          <textarea id="notes" placeholder="Notes...">Some stuff</textarea>
+        </div>
+        <div class="notes">
+          <label for="SF-notes">SF Notes</label>
+          <textarea
+            name="Sf-notes"
+            id="SF-notes"
+            placeholder="SF Notes"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="second-container">
+      <div class="add-transaction">
+        <button class="add-transaction-button">+ Add Transaction</button>
+      </div>
+    </div>
+    <div class="notes sticky-bottom">
+      <label for="persistent-notes">Persistent Notes</label>
+      <textarea id="persistent-notes" placeholder="Persistant Notes"></textarea>
+    </div>
+  </body>
+</html>

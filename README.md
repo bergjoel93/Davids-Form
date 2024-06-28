@@ -1,2 +1,2 @@
-# Davids-Form
-This is a form to help david do his job. 
+# webpack-starter
+Frontend environment for building JavaScript applications. 
