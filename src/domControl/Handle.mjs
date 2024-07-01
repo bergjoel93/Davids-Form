@@ -1,9 +1,12 @@
+import { generateCard } from "./forms.mjs";
 /**
  * This module is responsible for setting up all handlers. Instantiate the object then call the methods for handling certain things.
  */
 
 export default class Handle {
-  constructor() {}
+  constructor() {
+    this.buttonsContainer = document.querySelector(".buttons-container");
+  }
 
   // make handlers for the form page
   handleFormPage() {
@@ -18,10 +21,6 @@ export default class Handle {
       "Other",
     ];
 
-    const secondContainer = document.querySelector(".second-container");
-
-    const buttonsContainer = document.querySelector(".buttons-container"); //clear by default
-
     const addTransaction = document.querySelector(
       "button.add-transaction-button"
     );
@@ -31,20 +30,28 @@ export default class Handle {
         let button = document.createElement("button");
         button.id = `${options[i]}`;
         button.innerHTML = `${this.formatString(options[i])}`;
-        buttonsContainer.appendChild(button);
+        this.buttonsContainer.appendChild(button);
       }
-      secondContainer.appendChild(buttonsContainer);
+      this.addButtonHandlers();
     });
   }
 
   addButtonHandlers() {
-    let buttonsContainer = document.querySelector(".buttons-container");
-    let buttons = buttonsContainer.querySelectorAll("button");
+    const buttons = this.buttonsContainer.querySelectorAll("button");
+    const transactionContainer = document.querySelector(
+      "#transaction-container"
+    );
 
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
         let choice = button.getAttribute("id");
-        // generate and render form based off option chosen.
+        let card;
+        card = generateCard(choice);
+        console.log(`${choice} clicked`);
+        if (card) {
+          transactionContainer.appendChild(card);
+          this.buttonsContainer.innerHTML = ``;
+        }
       });
     });
   }
