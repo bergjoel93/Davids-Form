@@ -3,7 +3,7 @@ import { generateCard } from "./forms.mjs";
  * This module is responsible for setting up all handlers. Instantiate the object then call the methods for handling certain things.
  */
 
-export default class Handle {
+export default class AddTransaction {
   constructor() {
     this.buttonsContainer = document.querySelector(".buttons-container");
     this.options = {
@@ -40,6 +40,9 @@ export default class Handle {
     });
   }
 
+  /**
+   * Add's event handlers to the generated add transaction buttons.
+   */
   addButtonHandlers() {
     const buttons = this.buttonsContainer.querySelectorAll("button");
     const transactionContainer = document.querySelector(

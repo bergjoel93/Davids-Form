@@ -35,7 +35,7 @@ function generateCard(choice) {
 }
 
 function injectMovingMoney() {
-  return `    <fieldset name="MovingMoney id="MovingMoney" >
+  return `    
             <div class="transaction-card">
               <button class="close-card">X</button>
               <h3>Moving Money</h3>
@@ -91,7 +91,7 @@ function injectMovingMoney() {
                 <option value="journal">Journal</option>
               </select>
             </div>
-            </fieldset>
+
           `;
 }
 

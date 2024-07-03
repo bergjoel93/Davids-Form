@@ -167,31 +167,29 @@ header {
   margin: auto; /* Center the section */
 }
 
-.radio-box {
+.radio-container {
   text-align: center;
 }
 
 .text-box,
-.radio-box {
+.radio-container {
   display: flex;
   flex-direction: column;
 }
 
 .text-box label,
-.radio-box label {
+.radio-title {
   margin-bottom: 5px;
 }
 
-.text-box input,
-.radio-box input[type="radio"] {
+.text-box input {
   width: 100%;
   box-sizing: border-box;
 }
 
 .radios {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-around;
 }
 
 .radio {
@@ -203,6 +201,7 @@ header {
   width: auto;
   margin-right: 5px;
   cursor: pointer;
+  margin: 4px;
 }
 
 /* Notes Container */
@@ -353,8 +352,8 @@ textarea#persistent-notes {
   margin: 8px;
 }
 
-#save-button,
-#reset-button {
+#save-persistent-button,
+#reset-persistent-button {
   padding: 8px;
   background-color: var(--textBackground);
   cursor: pointer;
@@ -364,14 +363,16 @@ textarea#persistent-notes {
 }
 
 /* Submit Button */
-.submit-buttons {
+.submit-reset-buttons {
   width: 100%;
   display: flex;
   justify-content: center;
   margin: 1rem;
+  gap: 16px;
 }
 
-#submit-button {
+#submit-button,
+#reset-button {
   background-color: var(--secondaryColor);
   cursor: pointer;
   font-size: 2rem;
@@ -380,7 +381,8 @@ textarea#persistent-notes {
   padding: 8px;
 }
 
-#submit-button:hover {
+#submit-button:hover,
+#reset-button:hover {
   background-color: var(--primaryColor);
   color: var(--hoverColor);
 }
