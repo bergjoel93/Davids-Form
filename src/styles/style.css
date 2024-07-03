@@ -28,7 +28,8 @@ body {
   background-color: var(--backgroundColor);
 }
 
-main {
+main,
+form {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -360,4 +361,26 @@ textarea#persistent-notes {
   margin: 6px;
   border-style: none;
   border-radius: 6px;
+}
+
+/* Submit Button */
+.submit-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+#submit-button {
+  background-color: var(--secondaryColor);
+  cursor: pointer;
+  font-size: 2rem;
+  border-style: none;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+#submit-button:hover {
+  background-color: var(--primaryColor);
+  color: var(--hoverColor);
 }

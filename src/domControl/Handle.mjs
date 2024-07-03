@@ -6,31 +6,35 @@ import { generateCard } from "./forms.mjs";
 export default class Handle {
   constructor() {
     this.buttonsContainer = document.querySelector(".buttons-container");
+    this.options = {
+      "Moving-Money": false,
+      "Mutual-Fund-Trade": false,
+      "Equity-Trade": false,
+      "Options-Trade": false,
+      "Managed-Accounts": false,
+      Other: false,
+    };
   }
 
   // make handlers for the form page
-  handleFormPage() {
-    // add transaction button
-
-    let options = [
-      "Moving-Money",
-      "Mutual-Fund-Trade",
-      "Equity-Trade",
-      "Options-Trade",
-      "Managed-Accounts",
-      "Other",
-    ];
-
+  generateAddTransactionButtons() {
+    // select add-transaction button
     const addTransaction = document.querySelector(
       "button.add-transaction-button"
     );
+    // add event listener for add-transaction
     addTransaction.addEventListener("click", () => {
-      // when this button is clicked, 6 buttons will appear for 6 different options. Each option will add. After what type of option is clicked, then a new "Add Transaction" box will appear underneath the previous one.
-      for (let i = 0; i < options.length; i++) {
-        let button = document.createElement("button");
-        button.id = `${options[i]}`;
-        button.innerHTML = `${this.formatString(options[i])}`;
-        this.buttonsContainer.appendChild(button);
+      // Clear existing buttons before adding new ones
+      this.buttonsContainer.innerHTML = "";
+      // Generate buttons for options that haven't been clicked yet
+      for (let option in this.options) {
+        if (!this.options[option]) {
+          let button = document.createElement("button");
+          button.id = option;
+          button.innerHTML = this.formatString(option);
+          button.setAttribute("type", "button");
+          this.buttonsContainer.appendChild(button);
+        }
       }
       this.addButtonHandlers();
     });
@@ -45,11 +49,11 @@ export default class Handle {
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
         let choice = button.getAttribute("id");
-        let card;
-        card = generateCard(choice);
+        let card = generateCard(choice);
         console.log(`${choice} clicked`);
         if (card) {
           transactionContainer.appendChild(card);
+          this.options[choice] = true; // Update the option to true
           this.buttonsContainer.innerHTML = ``;
         }
       });
