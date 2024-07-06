@@ -1,11 +1,39 @@
 import "./styles/style.css";
-import AddTransaction from "./domControl/AddTransaction.mjs";
+import {
+  addFormToStorage,
+  getStoredData,
+  formatNoteObject,
+} from "./domControl/Save.mjs";
 import { dataManager } from "./domControl/DataManager.mjs";
-
-const handle = new AddTransaction();
-handle.generateAddTransactionButtons();
+import SavedTab from "./domControl/SavedTab.mjs";
 
 dataManager;
+
+let expandNote = document.querySelector("#expand-modal");
+expandNote.addEventListener("click", toggleModal);
+
+let closeNote = document.querySelector("#close-modal");
+closeNote.addEventListener("click", toggleModal);
+
+function toggleModal() {
+  const modalDiv = document.querySelector("#note-modal");
+  const backdrop = document.querySelector(".backdrop");
+  modalDiv.classList.toggle("show");
+  backdrop.classList.toggle("show");
+}
+let formData = getStoredData();
+let note = formData.forms[0];
+let noteTitle = Object.keys(note)[0];
+let date = note[noteTitle].Date;
+let name = note[noteTitle]["Client-Name"];
+console.log(note);
+let title = noteTitle + " " + date + " " + name;
+console.log(title);
+
+let printPretty = formatNoteObject(note);
+let savedTab = new SavedTab();
+
+savedTab.renderList();
 
 /**
  * Create event handlers on the main-form-container only. Including the Notes.

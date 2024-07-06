@@ -398,3 +398,94 @@ textarea#persistent-notes {
   z-index: 2;
   display: none;
 }
+
+#overlay .header {
+  display: flex;
+  width: 100%;
+}
+
+#overlay-notes-container {
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#overlay-notes-container ul {
+  padding-left: 24px;
+  margin: 0;
+}
+
+#overlay-notes-container ul li {
+  margin-bottom: 16px; /* Space between list items */
+  list-style-type: disc;
+}
+
+.overlay-note {
+  display: flex;
+  flex-direction: column;
+}
+
+#expand-modal {
+  padding: 5px;
+  font-size: 1rem;
+  background-color: var(--textBackground);
+  border-radius: 8px;
+  border-style: none;
+  cursor: pointer;
+}
+
+#note-modal {
+  width: 80%;
+  height: 80%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  margin: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--textBackground);
+  opacity: 0;
+}
+
+#close-modal {
+  width: 24px;
+  height: 24px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 8px;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border-style: none;
+  cursor: pointer;
+}
+
+#note-modal.show {
+  opacity: 100%;
+  pointer-events: all;
+}
+
+.note-print {
+  padding: 12px;
+  width: 100%;
+}
+
+.backdrop {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background: #000;
+  opacity: 0%;
+}
+
+.backdrop.show {
+  opacity: 30%;
+}

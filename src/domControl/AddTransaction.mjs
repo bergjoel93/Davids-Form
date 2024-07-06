@@ -12,7 +12,7 @@ import {
  * This module is responsible for setting up all handlers. Instantiate the object then call the methods for handling certain things.
  */
 
-export default class AddTransaction {
+class AddTransaction {
   constructor() {
     this.buttonsContainer = document.querySelector(".buttons-container");
     this.options = {
@@ -25,8 +25,25 @@ export default class AddTransaction {
     };
   }
 
+  resetTransactions() {
+    this.options = {};
+    this.options = {
+      "Moving-Money": { count: 0 },
+      "Mutual-Fund-Trade": { count: 0 },
+      "Equity-Trade": { count: 0 },
+      "Options-Trade": { count: 0 },
+      "Managed-Accounts": { count: 0 },
+      Other: { count: 0 },
+    };
+
+    const transactionContainer = document.querySelector(
+      "#transaction-container"
+    );
+    transactionContainer.innerHTML = "";
+  }
+
   // make handlers for the form page
-  generateAddTransactionButtons() {
+  handleTransactions() {
     // select add-transaction button
     const addTransaction = document.querySelector(
       "button.add-transaction-button"
@@ -76,6 +93,7 @@ export default class AddTransaction {
         }
         // initialize empty object that will be the new transaction object that will later be added to dataManager.data.Transactions.push(newTransactionObject);
         const newTransactionObjectName = `${choice}-${count}`;
+        console.log(newTransactionObjectName);
         // add the newTransactionObject to Transactions
         dataManager.addTransaction(newTransactionObjectName);
         // Selects all the text inputs.
@@ -172,6 +190,9 @@ export default class AddTransaction {
     return input.split("-").join(" ");
   }
 }
+
+let addTransactions = new AddTransaction();
+export { addTransactions };
 
 // generate a new object with a unique id and update it as the form is being filled out.
 // const newTransaction = this.createTransactionObject(

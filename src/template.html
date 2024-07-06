@@ -6,11 +6,41 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <div id="overlay"></div>
+    <div id="overlay">
+      <div class="backdrop"></div>
+      <div class="header">
+        <div class="nav-form" id="to-form">Form</div>
+        <div class="nav-saved">Saved</div>
+      </div>
+
+      <div id="overlay-notes-container">
+        <ul class="append-note">
+          <li>
+            <div class="overlay-note">
+              <div class="note-title">
+                <button id="expand-modal">Show</button>
+              </div>
+              <div id="note-modal" class="">
+                <button id="close-modal">x</button>
+                <label for="Note-0">Note-0</label>
+                <textarea
+                  class="note-print"
+                  name="Note-0"
+                  id="Note-0"
+                  wrap="hard"
+                >
+                </textarea>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <main>
       <header>
         <div class="nav-form">Form</div>
-        <div class="nav-saved">Saved</div>
+        <div class="nav-saved" id="to-saved">Saved</div>
       </header>
 
       <div class="main-container">

@@ -1,5 +1,6 @@
 import { format } from "date-fns";
-import { renderSaved, saveToLocal } from "./Save.mjs";
+import { addFormToStorage, getStoredData } from "./Save.mjs";
+import { addTransactions } from "./AddTransaction.mjs";
 /**
  * Resonsible for managing all of the data. Adds handlers and event listeners to the page. Creates the data object which is used for saving and displaying the data.
  */
@@ -24,6 +25,8 @@ class DataManager {
       Transactions: {},
     };
     this.transactionCount = 0;
+    this.addTransactions = addTransactions;
+    this.addTransactions.handleTransactions();
   }
 
   decrementTransactionCount() {
@@ -123,16 +126,24 @@ class DataManager {
     saveBtn.addEventListener("click", () => {
       console.log(this.data);
       // save the data object to local storage.
-      saveToLocal(this.generateDataId(), this.data);
+      // TODO
+      addFormToStorage(this.data);
     });
 
-    const savedTab = document.querySelector(".nav-saved");
+    const savedTab = document.querySelector("#to-saved");
     savedTab.addEventListener("click", () => {
       // render the saved data and then add it as an overlay on top of window.
-      const savedContainer = renderSaved();
+      // TODO
+      //   const savedContainer = renderSaved();
       const savedPage = document.querySelector("#overlay");
       savedPage.style.display = "block";
-      savedPage.appendChild(savedContainer);
+      //   savedPage.appendChild(savedContainer);
+    });
+
+    const formTab = document.querySelector("#to-form");
+    formTab.addEventListener("click", () => {
+      const savedPage = document.querySelector("#overlay");
+      savedPage.style.display = "none";
     });
   }
 
@@ -160,6 +171,7 @@ class DataManager {
   resetForm() {
     this.data = {};
     this.data = {
+      Date: this.formatDate(new Date()),
       "Cosmo-Whisper": null,
       "Client-Name": null,
       "Additional-Callers": null,
@@ -171,6 +183,7 @@ class DataManager {
       COTM: null,
       Notes: null,
       "SF-Notes": null,
+      Transactions: {},
     };
     // Clear all text input fields
     document.querySelectorAll('input[type="text"]').forEach((input) => {
@@ -191,7 +204,11 @@ class DataManager {
       textarea.value = "";
     });
     console.log("Form and data object have been reset");
+
+    // reset the transaction stuff and clear forms.
+    this.addTransactions.resetTransactions();
   }
+
   // Method to format the date
   formatDate(date) {
     // Create suffixes for day

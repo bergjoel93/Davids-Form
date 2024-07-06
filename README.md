@@ -15,3 +15,8 @@ Frontend environment for building JavaScript applications.
 - make everything on the form UI smaller.
 
 - Add the persisten notes. this will be a new object that is saved to local storage separtely.
+
+## Things left to do.
+
+Get the list item generator working.
+You have some consle .log that show it counting the i's but it seems like there's an issue with accessing the objects data.

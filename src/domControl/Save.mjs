@@ -1,91 +1,79 @@
-function renderSaved() {
-  const savedContainer = document.createElement("div");
-  savedContainer.className = "saved-container";
+/**
+ * 1. Retrieve the current data from local storage
+ * 2. parse the tretrieved data into a JS object.
+ * 3. Generate a new objec with a unique ID
+ * 4. Add the new object to the array.
+ * 5. Save the updated array back to local storage.
+ */
 
-  const objectsArray = getAllObjectsFromLocalStorage();
-
-  objectsArray.forEach((obj) => {
-    const card = document.createElement("div");
-    card.className = "card";
-
-    const title = document.createElement("h3");
-    title.textContent = `Client Name: ${obj["Client-Name"]} - Date: ${obj["Date"]}`;
-    card.appendChild(title);
-
-    const textArea = document.createElement("textarea");
-    textArea.readOnly = true;
-    textArea.value = JSON.stringify(obj, null, 2); // Pretty print the JSON object
-    card.appendChild(textArea);
-
-    savedContainer.appendChild(card);
-  });
-
-  document.body.appendChild(savedContainer);
-  return savedContainer;
+/**
+ * Returns an object called 'forms' that contains all of the saved form data as an array of objects.
+ */
+function getStoredData() {
+  let storedData = localStorage.getItem("F-Form-Gandy");
+  if (storedData) {
+    return JSON.parse(storedData);
+  } else {
+    return { forms: [] }; // Initialize an empty array if no data is found.
+  }
 }
 
-function getAllObjectsFromLocalStorage() {
-  const objectsArray = [];
+/**
+ * Returns a new Id that will be the length of the array.
+ */
+function generateUniqueID(forms) {
+  return forms.length;
+}
 
-  // Iterate over all keys in local storage
-  for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i);
-    const value = localStorage.getItem(key);
-    try {
-      const parsedValue = JSON.parse(value);
-      // Check if the value is an object (and not null)
-      if (parsedValue && typeof parsedValue === "object") {
-        objectsArray.push(parsedValue);
+function addFormToStorage(newFormData) {
+  let storedData = getStoredData();
+  let newID = generateUniqueID(storedData.forms);
+  let newFormObject = {};
+  newFormObject[`Note-${newID}`] = newFormData;
+  storedData.forms.push(newFormObject);
+  // save the updated array back to local storage
+  localStorage.setItem("F-Form-Gandy", JSON.stringify(storedData));
+}
+
+function formatNoteObject(noteObject) {
+  let formattedString = "";
+
+  for (let noteKey in noteObject) {
+    if (noteObject.hasOwnProperty(noteKey)) {
+      let note = noteObject[noteKey];
+      formattedString += `${noteKey}\n---------------\n`;
+
+      for (let key in note) {
+        if (note.hasOwnProperty(key)) {
+          if (key === "Verification") {
+            formattedString += `${key}: ${note[key].join(", ")}\n`;
+          } else if (key === "Transactions") {
+            formattedString += "Transactions\n----------------\n";
+            for (let transactionKey in note[key]) {
+              if (note[key].hasOwnProperty(transactionKey)) {
+                let transaction = note[key][transactionKey];
+                formattedString += `* ${transactionKey}:\n`;
+                for (let tKey in transaction) {
+                  if (transaction.hasOwnProperty(tKey)) {
+                    formattedString += `       ${tKey}: ${transaction[tKey]}\n`;
+                  }
+                }
+                formattedString += "\n";
+              }
+            }
+          } else {
+            formattedString += `${key}: ${
+              note[key] !== null ? note[key] : ""
+            }\n`;
+          }
+        }
       }
-    } catch (e) {
-      // Handle JSON parsing error, if any
-      console.error(`Error parsing value for key "${key}":`, e);
+
+      formattedString += "\n";
     }
   }
 
-  return objectsArray;
+  return formattedString;
 }
 
-function printObject(obj, indent = 0) {
-  let result = "";
-  const padding = " ".repeat(indent);
-
-  if (typeof obj !== "object" || obj === null) {
-    result += `${padding}${obj}\n`;
-    return result;
-  }
-
-  if (Array.isArray(obj)) {
-    result += `${padding}[\n`;
-    obj.forEach((item) => {
-      result += printObject(item, indent + 2);
-    });
-    result += `${padding}]\n`;
-    return result;
-  }
-
-  result += `${padding}{\n`;
-  for (let key in obj) {
-    if (obj.hasOwnProperty(key)) {
-      result += `${padding}  "${key}": `;
-      result += printObject(obj[key], indent + 2);
-    }
-  }
-  result += `${padding}}\n`;
-  return result;
-}
-
-function saveToLocal(key, object) {
-  // Convert the object to a JSON string
-  const jsonString = JSON.stringify(object);
-  // Save the JSON string to local storage
-  localStorage.setItem(key, jsonString);
-  console.log("Save to local storage");
-}
-
-function deleteFromLocal(key) {
-  // Remove the item from local storage
-  localStorage.removeItem(key);
-}
-
-export { renderSaved, saveToLocal, deleteFromLocal };
+export { addFormToStorage, getStoredData, formatNoteObject };
