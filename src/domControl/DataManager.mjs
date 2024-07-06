@@ -1,4 +1,5 @@
 import { format } from "date-fns";
+import { renderSaved, saveToLocal } from "./Save.mjs";
 /**
  * Resonsible for managing all of the data. Adds handlers and event listeners to the page. Creates the data object which is used for saving and displaying the data.
  */
@@ -121,8 +122,38 @@ class DataManager {
     const saveBtn = document.querySelector("#submit-button");
     saveBtn.addEventListener("click", () => {
       console.log(this.data);
+      // save the data object to local storage.
+      saveToLocal(this.generateDataId(), this.data);
+    });
+
+    const savedTab = document.querySelector(".nav-saved");
+    savedTab.addEventListener("click", () => {
+      // render the saved data and then add it as an overlay on top of window.
+      const savedContainer = renderSaved();
+      const savedPage = document.querySelector("#overlay");
+      savedPage.style.display = "block";
+      savedPage.appendChild(savedContainer);
     });
   }
+
+  generateDataId() {
+    let maxId = -1;
+
+    // Iterate over all keys in local storage
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      const match = key.match(/(\d+)$/); // Match any digits at the end of the key
+      if (match) {
+        const id = parseInt(match[0], 10); // Convert the matched digits to an integer
+        if (id > maxId) {
+          maxId = id;
+        }
+      }
+    }
+
+    return maxId + 1;
+  }
+
   /**
    * Resets the form and page entirely. Deletes any data in the data object.
    */

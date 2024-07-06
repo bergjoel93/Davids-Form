@@ -386,3 +386,15 @@ textarea#persistent-notes {
   background-color: var(--primaryColor);
   color: var(--hoverColor);
 }
+
+/* Overlay */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primaryColor);
+  z-index: 2;
+  display: none;
+}
