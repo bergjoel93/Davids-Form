@@ -20,7 +20,19 @@ class DataManager {
       COTM: null,
       Notes: null,
       "SF-Notes": null,
+      Transactions: {},
     };
+    this.transactionCount = 0;
+  }
+
+  decrementTransactionCount() {
+    this.transactionCount--;
+    if (this.transactionCount <= 0) this.transactionCount = 0;
+  }
+
+  addTransaction(transactionName) {
+    this.data.Transactions[transactionName] = {};
+    this.transactionCount++; // Increment the transaction counter
   }
 
   handleMain() {
@@ -105,6 +117,11 @@ class DataManager {
     resetBtn.addEventListener("click", () => {
       this.resetForm();
     });
+
+    const saveBtn = document.querySelector("#submit-button");
+    saveBtn.addEventListener("click", () => {
+      console.log(this.data);
+    });
   }
   /**
    * Resets the form and page entirely. Deletes any data in the data object.
@@ -171,6 +188,6 @@ class DataManager {
     return `${month} ${day} ${year} - ${time}`;
   }
 }
-let dataMangager = new DataManager();
+let dataManager = new DataManager();
 
-export { dataMangager };
+export { dataManager };

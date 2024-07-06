@@ -1,11 +1,11 @@
 import "./styles/style.css";
 import AddTransaction from "./domControl/AddTransaction.mjs";
-import { dataMangager } from "./domControl/DataManager.mjs";
+import { dataManager } from "./domControl/DataManager.mjs";
 
 const handle = new AddTransaction();
 handle.generateAddTransactionButtons();
 
-dataMangager;
+dataManager;
 
 /**
  * Create event handlers on the main-form-container only. Including the Notes.

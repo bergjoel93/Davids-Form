@@ -1,6 +1,7 @@
-function generateCard(choice) {
+function generateCard(choice, count) {
   const card = document.createElement("div");
   card.className = "transaction-card";
+  card.id = `${choice}-${count}`;
   let content = ``;
 
   switch (choice) {
@@ -27,32 +28,32 @@ function generateCard(choice) {
   }
   card.innerHTML = content;
   // Add event listener to close button
-  card.querySelector(".close-card").addEventListener("click", () => {
-    card.remove();
-  });
+  // card.querySelector(".close-card").addEventListener("click", () => {
+  //   card.remove();
+  // });
 
   return card;
 }
 
 function injectMovingMoney() {
   return `    
-            <div class="transaction-card">
-              <button class="close-card">X</button>
-              <h3>Moving Money</h3>
-              <label for="accountNum2">Account #</label>
-              <input type="text" id="accountNum2" />
-            </div>
+
+            <button class="close-card">X</button>
+            <h3>Moving Money</h3>
+            <label for="accountNum2">Account #</label>
+            <input type="text" id="accountNum2" name="Account-Number" />
+
             <div class="radio-box">
               <label for="alerts-and-restrictions"
                 >Alerts and Restrictions?</label
               >
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="alerts-and-restrictions-yes" />
+                  <input type="radio" id="alerts-and-restrictions-yes" name = "Alerts-And-Restrictions" value="yes" />
                   <label for="alerts-and-restrictions-yes">Yes</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="alerts-and-restrictions-no" />
+                  <input type="radio" id="alerts-and-restrictions-no" name = "Alerts-And-Restrictions" value="no"/>
                   <label for="alerts-and-restrictions-no">No</label>
                 </div>
               </div>
@@ -61,11 +62,11 @@ function injectMovingMoney() {
               <label for="authorized-to-trade">Authorized to Trade?</label>
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="authorized-to-trade-yes" />
+                  <input type="radio" id="authorized-to-trade-yes" name = "Authorized-To-Trade" value="yes"/>
                   <label for="authorized-to-trade-yes">Yes</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="authorized-to-trade-no" />
+                  <input type="radio" id="authorized-to-trade-no" name = "Authorized-To-Trade" value="no"/>
                   <label for="authorized-to-trade-no">No</label>
                 </div>
               </div>
@@ -75,7 +76,7 @@ function injectMovingMoney() {
               <label for="auto-investments"
                 >Auto Investments or PWS planse?</label
               >
-              <select id="auto-investments" name="auto-investments">
+              <select id="auto-investments" name="Auto-Investments">
                 <option value="null">Select Option:</option>
                 <option value="adjusted">Adjusted</option>
                 <option value="discussed-no-changes">
@@ -84,7 +85,7 @@ function injectMovingMoney() {
                 <option value="na">NA</option>
               </select>
               <label for="action">Action:</label>
-              <select id="action" name="action">
+              <select id="action" name="Action">
                 <option value="null">Select Option:</option>
                 <option value="deposit">Deposit</option>
                 <option value="withdrawal">Withdrawal</option>
@@ -97,23 +98,23 @@ function injectMovingMoney() {
 
 function injectMutualFundTrade() {
   return `
-            <div class="transaction-card" id="Mutual-Fund-Trade">
-              <button class="close-card">X</button>
-              <h3>Mutual Fund Trade</h3>
-              <label for="accountNum2">Account #</label>
-              <input type="text" id="accountNum2" />
-            </div>
+
+            <button class="close-card">X</button>
+            <h3>Mutual Fund Trade</h3>
+            <label for="accountNum2">Account #</label>
+            <input type="text" id="accountNum2" name="Account-Number" />
+
             <div class="radio-box">
               <label for="alerts-and-restrictions"
                 >Alerts and Restrictions?</label
               >
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="alerts-and-restrictions-yes" />
+                  <input type="radio" id="alerts-and-restrictions-yes" name = "Alerts-And-Restrictions" value="yes" />
                   <label for="alerts-and-restrictions-yes">Yes</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="alerts-and-restrictions-no" />
+                  <input type="radio" id="alerts-and-restrictions-no" name = "Alerts-And-Restrictions" value="no"/>
                   <label for="alerts-and-restrictions-no">No</label>
                 </div>
               </div>
@@ -122,11 +123,11 @@ function injectMutualFundTrade() {
               <label for="authorized-to-trade">Authorized to Trade?</label>
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="authorized-to-trade-yes" />
+                  <input type="radio" id="authorized-to-trade-yes" name = "Authorized-To-Trade" value="yes"/>
                   <label for="authorized-to-trade-yes">Yes</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="authorized-to-trade-no" />
+                  <input type="radio" id="authorized-to-trade-no" name = "Authorized-To-Trade" value="no"/>
                   <label for="authorized-to-trade-no">No</label>
                 </div>
               </div>
@@ -136,11 +137,11 @@ function injectMutualFundTrade() {
               <label for="orders">Orders</label>
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="orders-openend" />
+                  <input type="radio" id="orders-openend" name = "Orders" value = "opened"/>
                   <label for="openend">Openend</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="orders-closed" />
+                  <input type="radio" id="orders-closed" name="Orders" value="closed" />
                   <label for="orders-closed">Closed</label>
                 </div>
               </div>
@@ -173,23 +174,23 @@ function injectMutualFundTrade() {
 
 function injectEquityTrade() {
   return ` 
-            <div class="transaction-card" id="Equity-Trade">
-              <button class="close-card">X</button>
-              <h3>Equity Trade</h3>
-              <label for="accountNum2">Account #</label>
-              <input type="text" id="accountNum2" />
-            </div>
+
+            <button class="close-card">X</button>
+            <h3>Equity Trade</h3>
+            <label for="accountNum2">Account #</label>
+            <input type="text" id="accountNum2" name="Account-Number" />
+
             <div class="radio-box">
               <label for="alerts-and-restrictions"
                 >Alerts and Restrictions?</label
               >
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="alerts-and-restrictions-yes" />
+                  <input type="radio" id="alerts-and-restrictions-yes" name = "Alerts-And-Restrictions" value="yes" />
                   <label for="alerts-and-restrictions-yes">Yes</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="alerts-and-restrictions-no" />
+                  <input type="radio" id="alerts-and-restrictions-no" name = "Alerts-And-Restrictions" value="no"/>
                   <label for="alerts-and-restrictions-no">No</label>
                 </div>
               </div>
@@ -198,11 +199,11 @@ function injectEquityTrade() {
               <label for="authorized-to-trade">Authorized to Trade?</label>
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="authorized-to-trade-yes" />
+                  <input type="radio" id="authorized-to-trade-yes" name = "Authorized-To-Trade" value="yes"/>
                   <label for="authorized-to-trade-yes">Yes</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="authorized-to-trade-no" />
+                  <input type="radio" id="authorized-to-trade-no" name = "Authorized-To-Trade" value="no"/>
                   <label for="authorized-to-trade-no">No</label>
                 </div>
               </div>
@@ -212,11 +213,11 @@ function injectEquityTrade() {
               <label for="orders">Orders</label>
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="orders-openend" />
+                  <input type="radio" id="orders-openend" name = "Orders" value = "opened"/>
                   <label for="orders-openend">Openend</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="orders-cancelled" />
+                  <input type="radio" id="orders-cancelled" name="Orders" value="Cancelled"/>
                   <label for="orders-cancelled">Cancelled</label>
                 </div>
               </div>
@@ -255,29 +256,29 @@ function injectEquityTrade() {
 
 function injectOptionsTrade() {
   return `         
-   <div class="transaction-card" id="Options-Trade">
+
             <button class="close-card">X</button>
             <h3>Options Trade</h3>
             <label for="accountNum2">Account #</label>
-            <input type="text" id="accountNum2" />
-          </div>`;
+            <input type="text" id="accountNum2" name="Account-Number" />
+            `;
 }
 
 function injectManagedAccount() {
   return `
-            <div class="transaction-card" id="Managed-Accounts">
-              <button class="close-card">X</button>
-              <h3>Managed Accounts</h3>
-              <label for="accountNum2">Account #</label>
-              <input type="text" id="accountNum2" />
-            </div>
+
+            <button class="close-card">X</button>
+            <h3>Managed Accounts</h3>
+            <label for="accountNum2">Account #</label>
+            <input type="text" id="accountNum2" name="Account-Number" />
+
             <div class="radio-box">
               <label for="alerts-and-restrictions"
                 >Alerts and Restrictions?</label
               >
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="alerts-and-restrictions-yes" />
+                  <input type="radio" id="alerts-and-restrictions-yes" name = "Alerts-And-Restrictions" value="yes" />
                   <label for="alerts-and-restrictions-yes">Yes</label>
                 </div>
                 <div class="radio">
@@ -291,11 +292,11 @@ function injectManagedAccount() {
               <label for="authorized-to-trade">Authorized to Trade?</label>
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="authorized-to-trade-yes" />
+                  <input type="radio" id="authorized-to-trade-yes" name = "Authorized-To-Trade" value="yes"/>
                   <label for="authorized-to-trade-yes">Yes</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="authorized-to-trade-no" />
+                  <input type="radio" id="authorized-to-trade-no" name = "Authorized-To-Trade" value="no"/>
                   <label for="authorized-to-trade-no">No</label>
                 </div>
               </div>
@@ -305,11 +306,11 @@ function injectManagedAccount() {
               <label for="product">Product</label>
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="SMA" />
+                  <input type="radio" id="SMA" name = "Product" value="SMA"/>
                   <label for="SMA">SMA</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="FidelityGo" />
+                  <input type="radio" id="FidelityGo" name = "Product" value = "FidelityGo"/>
                   <label for="FidelityGo">FidelityGo</label>
                 </div>
               </div>
@@ -319,11 +320,11 @@ function injectManagedAccount() {
               <label for="DNT">DNT</label>
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="DNT-yes" />
+                  <input type="radio" id="DNT-yes" name="DNT" value = "Yes" />
                   <label for="DNT-yes">Yes</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="DNT-no" />
+                  <input type="radio" id="DNT-no" name = "DNT" value = "Yes"/>
                   <label for="DNT-no">No</label>
                 </div>
               </div>
@@ -354,12 +355,12 @@ function injectManagedAccount() {
 
 function injectOther() {
   return `
-              <div class="transaction-card" id="Other">
-            <button class="close-card">X</button>
-            <h3>Other</h3>
-            <label for="accountNum2">Account #</label>
-            <input type="text" id="accountNum2" />
-          </div>
+
+          <button class="close-card">X</button>
+          <h3>Other</h3>
+          <label for="accountNum2">Account #</label>
+          <input type="text" id="accountNum2" name="Account-Number" />
+
     `;
 }
 
