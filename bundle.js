@@ -185,31 +185,29 @@ header {
   margin: auto; /* Center the section */
 }
 
-.radio-box {
+.radio-container {
   text-align: center;
 }
 
 .text-box,
-.radio-box {
+.radio-container {
   display: flex;
   flex-direction: column;
 }
 
 .text-box label,
-.radio-box label {
+.radio-title {
   margin-bottom: 5px;
 }
 
-.text-box input,
-.radio-box input[type=radio] {
+.text-box input {
   width: 100%;
   box-sizing: border-box;
 }
 
 .radios {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-around;
 }
 
 .radio {
@@ -221,6 +219,7 @@ header {
   width: auto;
   margin-right: 5px;
   cursor: pointer;
+  margin: 4px;
 }
 
 /* Notes Container */
@@ -368,8 +367,8 @@ textarea#persistent-notes {
   margin: 8px;
 }
 
-#save-button,
-#reset-button {
+#save-persistent-button,
+#reset-persistent-button {
   padding: 8px;
   background-color: var(--textBackground);
   cursor: pointer;
@@ -379,14 +378,16 @@ textarea#persistent-notes {
 }
 
 /* Submit Button */
-.submit-buttons {
+.submit-reset-buttons {
   width: 100%;
   display: flex;
   justify-content: center;
   margin: 1rem;
+  gap: 16px;
 }
 
-#submit-button {
+#submit-button,
+#reset-button {
   background-color: var(--secondaryColor);
   cursor: pointer;
   font-size: 2rem;
@@ -395,10 +396,23 @@ textarea#persistent-notes {
   padding: 8px;
 }
 
-#submit-button:hover {
+#submit-button:hover,
+#reset-button:hover {
   background-color: var(--primaryColor);
   color: var(--hoverColor);
-}`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"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","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap\");\n\n:root {\n  --backgroundColor: #475569;\n  --primaryColor: #334155;\n  --secondaryColor: #4682b4;\n  --textBackground: #94a3b8;\n  --hoverColor: #4682b4;\n  --hoverTextColor: #334155;\n}\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  font-family: \"Roboto\", sans-serif;\n}\n\nhtml,\nbody {\n  height: 100%;\n  margin: 0;\n}\n\nbody {\n  display: flex;\n  flex-direction: column;\n  background-color: var(--backgroundColor);\n}\n\nmain,\nform {\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--backgroundColor);\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n\n.main-container {\n  display: flex;\n  justify-content: center;\n}\n\n.main-form-container {\n  margin: 12px;\n}\n\n.main-container {\n  margin: 16px;\n}\n\ninput {\n  background-color: var(--textBackground);\n  border-style: none;\n  border-radius: 8px;\n}\n\ninput[type=\"text\"],\noption {\n  width: 200px;\n  height: 20px;\n  padding: 5px;\n}\n\nsection {\n  border-bottom: solid black 1px;\n  margin-bottom: 6px;\n  padding-bottom: 10px;\n}\n\n/* Header */\nheader {\n  height: 40px;\n  display: flex;\n  width: 100%;\n  background-color: var(--primaryColor);\n}\n\n.nav-form,\n.nav-saved {\n  flex: 1; /* Distribute the space evenly */\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 10px;\n  cursor: pointer;\n}\n\n/* Specific styles for each tab */\n.nav-form {\n  background-color: var(--backgroundColor);\n  border-radius: 8px 8px 0px 0px;\n}\n\n.nav-saved {\n  background-color: var(--primaryColor);\n}\n\n/* Optional: Add hover effects for better user experience */\n.nav-form:hover,\n.nav-saved:hover {\n  background-color: var(\n    --hoverColor\n  ); /* Define a hover color in your variables */\n  color: var(--hoverTextColor); /* Optional: Change text color on hover */\n}\n\n/* Section 1 */\n.section-1 {\n  display: grid;\n  grid-template-columns: auto 1fr;\n  gap: 10px; /* Adjust the gap between labels and inputs as needed */\n  align-items: center; /* Center align labels and inputs vertically */\n  padding: 8px;\n}\n\n.section-1 label {\n  justify-self: end; /* Align labels to the right */\n}\n\n/* Section 2 */\n\n.section-2 {\n  display: grid;\n  grid-template-columns: 1fr;\n  gap: 10px; /* Adjust the gap as needed */\n  padding: 8px;\n}\n\n.checkbox-container-title {\n  font-weight: bold;\n}\n\n.checkboxes {\n  display: grid;\n  grid-template-columns: repeat(4, auto 1fr);\n  gap: 10px; /* Adjust the gap between labels and checkboxes as needed */\n  align-items: center; /* Center align labels and checkboxes vertically */\n}\n\n.checkbox {\n  display: contents; /* Use contents to make the children directly in the grid */\n}\n\n.checkbox label {\n  justify-self: end; /* Align labels to the right */\n}\n\n.checkbox input[type=\"checkbox\"] {\n  width: 20px; /* Set the desired width of checkbox */\n  height: 20px; /* Set the desired height of checkbox */\n  margin: 0; /* Remove default margin */\n  cursor: pointer;\n}\n\n/* Section 3 */\n\n.section-3 {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  gap: 10px; /* Adjust the gap between elements as needed */\n  align-items: center;\n  max-width: 600px; /* Adjust the width as needed */\n  margin: auto; /* Center the section */\n}\n\n.radio-box {\n  text-align: center;\n}\n\n.text-box,\n.radio-box {\n  display: flex;\n  flex-direction: column;\n}\n\n.text-box label,\n.radio-box label {\n  margin-bottom: 5px;\n}\n\n.text-box input,\n.radio-box input[type=\"radio\"] {\n  width: 100%;\n  box-sizing: border-box;\n}\n\n.radios {\n  display: flex;\n  justify-content: center;\n  gap: 10px;\n}\n\n.radio {\n  display: flex;\n  align-items: center;\n}\n\n.radio input[type=\"radio\"] {\n  width: auto;\n  margin-right: 5px;\n  cursor: pointer;\n}\n\n/* Notes Container */\n\n.notes-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 4px;\n  padding: 8px;\n}\n\n.notes {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--textBackground);\n  border-radius: 8px;\n}\n\ntextarea {\n  height: 90%;\n  margin: 6px;\n  color: black;\n  border-style: none;\n  background-color: transparent;\n  padding: 6px;\n}\n\ntextarea:focus {\n  border-style: none;\n  outline: none;\n}\n\n/* Second Container */\n\n.second-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 80%;\n  border: solid black 1px;\n  border-radius: 8px;\n  height: auto;\n}\n\n.add-transaction {\n  padding: 6px;\n  text-align: center;\n}\n\n.add-transaction-button {\n  cursor: pointer;\n  transition: transform 0.3s ease-in-out;\n  border-style: none;\n  background-color: transparent;\n  font-size: 1.1rem;\n  font-weight: 250;\n}\n\n.add-transaction-button:hover {\n  transform: scale(1.2);\n}\n\n.buttons-container {\n  display: flex;\n  justify-content: space-evenly;\n  gap: 12px;\n  margin: 16px;\n}\n\n.buttons-container button {\n  padding: 8px;\n  background-color: var(--secondaryColor);\n  border-style: none;\n  border-radius: 8px;\n  cursor: pointer;\n}\n\n/* Transaction Forms */\n\n#transaction-container {\n  display: flex;\n  flex-wrap: wrap;\n}\n.transaction-card {\n  background-color: var(--secondaryColor);\n  padding: 10px;\n  margin: 8px;\n  border-radius: 8px;\n  position: relative;\n}\n\n.close-card {\n  position: absolute;\n  top: 0;\n  right: 0;\n  background: none;\n  border: none;\n  font-size: 1.2rem;\n  cursor: pointer;\n  margin: 6px;\n  transition: transform 1s ease-in;\n}\n\n.close-card:hover {\n  transform: scale(1.5);\n}\n\n.transaction-card h3 {\n  border-bottom: solid black 1px;\n  padding: 4px;\n  margin-bottom: 6px;\n}\n\n.option-container {\n  display: grid;\n  grid-template-columns: auto 1fr;\n  gap: 10px;\n  align-items: center;\n  padding: 8px;\n}\n\n/* Footer  */\n\nfooter {\n  position: sticky;\n  width: 100%;\n  padding: 10px;\n  background-color: var(--primaryColor);\n  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  bottom: 0;\n}\n\n.persistent-note {\n  width: 60%;\n}\n\ntextarea#persistent-notes {\n  width: 100%;\n}\n\n.important-buttons {\n  display: flex;\n  flex-direction: column;\n  margin: 8px;\n}\n\n#save-button,\n#reset-button {\n  padding: 8px;\n  background-color: var(--textBackground);\n  cursor: pointer;\n  margin: 6px;\n  border-style: none;\n  border-radius: 6px;\n}\n\n/* Submit Button */\n.submit-buttons {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  margin: 1rem;\n}\n\n#submit-button {\n  background-color: var(--secondaryColor);\n  cursor: pointer;\n  font-size: 2rem;\n  border-style: none;\n  border-radius: 8px;\n  padding: 8px;\n}\n\n#submit-button:hover {\n  background-color: var(--primaryColor);\n  color: var(--hoverColor);\n}\n"],"sourceRoot":""}]);
+}
+
+/* Overlay */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primaryColor);
+  z-index: 2;
+  display: none;
+}`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"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","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap\");\n\n:root {\n  --backgroundColor: #475569;\n  --primaryColor: #334155;\n  --secondaryColor: #4682b4;\n  --textBackground: #94a3b8;\n  --hoverColor: #4682b4;\n  --hoverTextColor: #334155;\n}\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  font-family: \"Roboto\", sans-serif;\n}\n\nhtml,\nbody {\n  height: 100%;\n  margin: 0;\n}\n\nbody {\n  display: flex;\n  flex-direction: column;\n  background-color: var(--backgroundColor);\n}\n\nmain,\nform {\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--backgroundColor);\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n\n.main-container {\n  display: flex;\n  justify-content: center;\n}\n\n.main-form-container {\n  margin: 12px;\n}\n\n.main-container {\n  margin: 16px;\n}\n\ninput {\n  background-color: var(--textBackground);\n  border-style: none;\n  border-radius: 8px;\n}\n\ninput[type=\"text\"],\noption {\n  width: 200px;\n  height: 20px;\n  padding: 5px;\n}\n\nsection {\n  border-bottom: solid black 1px;\n  margin-bottom: 6px;\n  padding-bottom: 10px;\n}\n\n/* Header */\nheader {\n  height: 40px;\n  display: flex;\n  width: 100%;\n  background-color: var(--primaryColor);\n}\n\n.nav-form,\n.nav-saved {\n  flex: 1; /* Distribute the space evenly */\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 10px;\n  cursor: pointer;\n}\n\n/* Specific styles for each tab */\n.nav-form {\n  background-color: var(--backgroundColor);\n  border-radius: 8px 8px 0px 0px;\n}\n\n.nav-saved {\n  background-color: var(--primaryColor);\n}\n\n/* Optional: Add hover effects for better user experience */\n.nav-form:hover,\n.nav-saved:hover {\n  background-color: var(\n    --hoverColor\n  ); /* Define a hover color in your variables */\n  color: var(--hoverTextColor); /* Optional: Change text color on hover */\n}\n\n/* Section 1 */\n.section-1 {\n  display: grid;\n  grid-template-columns: auto 1fr;\n  gap: 10px; /* Adjust the gap between labels and inputs as needed */\n  align-items: center; /* Center align labels and inputs vertically */\n  padding: 8px;\n}\n\n.section-1 label {\n  justify-self: end; /* Align labels to the right */\n}\n\n/* Section 2 */\n\n.section-2 {\n  display: grid;\n  grid-template-columns: 1fr;\n  gap: 10px; /* Adjust the gap as needed */\n  padding: 8px;\n}\n\n.checkbox-container-title {\n  font-weight: bold;\n}\n\n.checkboxes {\n  display: grid;\n  grid-template-columns: repeat(4, auto 1fr);\n  gap: 10px; /* Adjust the gap between labels and checkboxes as needed */\n  align-items: center; /* Center align labels and checkboxes vertically */\n}\n\n.checkbox {\n  display: contents; /* Use contents to make the children directly in the grid */\n}\n\n.checkbox label {\n  justify-self: end; /* Align labels to the right */\n}\n\n.checkbox input[type=\"checkbox\"] {\n  width: 20px; /* Set the desired width of checkbox */\n  height: 20px; /* Set the desired height of checkbox */\n  margin: 0; /* Remove default margin */\n  cursor: pointer;\n}\n\n/* Section 3 */\n\n.section-3 {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  gap: 10px; /* Adjust the gap between elements as needed */\n  align-items: center;\n  max-width: 600px; /* Adjust the width as needed */\n  margin: auto; /* Center the section */\n}\n\n.radio-container {\n  text-align: center;\n}\n\n.text-box,\n.radio-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.text-box label,\n.radio-title {\n  margin-bottom: 5px;\n}\n\n.text-box input {\n  width: 100%;\n  box-sizing: border-box;\n}\n\n.radios {\n  display: flex;\n  justify-content: space-around;\n}\n\n.radio {\n  display: flex;\n  align-items: center;\n}\n\n.radio input[type=\"radio\"] {\n  width: auto;\n  margin-right: 5px;\n  cursor: pointer;\n  margin: 4px;\n}\n\n/* Notes Container */\n\n.notes-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 4px;\n  padding: 8px;\n}\n\n.notes {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--textBackground);\n  border-radius: 8px;\n}\n\ntextarea {\n  height: 90%;\n  margin: 6px;\n  color: black;\n  border-style: none;\n  background-color: transparent;\n  padding: 6px;\n}\n\ntextarea:focus {\n  border-style: none;\n  outline: none;\n}\n\n/* Second Container */\n\n.second-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 80%;\n  border: solid black 1px;\n  border-radius: 8px;\n  height: auto;\n}\n\n.add-transaction {\n  padding: 6px;\n  text-align: center;\n}\n\n.add-transaction-button {\n  cursor: pointer;\n  transition: transform 0.3s ease-in-out;\n  border-style: none;\n  background-color: transparent;\n  font-size: 1.1rem;\n  font-weight: 250;\n}\n\n.add-transaction-button:hover {\n  transform: scale(1.2);\n}\n\n.buttons-container {\n  display: flex;\n  justify-content: space-evenly;\n  gap: 12px;\n  margin: 16px;\n}\n\n.buttons-container button {\n  padding: 8px;\n  background-color: var(--secondaryColor);\n  border-style: none;\n  border-radius: 8px;\n  cursor: pointer;\n}\n\n/* Transaction Forms */\n\n#transaction-container {\n  display: flex;\n  flex-wrap: wrap;\n}\n.transaction-card {\n  background-color: var(--secondaryColor);\n  padding: 10px;\n  margin: 8px;\n  border-radius: 8px;\n  position: relative;\n}\n\n.close-card {\n  position: absolute;\n  top: 0;\n  right: 0;\n  background: none;\n  border: none;\n  font-size: 1.2rem;\n  cursor: pointer;\n  margin: 6px;\n  transition: transform 1s ease-in;\n}\n\n.close-card:hover {\n  transform: scale(1.5);\n}\n\n.transaction-card h3 {\n  border-bottom: solid black 1px;\n  padding: 4px;\n  margin-bottom: 6px;\n}\n\n.option-container {\n  display: grid;\n  grid-template-columns: auto 1fr;\n  gap: 10px;\n  align-items: center;\n  padding: 8px;\n}\n\n/* Footer  */\n\nfooter {\n  position: sticky;\n  width: 100%;\n  padding: 10px;\n  background-color: var(--primaryColor);\n  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  bottom: 0;\n}\n\n.persistent-note {\n  width: 60%;\n}\n\ntextarea#persistent-notes {\n  width: 100%;\n}\n\n.important-buttons {\n  display: flex;\n  flex-direction: column;\n  margin: 8px;\n}\n\n#save-persistent-button,\n#reset-persistent-button {\n  padding: 8px;\n  background-color: var(--textBackground);\n  cursor: pointer;\n  margin: 6px;\n  border-style: none;\n  border-radius: 6px;\n}\n\n/* Submit Button */\n.submit-reset-buttons {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  margin: 1rem;\n  gap: 16px;\n}\n\n#submit-button,\n#reset-button {\n  background-color: var(--secondaryColor);\n  cursor: pointer;\n  font-size: 2rem;\n  border-style: none;\n  border-radius: 8px;\n  padding: 8px;\n}\n\n#submit-button:hover,\n#reset-button:hover {\n  background-color: var(--primaryColor);\n  color: var(--hoverColor);\n}\n\n/* Overlay */\n#overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: var(--primaryColor);\n  z-index: 2;\n  display: none;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4466,32 +4480,36 @@ function toDate(argument) {
 
 /***/ }),
 
-/***/ "./src/domControl/Handle.mjs":
-/*!***********************************!*\
-  !*** ./src/domControl/Handle.mjs ***!
-  \***********************************/
+/***/ "./src/domControl/AddTransaction.mjs":
+/*!*******************************************!*\
+  !*** ./src/domControl/AddTransaction.mjs ***!
+  \*******************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Handle)
+/* harmony export */   "default": () => (/* binding */ AddTransaction)
 /* harmony export */ });
 /* harmony import */ var _forms_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./forms.mjs */ "./src/domControl/forms.mjs");
+/* harmony import */ var _DataManager_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DataManager.mjs */ "./src/domControl/DataManager.mjs");
+/* harmony import */ var _Transaction_mjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Transaction.mjs */ "./src/domControl/Transaction.mjs");
+
+
 
 /**
  * This module is responsible for setting up all handlers. Instantiate the object then call the methods for handling certain things.
  */
 
-class Handle {
+class AddTransaction {
   constructor() {
     this.buttonsContainer = document.querySelector(".buttons-container");
     this.options = {
-      "Moving-Money": false,
-      "Mutual-Fund-Trade": false,
-      "Equity-Trade": false,
-      "Options-Trade": false,
-      "Managed-Accounts": false,
-      Other: false,
+      "Moving-Money": { count: 0 },
+      "Mutual-Fund-Trade": { count: 0 },
+      "Equity-Trade": { count: 0 },
+      "Options-Trade": { count: 0 },
+      "Managed-Accounts": { count: 0 },
+      Other: { count: 0 },
     };
   }
 
@@ -4507,18 +4525,24 @@ class Handle {
       this.buttonsContainer.innerHTML = "";
       // Generate buttons for options that haven't been clicked yet
       for (let option in this.options) {
-        if (!this.options[option]) {
-          let button = document.createElement("button");
-          button.id = option;
-          button.innerHTML = this.formatString(option);
-          button.setAttribute("type", "button");
-          this.buttonsContainer.appendChild(button);
-        }
+        let button = document.createElement("button");
+        button.id = option;
+        button.innerHTML = this.formatString(option);
+        button.setAttribute("type", "button");
+        this.buttonsContainer.appendChild(button);
       }
+      //console.log(this.options);
       this.addButtonHandlers();
     });
   }
 
+  /**
+   * When the user selects an add transaction option, it needs to generate a new object that is then appended to the data object. How can we do that?
+   */
+
+  /**
+   * Add's event handlers to the generated add transaction buttons.
+   */
   addButtonHandlers() {
     const buttons = this.buttonsContainer.querySelectorAll("button");
     const transactionContainer = document.querySelector(
@@ -4528,15 +4552,108 @@ class Handle {
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
         let choice = button.getAttribute("id");
-        let card = (0,_forms_mjs__WEBPACK_IMPORTED_MODULE_0__.generateCard)(choice);
+        let count = this.options[choice].count;
+        let card = (0,_forms_mjs__WEBPACK_IMPORTED_MODULE_0__.generateCard)(choice, count);
+        console.log(card);
         console.log(`${choice} clicked`);
         if (card) {
           transactionContainer.appendChild(card);
-          this.options[choice] = true; // Update the option to true
+          // increase count on option
+          this.options[choice].count++;
           this.buttonsContainer.innerHTML = ``;
         }
+        // initialize empty object that will be the new transaction object that will later be added to dataManager.data.Transactions.push(newTransactionObject);
+        const newTransactionObjectName = `${choice}-${count}`;
+        // add the newTransactionObject to Transactions
+        _DataManager_mjs__WEBPACK_IMPORTED_MODULE_1__.dataManager.addTransaction(newTransactionObjectName);
+        // Selects all the text inputs.
+        let textInputs = card.querySelectorAll('input[type= "text"]');
+        if (textInputs) {
+          textInputs.forEach((input) => {
+            // dataManager.data.Transactions[newTransactionObjectName][
+            //   input.name
+            // ] = null;
+            input.addEventListener("input", () => {
+              // get the object key
+              let key = input.name;
+              // get the object value
+              let value = input.value;
+              // update the object.
+              _DataManager_mjs__WEBPACK_IMPORTED_MODULE_1__.dataManager.data.Transactions[newTransactionObjectName][key] =
+                value;
+            });
+          });
+        }
+        // Handle radio buttons
+        let radioButtons = card.querySelectorAll('input[type="radio"]');
+        if (radioButtons) {
+          radioButtons.forEach((radio) => {
+            radio.addEventListener("change", () => {
+              if (radio.checked) {
+                let key = radio.name;
+                let value = radio.value;
+                _DataManager_mjs__WEBPACK_IMPORTED_MODULE_1__.dataManager.data.Transactions[newTransactionObjectName][key] =
+                  value;
+              }
+            });
+          });
+        }
+
+        // Handle select dropdowns
+        let selects = card.querySelectorAll("select");
+        if (selects) {
+          selects.forEach((select) => {
+            select.addEventListener("change", () => {
+              let key = select.name;
+              let value = select.value;
+              _DataManager_mjs__WEBPACK_IMPORTED_MODULE_1__.dataManager.data.Transactions[newTransactionObjectName][key] =
+                value;
+            });
+          });
+        }
+
+        // Event Handler to close the card.
+        card.querySelector(".close-card").addEventListener("click", () => {
+          card.remove();
+          // remove options count
+          this.options[choice].count--;
+          // TODO - Remove the object from the data.
+          delete _DataManager_mjs__WEBPACK_IMPORTED_MODULE_1__.dataManager.data.Transactions[newTransactionObjectName]; // Remove the object from the data
+          _DataManager_mjs__WEBPACK_IMPORTED_MODULE_1__.dataManager.decrementTransactionCount();
+        });
       });
     });
+  }
+  // responsible for setting up new event handlers on inputs of new transaction form, and updating the new transaction object nested in the data object.
+  handleNewTransaction(transactionId) {
+    const transactionForm = document.querySelector(`#${transactionId}`);
+  }
+
+  createTransactionObject(choice, count) {
+    let newTransaction = {};
+    switch (choice) {
+      case "Moving-Money":
+        newTransaction = new _Transaction_mjs__WEBPACK_IMPORTED_MODULE_2__.MovingMoney(count);
+        break;
+      case "Mutual-Fund-Trade":
+        newTransaction = new _Transaction_mjs__WEBPACK_IMPORTED_MODULE_2__.MutualFundTrade(count);
+        break;
+      case "Equity-Trade":
+        newTransaction = new _Transaction_mjs__WEBPACK_IMPORTED_MODULE_2__.EquityTrade(count);
+        break;
+      case "Options-Trade":
+        newTransaction = new _Transaction_mjs__WEBPACK_IMPORTED_MODULE_2__.OptionsTrade(count);
+        break;
+      case "Managed-Accounts":
+        newTransaction = new _Transaction_mjs__WEBPACK_IMPORTED_MODULE_2__.ManagedAccounts(count);
+        break;
+      case "Other":
+        newTransaction = new _Transaction_mjs__WEBPACK_IMPORTED_MODULE_2__.Other(count);
+        break;
+      default:
+        break;
+    }
+    return newTransaction;
   }
 
   formatString(input) {
@@ -4544,54 +4661,231 @@ class Handle {
   }
 }
 
+// generate a new object with a unique id and update it as the form is being filled out.
+// const newTransaction = this.createTransactionObject(
+//   choice,
+//   this.options[choice].count
+// );
+//console.log("newTransaction:", newTransaction);
+// Add newTransaction to data object.
+//dataManager.data.Transactions.push(newTransaction);
+// update the dom controller so that new event handlers are added to all of the fields and that they update the dataManager object when new inputs are added.
+
+/**
+ * A new idea. So instead of instantiating the transaction objects, simply add a new empty object to the data.Transactions, then add all the event listeners. Then the event listener will update all of the keys and add them based on what the form value is.
+ */
+
+//
+
 
 /***/ }),
 
-/***/ "./src/domControl/HandleFormData.mjs":
-/*!*******************************************!*\
-  !*** ./src/domControl/HandleFormData.mjs ***!
-  \*******************************************/
+/***/ "./src/domControl/DataManager.mjs":
+/*!****************************************!*\
+  !*** ./src/domControl/DataManager.mjs ***!
+  \****************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ HandleFormData)
+/* harmony export */   dataManager: () => (/* binding */ dataManager)
 /* harmony export */ });
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/format.mjs");
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/format.mjs");
+/* harmony import */ var _Save_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Save.mjs */ "./src/domControl/Save.mjs");
 
-class HandleFormData {
-  constructor(event) {
-    this.form = event.target;
-    this.formData = new FormData(this.form);
-    this.jsonObject = {};
-    this.handleSubmit(event);
+
+/**
+ * Resonsible for managing all of the data. Adds handlers and event listeners to the page. Creates the data object which is used for saving and displaying the data.
+ */
+
+class DataManager {
+  constructor() {
+    this.handleMain();
+    this.currentDate = this.formatDate(new Date());
+    this.data = {
+      Date: this.currentDate,
+      "Cosmo-Whisper": null,
+      "Client-Name": null,
+      "Additional-Callers": null,
+      "Internal-FC": null,
+      Verification: [],
+      "Account-Number": null,
+      Restrictions: null,
+      MID: null,
+      COTM: null,
+      Notes: null,
+      "SF-Notes": null,
+      Transactions: {},
+    };
+    this.transactionCount = 0;
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
-    const currentDate = new Date();
-    const formattedDate = this.formatDate(currentDate);
-    // Add the current date to the JSON object
-    this.jsonObject["submissionDate"] = formattedDate;
-    this.formData.forEach((value, key) => {
-      if (this.jsonObject[key]) {
-        if (!Array.isArray(this.jsonObject[key])) {
-          this.jsonObject[key] = [this.jsonObject[key]];
-        }
-        this.jsonObject[key].push(value);
-      } else {
-        this.jsonObject[key] = value;
-      }
+  decrementTransactionCount() {
+    this.transactionCount--;
+    if (this.transactionCount <= 0) this.transactionCount = 0;
+  }
+
+  addTransaction(transactionName) {
+    this.data.Transactions[transactionName] = {};
+    this.transactionCount++; // Increment the transaction counter
+  }
+
+  handleMain() {
+    // select all of the inputs in main container
+    const cosmo = document.querySelector("#cosmo-whisper");
+    const name = document.querySelector("#client-name");
+    const additionalCallers = document.querySelector("#additional-callers");
+    const internal = document.querySelector("#internal-FC");
+    const verification = document.querySelectorAll(
+      '.checkbox input[type="checkbox"]'
+    );
+    const accountNum = document.querySelector("#account-number");
+    const restrictions = document.querySelectorAll(
+      'input[name="restrictions"]'
+    );
+    const mid = document.querySelector("#MID");
+    const cotm = document.querySelector("#COTM");
+    const notes = document.querySelector("#notes");
+    const sfNotes = document.querySelector("#SF-notes");
+
+    // add event handlers to all those in main container
+    cosmo.addEventListener("input", () => {
+      let value = cosmo.value;
+      this.data["Cosmo-Whisper"] = value;
+      //console.log(data);
     });
-    // Pretty print the JSON object
-    console.log(this.prettyPrintJSON(this.jsonObject));
+    name.addEventListener("input", () => {
+      this.data["Client-Name"] = name.value;
+    });
+    additionalCallers.addEventListener("input", () => {
+      this.data["Additional-Callers"] = additionalCallers.value;
+    });
+    internal.addEventListener("input", () => {
+      this.data["Input-FC"] = internal.value;
+    });
+    verification.forEach((checkbox) => {
+      // if there is a change to any of the checkboxes update.
+      checkbox.addEventListener("change", () => {
+        // first clear the verifaction array.
+        this.data.Verification = [];
+        // recapture all the checkboxes to check if they're checked or unchecked.
+        const checkboxes = document.querySelectorAll(
+          '.checkbox input[type="checkbox"]'
+        );
+        checkboxes.forEach((check) => {
+          if (check.checked) {
+            this.data.Verification.push(checkbox.id);
+          }
+        });
+      });
+    });
+    accountNum.addEventListener("input", () => {
+      this.data["Account-Number"] = accountNum.value;
+    });
+    restrictions.forEach((radio) => {
+      //detect a change to any of those radio buttons.
+      radio.addEventListener("change", () => {
+        // select only the button that has been checked.
+        const selectedRadio = document.querySelector(
+          'input[name="restrictions"]:checked'
+        );
+        if (selectedRadio) {
+          this.data.Restrictions = selectedRadio.value;
+        }
+        console.log(this.data);
+      });
+    });
+    mid.addEventListener("input", () => {
+      this.data.MID = mid.value;
+    });
+    cotm.addEventListener("input", () => {
+      this.data.COTM = cotm.value;
+    });
+    notes.addEventListener("input", () => {
+      this.data.Notes = notes.value;
+    });
+    sfNotes.addEventListener("input", () => {
+      this.data["SF-Notes"] = sfNotes.value;
+    });
+
+    const resetBtn = document.querySelector("#reset-button");
+    resetBtn.addEventListener("click", () => {
+      this.resetForm();
+    });
+
+    const saveBtn = document.querySelector("#submit-button");
+    saveBtn.addEventListener("click", () => {
+      console.log(this.data);
+      // save the data object to local storage.
+      (0,_Save_mjs__WEBPACK_IMPORTED_MODULE_0__.saveToLocal)(this.generateDataId(), this.data);
+    });
+
+    const savedTab = document.querySelector(".nav-saved");
+    savedTab.addEventListener("click", () => {
+      // render the saved data and then add it as an overlay on top of window.
+      const savedContainer = (0,_Save_mjs__WEBPACK_IMPORTED_MODULE_0__.renderSaved)();
+      const savedPage = document.querySelector("#overlay");
+      savedPage.style.display = "block";
+      savedPage.appendChild(savedContainer);
+    });
   }
 
-  // Method to pretty print a JSON object
-  prettyPrintJSON(jsonObject) {
-    return JSON.stringify(jsonObject, null, 2);
+  generateDataId() {
+    let maxId = -1;
+
+    // Iterate over all keys in local storage
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      const match = key.match(/(\d+)$/); // Match any digits at the end of the key
+      if (match) {
+        const id = parseInt(match[0], 10); // Convert the matched digits to an integer
+        if (id > maxId) {
+          maxId = id;
+        }
+      }
+    }
+
+    return maxId + 1;
   }
 
+  /**
+   * Resets the form and page entirely. Deletes any data in the data object.
+   */
+  resetForm() {
+    this.data = {};
+    this.data = {
+      "Cosmo-Whisper": null,
+      "Client-Name": null,
+      "Additional-Callers": null,
+      "Internal-FC": null,
+      Verification: [],
+      "Account-Number": null,
+      Restrictions: null,
+      MID: null,
+      COTM: null,
+      Notes: null,
+      "SF-Notes": null,
+    };
+    // Clear all text input fields
+    document.querySelectorAll('input[type="text"]').forEach((input) => {
+      input.value = "";
+    });
+    // Clear all checkboxes
+    document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+      checkbox.checked = false;
+    });
+
+    // Clear all radio buttons
+    document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+      radio.checked = false;
+    });
+
+    // Clear all textareas
+    document.querySelectorAll("textarea").forEach((textarea) => {
+      textarea.value = "";
+    });
+    console.log("Form and data object have been reset");
+  }
   // Method to format the date
   formatDate(date) {
     // Create suffixes for day
@@ -4610,15 +4904,209 @@ class HandleFormData {
     };
 
     // Format parts of the date
-    const month = (0,date_fns__WEBPACK_IMPORTED_MODULE_0__.format)(date, "MMM");
-    const day = getDayWithSuffix((0,date_fns__WEBPACK_IMPORTED_MODULE_0__.format)(date, "d"));
-    const year = (0,date_fns__WEBPACK_IMPORTED_MODULE_0__.format)(date, "yyyy");
-    const time = (0,date_fns__WEBPACK_IMPORTED_MODULE_0__.format)(date, "h:mmaaa").toUpperCase();
+    const month = (0,date_fns__WEBPACK_IMPORTED_MODULE_1__.format)(date, "MMM");
+    const day = getDayWithSuffix((0,date_fns__WEBPACK_IMPORTED_MODULE_1__.format)(date, "d"));
+    const year = (0,date_fns__WEBPACK_IMPORTED_MODULE_1__.format)(date, "yyyy");
+    const time = (0,date_fns__WEBPACK_IMPORTED_MODULE_1__.format)(date, "h:mmaaa").toUpperCase();
 
     // Combine parts into desired format
     return `${month} ${day} ${year} - ${time}`;
   }
 }
+let dataManager = new DataManager();
+
+
+
+
+/***/ }),
+
+/***/ "./src/domControl/Save.mjs":
+/*!*********************************!*\
+  !*** ./src/domControl/Save.mjs ***!
+  \*********************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   deleteFromLocal: () => (/* binding */ deleteFromLocal),
+/* harmony export */   renderSaved: () => (/* binding */ renderSaved),
+/* harmony export */   saveToLocal: () => (/* binding */ saveToLocal)
+/* harmony export */ });
+function renderSaved() {
+  const savedContainer = document.createElement("div");
+  savedContainer.className = "saved-container";
+
+  const objectsArray = getAllObjectsFromLocalStorage();
+
+  objectsArray.forEach((obj) => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    const title = document.createElement("h3");
+    title.textContent = `Client Name: ${obj["Client-Name"]} - Date: ${obj["Date"]}`;
+    card.appendChild(title);
+
+    const textArea = document.createElement("textarea");
+    textArea.readOnly = true;
+    textArea.value = JSON.stringify(obj, null, 2); // Pretty print the JSON object
+    card.appendChild(textArea);
+
+    savedContainer.appendChild(card);
+  });
+
+  document.body.appendChild(savedContainer);
+  return savedContainer;
+}
+
+function getAllObjectsFromLocalStorage() {
+  const objectsArray = [];
+
+  // Iterate over all keys in local storage
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    const value = localStorage.getItem(key);
+    try {
+      const parsedValue = JSON.parse(value);
+      // Check if the value is an object (and not null)
+      if (parsedValue && typeof parsedValue === "object") {
+        objectsArray.push(parsedValue);
+      }
+    } catch (e) {
+      // Handle JSON parsing error, if any
+      console.error(`Error parsing value for key "${key}":`, e);
+    }
+  }
+
+  return objectsArray;
+}
+
+function printObject(obj, indent = 0) {
+  let result = "";
+  const padding = " ".repeat(indent);
+
+  if (typeof obj !== "object" || obj === null) {
+    result += `${padding}${obj}\n`;
+    return result;
+  }
+
+  if (Array.isArray(obj)) {
+    result += `${padding}[\n`;
+    obj.forEach((item) => {
+      result += printObject(item, indent + 2);
+    });
+    result += `${padding}]\n`;
+    return result;
+  }
+
+  result += `${padding}{\n`;
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      result += `${padding}  "${key}": `;
+      result += printObject(obj[key], indent + 2);
+    }
+  }
+  result += `${padding}}\n`;
+  return result;
+}
+
+function saveToLocal(key, object) {
+  // Convert the object to a JSON string
+  const jsonString = JSON.stringify(object);
+  // Save the JSON string to local storage
+  localStorage.setItem(key, jsonString);
+  console.log("Save to local storage");
+}
+
+function deleteFromLocal(key) {
+  // Remove the item from local storage
+  localStorage.removeItem(key);
+}
+
+
+
+
+/***/ }),
+
+/***/ "./src/domControl/Transaction.mjs":
+/*!****************************************!*\
+  !*** ./src/domControl/Transaction.mjs ***!
+  \****************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   EquityTrade: () => (/* binding */ EquityTrade),
+/* harmony export */   ManagedAccounts: () => (/* binding */ ManagedAccounts),
+/* harmony export */   MovingMoney: () => (/* binding */ MovingMoney),
+/* harmony export */   MutualFundTrade: () => (/* binding */ MutualFundTrade),
+/* harmony export */   OptionsTrade: () => (/* binding */ OptionsTrade),
+/* harmony export */   Other: () => (/* binding */ Other)
+/* harmony export */ });
+/**
+ * This class is responsible for generating the Transaction object which will then be appended to the data object and is updated.
+ */
+
+class MovingMoney {
+  constructor(count) {
+    this.id = count;
+    this.AccountNumber = null;
+    this.AlertsAndRestrictions = null;
+    this.AuthorizedToTrade = null;
+    this.AutoInvestments = null;
+    this.Action = null;
+  }
+}
+
+class MutualFundTrade {
+  constructor(count) {
+    this.id = count;
+    this.AcountNumber = null;
+    this.AlertsAndRestrictions = null;
+    this.AuthorizedToTrade = null;
+    this.orders = null;
+    this.AutoInvestments = null;
+    this.Action = null;
+  }
+}
+
+class EquityTrade {
+  constructor(count) {
+    this.id = count;
+    this.AccountNumber = null;
+    this.AlertsAndRestrictions = null;
+    this.AuthorizedToTrade = null;
+    this.orders = null;
+    this.AutoInvestments = null;
+    this.Commission = null;
+    this.Action = null;
+  }
+}
+class OptionsTrade {
+  constructor(count) {
+    this.id = count;
+    this.AccountNumber = null;
+  }
+}
+class ManagedAccounts {
+  constructor(count) {
+    this.id = count;
+    this.AccountNumber = null;
+    this.AlertsAndRestrictions = null;
+    this.AuthorizedToTrade = null;
+    this.Product = null;
+    this.DNT = null;
+    this.AutoInvestments = null;
+    this.Action = null;
+  }
+}
+class Other {
+  constructor(count) {
+    this.id = count;
+    this.AccountNumber = null;
+  }
+}
+
+
 
 
 /***/ }),
@@ -4633,9 +5121,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   generateCard: () => (/* binding */ generateCard)
 /* harmony export */ });
-function generateCard(choice) {
+function generateCard(choice, count) {
   const card = document.createElement("div");
   card.className = "transaction-card";
+  card.id = `${choice}-${count}`;
   let content = ``;
 
   switch (choice) {
@@ -4662,32 +5151,32 @@ function generateCard(choice) {
   }
   card.innerHTML = content;
   // Add event listener to close button
-  card.querySelector(".close-card").addEventListener("click", () => {
-    card.remove();
-  });
+  // card.querySelector(".close-card").addEventListener("click", () => {
+  //   card.remove();
+  // });
 
   return card;
 }
 
 function injectMovingMoney() {
-  return `    <fieldset name="MovingMoney id="MovingMoney" >
-            <div class="transaction-card">
-              <button class="close-card">X</button>
-              <h3>Moving Money</h3>
-              <label for="accountNum2">Account #</label>
-              <input type="text" id="accountNum2" />
-            </div>
+  return `    
+
+            <button class="close-card">X</button>
+            <h3>Moving Money</h3>
+            <label for="accountNum2">Account #</label>
+            <input type="text" id="accountNum2" name="Account-Number" />
+
             <div class="radio-box">
               <label for="alerts-and-restrictions"
                 >Alerts and Restrictions?</label
               >
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="alerts-and-restrictions-yes" />
+                  <input type="radio" id="alerts-and-restrictions-yes" name = "Alerts-And-Restrictions" value="yes" />
                   <label for="alerts-and-restrictions-yes">Yes</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="alerts-and-restrictions-no" />
+                  <input type="radio" id="alerts-and-restrictions-no" name = "Alerts-And-Restrictions" value="no"/>
                   <label for="alerts-and-restrictions-no">No</label>
                 </div>
               </div>
@@ -4696,11 +5185,11 @@ function injectMovingMoney() {
               <label for="authorized-to-trade">Authorized to Trade?</label>
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="authorized-to-trade-yes" />
+                  <input type="radio" id="authorized-to-trade-yes" name = "Authorized-To-Trade" value="yes"/>
                   <label for="authorized-to-trade-yes">Yes</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="authorized-to-trade-no" />
+                  <input type="radio" id="authorized-to-trade-no" name = "Authorized-To-Trade" value="no"/>
                   <label for="authorized-to-trade-no">No</label>
                 </div>
               </div>
@@ -4710,7 +5199,7 @@ function injectMovingMoney() {
               <label for="auto-investments"
                 >Auto Investments or PWS planse?</label
               >
-              <select id="auto-investments" name="auto-investments">
+              <select id="auto-investments" name="Auto-Investments">
                 <option value="null">Select Option:</option>
                 <option value="adjusted">Adjusted</option>
                 <option value="discussed-no-changes">
@@ -4719,36 +5208,36 @@ function injectMovingMoney() {
                 <option value="na">NA</option>
               </select>
               <label for="action">Action:</label>
-              <select id="action" name="action">
+              <select id="action" name="Action">
                 <option value="null">Select Option:</option>
                 <option value="deposit">Deposit</option>
                 <option value="withdrawal">Withdrawal</option>
                 <option value="journal">Journal</option>
               </select>
             </div>
-            </fieldset>
+
           `;
 }
 
 function injectMutualFundTrade() {
   return `
-            <div class="transaction-card" id="Mutual-Fund-Trade">
-              <button class="close-card">X</button>
-              <h3>Mutual Fund Trade</h3>
-              <label for="accountNum2">Account #</label>
-              <input type="text" id="accountNum2" />
-            </div>
+
+            <button class="close-card">X</button>
+            <h3>Mutual Fund Trade</h3>
+            <label for="accountNum2">Account #</label>
+            <input type="text" id="accountNum2" name="Account-Number" />
+
             <div class="radio-box">
               <label for="alerts-and-restrictions"
                 >Alerts and Restrictions?</label
               >
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="alerts-and-restrictions-yes" />
+                  <input type="radio" id="alerts-and-restrictions-yes" name = "Alerts-And-Restrictions" value="yes" />
                   <label for="alerts-and-restrictions-yes">Yes</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="alerts-and-restrictions-no" />
+                  <input type="radio" id="alerts-and-restrictions-no" name = "Alerts-And-Restrictions" value="no"/>
                   <label for="alerts-and-restrictions-no">No</label>
                 </div>
               </div>
@@ -4757,11 +5246,11 @@ function injectMutualFundTrade() {
               <label for="authorized-to-trade">Authorized to Trade?</label>
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="authorized-to-trade-yes" />
+                  <input type="radio" id="authorized-to-trade-yes" name = "Authorized-To-Trade" value="yes"/>
                   <label for="authorized-to-trade-yes">Yes</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="authorized-to-trade-no" />
+                  <input type="radio" id="authorized-to-trade-no" name = "Authorized-To-Trade" value="no"/>
                   <label for="authorized-to-trade-no">No</label>
                 </div>
               </div>
@@ -4771,11 +5260,11 @@ function injectMutualFundTrade() {
               <label for="orders">Orders</label>
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="orders-openend" />
+                  <input type="radio" id="orders-openend" name = "Orders" value = "opened"/>
                   <label for="openend">Openend</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="orders-closed" />
+                  <input type="radio" id="orders-closed" name="Orders" value="closed" />
                   <label for="orders-closed">Closed</label>
                 </div>
               </div>
@@ -4808,23 +5297,23 @@ function injectMutualFundTrade() {
 
 function injectEquityTrade() {
   return ` 
-            <div class="transaction-card" id="Equity-Trade">
-              <button class="close-card">X</button>
-              <h3>Equity Trade</h3>
-              <label for="accountNum2">Account #</label>
-              <input type="text" id="accountNum2" />
-            </div>
+
+            <button class="close-card">X</button>
+            <h3>Equity Trade</h3>
+            <label for="accountNum2">Account #</label>
+            <input type="text" id="accountNum2" name="Account-Number" />
+
             <div class="radio-box">
               <label for="alerts-and-restrictions"
                 >Alerts and Restrictions?</label
               >
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="alerts-and-restrictions-yes" />
+                  <input type="radio" id="alerts-and-restrictions-yes" name = "Alerts-And-Restrictions" value="yes" />
                   <label for="alerts-and-restrictions-yes">Yes</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="alerts-and-restrictions-no" />
+                  <input type="radio" id="alerts-and-restrictions-no" name = "Alerts-And-Restrictions" value="no"/>
                   <label for="alerts-and-restrictions-no">No</label>
                 </div>
               </div>
@@ -4833,11 +5322,11 @@ function injectEquityTrade() {
               <label for="authorized-to-trade">Authorized to Trade?</label>
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="authorized-to-trade-yes" />
+                  <input type="radio" id="authorized-to-trade-yes" name = "Authorized-To-Trade" value="yes"/>
                   <label for="authorized-to-trade-yes">Yes</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="authorized-to-trade-no" />
+                  <input type="radio" id="authorized-to-trade-no" name = "Authorized-To-Trade" value="no"/>
                   <label for="authorized-to-trade-no">No</label>
                 </div>
               </div>
@@ -4847,11 +5336,11 @@ function injectEquityTrade() {
               <label for="orders">Orders</label>
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="orders-openend" />
+                  <input type="radio" id="orders-openend" name = "Orders" value = "opened"/>
                   <label for="orders-openend">Openend</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="orders-cancelled" />
+                  <input type="radio" id="orders-cancelled" name="Orders" value="Cancelled"/>
                   <label for="orders-cancelled">Cancelled</label>
                 </div>
               </div>
@@ -4890,29 +5379,29 @@ function injectEquityTrade() {
 
 function injectOptionsTrade() {
   return `         
-   <div class="transaction-card" id="Options-Trade">
+
             <button class="close-card">X</button>
             <h3>Options Trade</h3>
             <label for="accountNum2">Account #</label>
-            <input type="text" id="accountNum2" />
-          </div>`;
+            <input type="text" id="accountNum2" name="Account-Number" />
+            `;
 }
 
 function injectManagedAccount() {
   return `
-            <div class="transaction-card" id="Managed-Accounts">
-              <button class="close-card">X</button>
-              <h3>Managed Accounts</h3>
-              <label for="accountNum2">Account #</label>
-              <input type="text" id="accountNum2" />
-            </div>
+
+            <button class="close-card">X</button>
+            <h3>Managed Accounts</h3>
+            <label for="accountNum2">Account #</label>
+            <input type="text" id="accountNum2" name="Account-Number" />
+
             <div class="radio-box">
               <label for="alerts-and-restrictions"
                 >Alerts and Restrictions?</label
               >
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="alerts-and-restrictions-yes" />
+                  <input type="radio" id="alerts-and-restrictions-yes" name = "Alerts-And-Restrictions" value="yes" />
                   <label for="alerts-and-restrictions-yes">Yes</label>
                 </div>
                 <div class="radio">
@@ -4926,11 +5415,11 @@ function injectManagedAccount() {
               <label for="authorized-to-trade">Authorized to Trade?</label>
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="authorized-to-trade-yes" />
+                  <input type="radio" id="authorized-to-trade-yes" name = "Authorized-To-Trade" value="yes"/>
                   <label for="authorized-to-trade-yes">Yes</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="authorized-to-trade-no" />
+                  <input type="radio" id="authorized-to-trade-no" name = "Authorized-To-Trade" value="no"/>
                   <label for="authorized-to-trade-no">No</label>
                 </div>
               </div>
@@ -4940,11 +5429,11 @@ function injectManagedAccount() {
               <label for="product">Product</label>
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="SMA" />
+                  <input type="radio" id="SMA" name = "Product" value="SMA"/>
                   <label for="SMA">SMA</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="FidelityGo" />
+                  <input type="radio" id="FidelityGo" name = "Product" value = "FidelityGo"/>
                   <label for="FidelityGo">FidelityGo</label>
                 </div>
               </div>
@@ -4954,11 +5443,11 @@ function injectManagedAccount() {
               <label for="DNT">DNT</label>
               <div class="radios">
                 <div class="radio">
-                  <input type="radio" id="DNT-yes" />
+                  <input type="radio" id="DNT-yes" name="DNT" value = "Yes" />
                   <label for="DNT-yes">Yes</label>
                 </div>
                 <div class="radio">
-                  <input type="radio" id="DNT-no" />
+                  <input type="radio" id="DNT-no" name = "DNT" value = "Yes"/>
                   <label for="DNT-no">No</label>
                 </div>
               </div>
@@ -4989,12 +5478,12 @@ function injectManagedAccount() {
 
 function injectOther() {
   return `
-              <div class="transaction-card" id="Other">
-            <button class="close-card">X</button>
-            <h3>Other</h3>
-            <label for="accountNum2">Account #</label>
-            <input type="text" id="accountNum2" />
-          </div>
+
+          <button class="close-card">X</button>
+          <h3>Other</h3>
+          <label for="accountNum2">Account #</label>
+          <input type="text" id="accountNum2" name="Account-Number" />
+
     `;
 }
 
@@ -5088,18 +5577,24 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
-/* harmony import */ var _domControl_Handle_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./domControl/Handle.mjs */ "./src/domControl/Handle.mjs");
-/* harmony import */ var _domControl_HandleFormData_mjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./domControl/HandleFormData.mjs */ "./src/domControl/HandleFormData.mjs");
+/* harmony import */ var _domControl_AddTransaction_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./domControl/AddTransaction.mjs */ "./src/domControl/AddTransaction.mjs");
+/* harmony import */ var _domControl_DataManager_mjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./domControl/DataManager.mjs */ "./src/domControl/DataManager.mjs");
 
 
 
-const handle = new _domControl_Handle_mjs__WEBPACK_IMPORTED_MODULE_1__["default"]();
+const handle = new _domControl_AddTransaction_mjs__WEBPACK_IMPORTED_MODULE_1__["default"]();
 handle.generateAddTransactionButtons();
-const form = document.querySelector("#myForm");
-form.addEventListener("submit", event => {
-  event.preventDefault();
-  new _domControl_HandleFormData_mjs__WEBPACK_IMPORTED_MODULE_2__["default"](event);
-});
+_domControl_DataManager_mjs__WEBPACK_IMPORTED_MODULE_2__.dataManager;
+
+/**
+ * Create event handlers on the main-form-container only. Including the Notes.
+ */
+
+/**
+ * Notes:
+ * What if we removed the form tag. Then we added event handlers to all of the inputs that automatically updated an object for the section 1 stuff.
+ * Then, when user clicks add transaction and adds one, it will generate a form that also implements all of the event listeners. This will then create a new data object with a unique ID.
+ */
 })();
 
 /******/ })()
