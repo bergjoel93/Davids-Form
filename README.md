@@ -20,3 +20,14 @@ Frontend environment for building JavaScript applications.
 
 Get the list item generator working.
 You have some consle .log that show it counting the i's but it seems like there's an issue with accessing the objects data.
+
+## Things to do 7/7/24
+
+- Gandy will give list of all of field inputs for each transaction type.
+- Pressing save button will reset the form.
+- Redesign
+- SF - sales force
+- Change COTM to checkbox.
+- Make generate button under Notes textArea where user can click 'Generate' and it will print particular fields of the current form object and transaction objects.
+- Saved Tab will show everything in a table.
+-

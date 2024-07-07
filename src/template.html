@@ -14,26 +14,7 @@
       </div>
 
       <div id="overlay-notes-container">
-        <ul class="append-note">
-          <li>
-            <div class="overlay-note">
-              <div class="note-title">
-                <button id="expand-modal">Show</button>
-              </div>
-              <div id="note-modal" class="">
-                <button id="close-modal">x</button>
-                <label for="Note-0">Note-0</label>
-                <textarea
-                  class="note-print"
-                  name="Note-0"
-                  id="Note-0"
-                  wrap="hard"
-                >
-                </textarea>
-              </div>
-            </div>
-          </li>
-        </ul>
+        <ul class="append-note"></ul>
       </div>
     </div>
 
@@ -52,7 +33,12 @@
             <input type="text" id="cosmo-whisper" name="cosmo-whisper" />
 
             <label for="client-name" name="client-name">Client Name:</label>
-            <input type="text" id="client-name" name="client-name" />
+            <input
+              type="text"
+              id="client-name"
+              name="client-name"
+              data="add-to-notes"
+            />
 
             <label for="additional-callers" name="additional-callers"
               >Additional Callers:</label

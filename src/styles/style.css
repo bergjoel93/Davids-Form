@@ -429,7 +429,13 @@ textarea#persistent-notes {
   flex-direction: column;
 }
 
-#expand-modal {
+.note-title {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.expand-modal-btn {
   padding: 5px;
   font-size: 1rem;
   background-color: var(--textBackground);
@@ -438,7 +444,7 @@ textarea#persistent-notes {
   cursor: pointer;
 }
 
-#note-modal {
+.note-modal {
   width: 80%;
   height: 80%;
   position: fixed;
@@ -449,13 +455,12 @@ textarea#persistent-notes {
   margin: 12px;
   padding: 12px;
   border-radius: 8px;
-  display: flex;
-  flex-direction: column;
+  display: none;
   background-color: var(--textBackground);
   opacity: 0;
 }
 
-#close-modal {
+.close-modal-btn {
   width: 24px;
   height: 24px;
   position: fixed;
@@ -468,9 +473,11 @@ textarea#persistent-notes {
   cursor: pointer;
 }
 
-#note-modal.show {
+.note-modal.show {
   opacity: 100%;
   pointer-events: all;
+  display: flex;
+  flex-direction: column;
 }
 
 .note-print {

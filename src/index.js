@@ -9,18 +9,6 @@ import SavedTab from "./domControl/SavedTab.mjs";
 
 dataManager;
 
-let expandNote = document.querySelector("#expand-modal");
-expandNote.addEventListener("click", toggleModal);
-
-let closeNote = document.querySelector("#close-modal");
-closeNote.addEventListener("click", toggleModal);
-
-function toggleModal() {
-  const modalDiv = document.querySelector("#note-modal");
-  const backdrop = document.querySelector(".backdrop");
-  modalDiv.classList.toggle("show");
-  backdrop.classList.toggle("show");
-}
 let formData = getStoredData();
 let note = formData.forms[0];
 let noteTitle = Object.keys(note)[0];

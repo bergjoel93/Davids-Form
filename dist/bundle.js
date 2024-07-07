@@ -412,7 +412,105 @@ textarea#persistent-notes {
   background-color: var(--primaryColor);
   z-index: 2;
   display: none;
-}`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"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","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap\");\n\n:root {\n  --backgroundColor: #475569;\n  --primaryColor: #334155;\n  --secondaryColor: #4682b4;\n  --textBackground: #94a3b8;\n  --hoverColor: #4682b4;\n  --hoverTextColor: #334155;\n}\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  font-family: \"Roboto\", sans-serif;\n}\n\nhtml,\nbody {\n  height: 100%;\n  margin: 0;\n}\n\nbody {\n  display: flex;\n  flex-direction: column;\n  background-color: var(--backgroundColor);\n}\n\nmain,\nform {\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--backgroundColor);\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n\n.main-container {\n  display: flex;\n  justify-content: center;\n}\n\n.main-form-container {\n  margin: 12px;\n}\n\n.main-container {\n  margin: 16px;\n}\n\ninput {\n  background-color: var(--textBackground);\n  border-style: none;\n  border-radius: 8px;\n}\n\ninput[type=\"text\"],\noption {\n  width: 200px;\n  height: 20px;\n  padding: 5px;\n}\n\nsection {\n  border-bottom: solid black 1px;\n  margin-bottom: 6px;\n  padding-bottom: 10px;\n}\n\n/* Header */\nheader {\n  height: 40px;\n  display: flex;\n  width: 100%;\n  background-color: var(--primaryColor);\n}\n\n.nav-form,\n.nav-saved {\n  flex: 1; /* Distribute the space evenly */\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 10px;\n  cursor: pointer;\n}\n\n/* Specific styles for each tab */\n.nav-form {\n  background-color: var(--backgroundColor);\n  border-radius: 8px 8px 0px 0px;\n}\n\n.nav-saved {\n  background-color: var(--primaryColor);\n}\n\n/* Optional: Add hover effects for better user experience */\n.nav-form:hover,\n.nav-saved:hover {\n  background-color: var(\n    --hoverColor\n  ); /* Define a hover color in your variables */\n  color: var(--hoverTextColor); /* Optional: Change text color on hover */\n}\n\n/* Section 1 */\n.section-1 {\n  display: grid;\n  grid-template-columns: auto 1fr;\n  gap: 10px; /* Adjust the gap between labels and inputs as needed */\n  align-items: center; /* Center align labels and inputs vertically */\n  padding: 8px;\n}\n\n.section-1 label {\n  justify-self: end; /* Align labels to the right */\n}\n\n/* Section 2 */\n\n.section-2 {\n  display: grid;\n  grid-template-columns: 1fr;\n  gap: 10px; /* Adjust the gap as needed */\n  padding: 8px;\n}\n\n.checkbox-container-title {\n  font-weight: bold;\n}\n\n.checkboxes {\n  display: grid;\n  grid-template-columns: repeat(4, auto 1fr);\n  gap: 10px; /* Adjust the gap between labels and checkboxes as needed */\n  align-items: center; /* Center align labels and checkboxes vertically */\n}\n\n.checkbox {\n  display: contents; /* Use contents to make the children directly in the grid */\n}\n\n.checkbox label {\n  justify-self: end; /* Align labels to the right */\n}\n\n.checkbox input[type=\"checkbox\"] {\n  width: 20px; /* Set the desired width of checkbox */\n  height: 20px; /* Set the desired height of checkbox */\n  margin: 0; /* Remove default margin */\n  cursor: pointer;\n}\n\n/* Section 3 */\n\n.section-3 {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  gap: 10px; /* Adjust the gap between elements as needed */\n  align-items: center;\n  max-width: 600px; /* Adjust the width as needed */\n  margin: auto; /* Center the section */\n}\n\n.radio-container {\n  text-align: center;\n}\n\n.text-box,\n.radio-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.text-box label,\n.radio-title {\n  margin-bottom: 5px;\n}\n\n.text-box input {\n  width: 100%;\n  box-sizing: border-box;\n}\n\n.radios {\n  display: flex;\n  justify-content: space-around;\n}\n\n.radio {\n  display: flex;\n  align-items: center;\n}\n\n.radio input[type=\"radio\"] {\n  width: auto;\n  margin-right: 5px;\n  cursor: pointer;\n  margin: 4px;\n}\n\n/* Notes Container */\n\n.notes-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 4px;\n  padding: 8px;\n}\n\n.notes {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--textBackground);\n  border-radius: 8px;\n}\n\ntextarea {\n  height: 90%;\n  margin: 6px;\n  color: black;\n  border-style: none;\n  background-color: transparent;\n  padding: 6px;\n}\n\ntextarea:focus {\n  border-style: none;\n  outline: none;\n}\n\n/* Second Container */\n\n.second-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 80%;\n  border: solid black 1px;\n  border-radius: 8px;\n  height: auto;\n}\n\n.add-transaction {\n  padding: 6px;\n  text-align: center;\n}\n\n.add-transaction-button {\n  cursor: pointer;\n  transition: transform 0.3s ease-in-out;\n  border-style: none;\n  background-color: transparent;\n  font-size: 1.1rem;\n  font-weight: 250;\n}\n\n.add-transaction-button:hover {\n  transform: scale(1.2);\n}\n\n.buttons-container {\n  display: flex;\n  justify-content: space-evenly;\n  gap: 12px;\n  margin: 16px;\n}\n\n.buttons-container button {\n  padding: 8px;\n  background-color: var(--secondaryColor);\n  border-style: none;\n  border-radius: 8px;\n  cursor: pointer;\n}\n\n/* Transaction Forms */\n\n#transaction-container {\n  display: flex;\n  flex-wrap: wrap;\n}\n.transaction-card {\n  background-color: var(--secondaryColor);\n  padding: 10px;\n  margin: 8px;\n  border-radius: 8px;\n  position: relative;\n}\n\n.close-card {\n  position: absolute;\n  top: 0;\n  right: 0;\n  background: none;\n  border: none;\n  font-size: 1.2rem;\n  cursor: pointer;\n  margin: 6px;\n  transition: transform 1s ease-in;\n}\n\n.close-card:hover {\n  transform: scale(1.5);\n}\n\n.transaction-card h3 {\n  border-bottom: solid black 1px;\n  padding: 4px;\n  margin-bottom: 6px;\n}\n\n.option-container {\n  display: grid;\n  grid-template-columns: auto 1fr;\n  gap: 10px;\n  align-items: center;\n  padding: 8px;\n}\n\n/* Footer  */\n\nfooter {\n  position: sticky;\n  width: 100%;\n  padding: 10px;\n  background-color: var(--primaryColor);\n  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  bottom: 0;\n}\n\n.persistent-note {\n  width: 60%;\n}\n\ntextarea#persistent-notes {\n  width: 100%;\n}\n\n.important-buttons {\n  display: flex;\n  flex-direction: column;\n  margin: 8px;\n}\n\n#save-persistent-button,\n#reset-persistent-button {\n  padding: 8px;\n  background-color: var(--textBackground);\n  cursor: pointer;\n  margin: 6px;\n  border-style: none;\n  border-radius: 6px;\n}\n\n/* Submit Button */\n.submit-reset-buttons {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  margin: 1rem;\n  gap: 16px;\n}\n\n#submit-button,\n#reset-button {\n  background-color: var(--secondaryColor);\n  cursor: pointer;\n  font-size: 2rem;\n  border-style: none;\n  border-radius: 8px;\n  padding: 8px;\n}\n\n#submit-button:hover,\n#reset-button:hover {\n  background-color: var(--primaryColor);\n  color: var(--hoverColor);\n}\n\n/* Overlay */\n#overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: var(--primaryColor);\n  z-index: 2;\n  display: none;\n}\n"],"sourceRoot":""}]);
+}
+
+#overlay .header {
+  display: flex;
+  width: 100%;
+}
+
+#overlay-notes-container {
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#overlay-notes-container ul {
+  padding-left: 24px;
+  margin: 0;
+}
+
+#overlay-notes-container ul li {
+  margin-bottom: 16px; /* Space between list items */
+  list-style-type: disc;
+}
+
+.overlay-note {
+  display: flex;
+  flex-direction: column;
+}
+
+.note-title {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.expand-modal-btn {
+  padding: 5px;
+  font-size: 1rem;
+  background-color: var(--textBackground);
+  border-radius: 8px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.note-modal {
+  width: 80%;
+  height: 80%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  margin: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  display: none;
+  background-color: var(--textBackground);
+  opacity: 0;
+}
+
+.close-modal-btn {
+  width: 24px;
+  height: 24px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 8px;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border-style: none;
+  cursor: pointer;
+}
+
+.note-modal.show {
+  opacity: 100%;
+  pointer-events: all;
+  display: flex;
+  flex-direction: column;
+}
+
+.note-print {
+  padding: 12px;
+  width: 100%;
+}
+
+.backdrop {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background: #000;
+  opacity: 0%;
+}
+
+.backdrop.show {
+  opacity: 30%;
+}`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"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","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap\");\n\n:root {\n  --backgroundColor: #475569;\n  --primaryColor: #334155;\n  --secondaryColor: #4682b4;\n  --textBackground: #94a3b8;\n  --hoverColor: #4682b4;\n  --hoverTextColor: #334155;\n}\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  font-family: \"Roboto\", sans-serif;\n}\n\nhtml,\nbody {\n  height: 100%;\n  margin: 0;\n}\n\nbody {\n  display: flex;\n  flex-direction: column;\n  background-color: var(--backgroundColor);\n}\n\nmain,\nform {\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--backgroundColor);\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n\n.main-container {\n  display: flex;\n  justify-content: center;\n}\n\n.main-form-container {\n  margin: 12px;\n}\n\n.main-container {\n  margin: 16px;\n}\n\ninput {\n  background-color: var(--textBackground);\n  border-style: none;\n  border-radius: 8px;\n}\n\ninput[type=\"text\"],\noption {\n  width: 200px;\n  height: 20px;\n  padding: 5px;\n}\n\nsection {\n  border-bottom: solid black 1px;\n  margin-bottom: 6px;\n  padding-bottom: 10px;\n}\n\n/* Header */\nheader {\n  height: 40px;\n  display: flex;\n  width: 100%;\n  background-color: var(--primaryColor);\n}\n\n.nav-form,\n.nav-saved {\n  flex: 1; /* Distribute the space evenly */\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 10px;\n  cursor: pointer;\n}\n\n/* Specific styles for each tab */\n.nav-form {\n  background-color: var(--backgroundColor);\n  border-radius: 8px 8px 0px 0px;\n}\n\n.nav-saved {\n  background-color: var(--primaryColor);\n}\n\n/* Optional: Add hover effects for better user experience */\n.nav-form:hover,\n.nav-saved:hover {\n  background-color: var(\n    --hoverColor\n  ); /* Define a hover color in your variables */\n  color: var(--hoverTextColor); /* Optional: Change text color on hover */\n}\n\n/* Section 1 */\n.section-1 {\n  display: grid;\n  grid-template-columns: auto 1fr;\n  gap: 10px; /* Adjust the gap between labels and inputs as needed */\n  align-items: center; /* Center align labels and inputs vertically */\n  padding: 8px;\n}\n\n.section-1 label {\n  justify-self: end; /* Align labels to the right */\n}\n\n/* Section 2 */\n\n.section-2 {\n  display: grid;\n  grid-template-columns: 1fr;\n  gap: 10px; /* Adjust the gap as needed */\n  padding: 8px;\n}\n\n.checkbox-container-title {\n  font-weight: bold;\n}\n\n.checkboxes {\n  display: grid;\n  grid-template-columns: repeat(4, auto 1fr);\n  gap: 10px; /* Adjust the gap between labels and checkboxes as needed */\n  align-items: center; /* Center align labels and checkboxes vertically */\n}\n\n.checkbox {\n  display: contents; /* Use contents to make the children directly in the grid */\n}\n\n.checkbox label {\n  justify-self: end; /* Align labels to the right */\n}\n\n.checkbox input[type=\"checkbox\"] {\n  width: 20px; /* Set the desired width of checkbox */\n  height: 20px; /* Set the desired height of checkbox */\n  margin: 0; /* Remove default margin */\n  cursor: pointer;\n}\n\n/* Section 3 */\n\n.section-3 {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  gap: 10px; /* Adjust the gap between elements as needed */\n  align-items: center;\n  max-width: 600px; /* Adjust the width as needed */\n  margin: auto; /* Center the section */\n}\n\n.radio-container {\n  text-align: center;\n}\n\n.text-box,\n.radio-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.text-box label,\n.radio-title {\n  margin-bottom: 5px;\n}\n\n.text-box input {\n  width: 100%;\n  box-sizing: border-box;\n}\n\n.radios {\n  display: flex;\n  justify-content: space-around;\n}\n\n.radio {\n  display: flex;\n  align-items: center;\n}\n\n.radio input[type=\"radio\"] {\n  width: auto;\n  margin-right: 5px;\n  cursor: pointer;\n  margin: 4px;\n}\n\n/* Notes Container */\n\n.notes-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 4px;\n  padding: 8px;\n}\n\n.notes {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--textBackground);\n  border-radius: 8px;\n}\n\ntextarea {\n  height: 90%;\n  margin: 6px;\n  color: black;\n  border-style: none;\n  background-color: transparent;\n  padding: 6px;\n}\n\ntextarea:focus {\n  border-style: none;\n  outline: none;\n}\n\n/* Second Container */\n\n.second-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 80%;\n  border: solid black 1px;\n  border-radius: 8px;\n  height: auto;\n}\n\n.add-transaction {\n  padding: 6px;\n  text-align: center;\n}\n\n.add-transaction-button {\n  cursor: pointer;\n  transition: transform 0.3s ease-in-out;\n  border-style: none;\n  background-color: transparent;\n  font-size: 1.1rem;\n  font-weight: 250;\n}\n\n.add-transaction-button:hover {\n  transform: scale(1.2);\n}\n\n.buttons-container {\n  display: flex;\n  justify-content: space-evenly;\n  gap: 12px;\n  margin: 16px;\n}\n\n.buttons-container button {\n  padding: 8px;\n  background-color: var(--secondaryColor);\n  border-style: none;\n  border-radius: 8px;\n  cursor: pointer;\n}\n\n/* Transaction Forms */\n\n#transaction-container {\n  display: flex;\n  flex-wrap: wrap;\n}\n.transaction-card {\n  background-color: var(--secondaryColor);\n  padding: 10px;\n  margin: 8px;\n  border-radius: 8px;\n  position: relative;\n}\n\n.close-card {\n  position: absolute;\n  top: 0;\n  right: 0;\n  background: none;\n  border: none;\n  font-size: 1.2rem;\n  cursor: pointer;\n  margin: 6px;\n  transition: transform 1s ease-in;\n}\n\n.close-card:hover {\n  transform: scale(1.5);\n}\n\n.transaction-card h3 {\n  border-bottom: solid black 1px;\n  padding: 4px;\n  margin-bottom: 6px;\n}\n\n.option-container {\n  display: grid;\n  grid-template-columns: auto 1fr;\n  gap: 10px;\n  align-items: center;\n  padding: 8px;\n}\n\n/* Footer  */\n\nfooter {\n  position: sticky;\n  width: 100%;\n  padding: 10px;\n  background-color: var(--primaryColor);\n  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  bottom: 0;\n}\n\n.persistent-note {\n  width: 60%;\n}\n\ntextarea#persistent-notes {\n  width: 100%;\n}\n\n.important-buttons {\n  display: flex;\n  flex-direction: column;\n  margin: 8px;\n}\n\n#save-persistent-button,\n#reset-persistent-button {\n  padding: 8px;\n  background-color: var(--textBackground);\n  cursor: pointer;\n  margin: 6px;\n  border-style: none;\n  border-radius: 6px;\n}\n\n/* Submit Button */\n.submit-reset-buttons {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  margin: 1rem;\n  gap: 16px;\n}\n\n#submit-button,\n#reset-button {\n  background-color: var(--secondaryColor);\n  cursor: pointer;\n  font-size: 2rem;\n  border-style: none;\n  border-radius: 8px;\n  padding: 8px;\n}\n\n#submit-button:hover,\n#reset-button:hover {\n  background-color: var(--primaryColor);\n  color: var(--hoverColor);\n}\n\n/* Overlay */\n#overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: var(--primaryColor);\n  z-index: 2;\n  display: none;\n}\n\n#overlay .header {\n  display: flex;\n  width: 100%;\n}\n\n#overlay-notes-container {\n  width: 100%;\n  height: 100%;\n  padding: 24px;\n  font-size: 1.3rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n#overlay-notes-container ul {\n  padding-left: 24px;\n  margin: 0;\n}\n\n#overlay-notes-container ul li {\n  margin-bottom: 16px; /* Space between list items */\n  list-style-type: disc;\n}\n\n.overlay-note {\n  display: flex;\n  flex-direction: column;\n}\n\n.note-title {\n  display: flex;\n  gap: 12px;\n  align-items: center;\n}\n\n.expand-modal-btn {\n  padding: 5px;\n  font-size: 1rem;\n  background-color: var(--textBackground);\n  border-radius: 8px;\n  border-style: none;\n  cursor: pointer;\n}\n\n.note-modal {\n  width: 80%;\n  height: 80%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  transform-origin: center;\n  transform: translate(-50%, -50%);\n  margin: 12px;\n  padding: 12px;\n  border-radius: 8px;\n  display: none;\n  background-color: var(--textBackground);\n  opacity: 0;\n}\n\n.close-modal-btn {\n  width: 24px;\n  height: 24px;\n  position: fixed;\n  top: 0;\n  right: 0;\n  margin: 8px;\n  font-size: 1.5rem;\n  background-color: transparent;\n  border-style: none;\n  cursor: pointer;\n}\n\n.note-modal.show {\n  opacity: 100%;\n  pointer-events: all;\n  display: flex;\n  flex-direction: column;\n}\n\n.note-print {\n  padding: 12px;\n  width: 100%;\n}\n\n.backdrop {\n  pointer-events: none;\n  position: fixed;\n  inset: 0;\n  background: #000;\n  opacity: 0%;\n}\n\n.backdrop.show {\n  opacity: 30%;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4488,7 +4586,7 @@ function toDate(argument) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ AddTransaction)
+/* harmony export */   addTransactions: () => (/* binding */ addTransactions)
 /* harmony export */ });
 /* harmony import */ var _forms_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./forms.mjs */ "./src/domControl/forms.mjs");
 /* harmony import */ var _DataManager_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DataManager.mjs */ "./src/domControl/DataManager.mjs");
@@ -4513,8 +4611,25 @@ class AddTransaction {
     };
   }
 
+  resetTransactions() {
+    this.options = {};
+    this.options = {
+      "Moving-Money": { count: 0 },
+      "Mutual-Fund-Trade": { count: 0 },
+      "Equity-Trade": { count: 0 },
+      "Options-Trade": { count: 0 },
+      "Managed-Accounts": { count: 0 },
+      Other: { count: 0 },
+    };
+
+    const transactionContainer = document.querySelector(
+      "#transaction-container"
+    );
+    transactionContainer.innerHTML = "";
+  }
+
   // make handlers for the form page
-  generateAddTransactionButtons() {
+  handleTransactions() {
     // select add-transaction button
     const addTransaction = document.querySelector(
       "button.add-transaction-button"
@@ -4564,6 +4679,7 @@ class AddTransaction {
         }
         // initialize empty object that will be the new transaction object that will later be added to dataManager.data.Transactions.push(newTransactionObject);
         const newTransactionObjectName = `${choice}-${count}`;
+        console.log(newTransactionObjectName);
         // add the newTransactionObject to Transactions
         _DataManager_mjs__WEBPACK_IMPORTED_MODULE_1__.dataManager.addTransaction(newTransactionObjectName);
         // Selects all the text inputs.
@@ -4661,6 +4777,9 @@ class AddTransaction {
   }
 }
 
+let addTransactions = new AddTransaction();
+
+
 // generate a new object with a unique id and update it as the form is being filled out.
 // const newTransaction = this.createTransactionObject(
 //   choice,
@@ -4690,8 +4809,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   dataManager: () => (/* binding */ dataManager)
 /* harmony export */ });
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/format.mjs");
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/format.mjs");
 /* harmony import */ var _Save_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Save.mjs */ "./src/domControl/Save.mjs");
+/* harmony import */ var _AddTransaction_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AddTransaction.mjs */ "./src/domControl/AddTransaction.mjs");
+
 
 
 /**
@@ -4718,6 +4839,8 @@ class DataManager {
       Transactions: {},
     };
     this.transactionCount = 0;
+    this.addTransactions = _AddTransaction_mjs__WEBPACK_IMPORTED_MODULE_1__.addTransactions;
+    this.addTransactions.handleTransactions();
   }
 
   decrementTransactionCount() {
@@ -4817,16 +4940,24 @@ class DataManager {
     saveBtn.addEventListener("click", () => {
       console.log(this.data);
       // save the data object to local storage.
-      (0,_Save_mjs__WEBPACK_IMPORTED_MODULE_0__.saveToLocal)(this.generateDataId(), this.data);
+      // TODO
+      (0,_Save_mjs__WEBPACK_IMPORTED_MODULE_0__.addFormToStorage)(this.data);
     });
 
-    const savedTab = document.querySelector(".nav-saved");
+    const savedTab = document.querySelector("#to-saved");
     savedTab.addEventListener("click", () => {
       // render the saved data and then add it as an overlay on top of window.
-      const savedContainer = (0,_Save_mjs__WEBPACK_IMPORTED_MODULE_0__.renderSaved)();
+      // TODO
+      //   const savedContainer = renderSaved();
       const savedPage = document.querySelector("#overlay");
       savedPage.style.display = "block";
-      savedPage.appendChild(savedContainer);
+      //   savedPage.appendChild(savedContainer);
+    });
+
+    const formTab = document.querySelector("#to-form");
+    formTab.addEventListener("click", () => {
+      const savedPage = document.querySelector("#overlay");
+      savedPage.style.display = "none";
     });
   }
 
@@ -4854,6 +4985,7 @@ class DataManager {
   resetForm() {
     this.data = {};
     this.data = {
+      Date: this.formatDate(new Date()),
       "Cosmo-Whisper": null,
       "Client-Name": null,
       "Additional-Callers": null,
@@ -4865,6 +4997,7 @@ class DataManager {
       COTM: null,
       Notes: null,
       "SF-Notes": null,
+      Transactions: {},
     };
     // Clear all text input fields
     document.querySelectorAll('input[type="text"]').forEach((input) => {
@@ -4885,7 +5018,11 @@ class DataManager {
       textarea.value = "";
     });
     console.log("Form and data object have been reset");
+
+    // reset the transaction stuff and clear forms.
+    this.addTransactions.resetTransactions();
   }
+
   // Method to format the date
   formatDate(date) {
     // Create suffixes for day
@@ -4904,10 +5041,10 @@ class DataManager {
     };
 
     // Format parts of the date
-    const month = (0,date_fns__WEBPACK_IMPORTED_MODULE_1__.format)(date, "MMM");
-    const day = getDayWithSuffix((0,date_fns__WEBPACK_IMPORTED_MODULE_1__.format)(date, "d"));
-    const year = (0,date_fns__WEBPACK_IMPORTED_MODULE_1__.format)(date, "yyyy");
-    const time = (0,date_fns__WEBPACK_IMPORTED_MODULE_1__.format)(date, "h:mmaaa").toUpperCase();
+    const month = (0,date_fns__WEBPACK_IMPORTED_MODULE_2__.format)(date, "MMM");
+    const day = getDayWithSuffix((0,date_fns__WEBPACK_IMPORTED_MODULE_2__.format)(date, "d"));
+    const year = (0,date_fns__WEBPACK_IMPORTED_MODULE_2__.format)(date, "yyyy");
+    const time = (0,date_fns__WEBPACK_IMPORTED_MODULE_2__.format)(date, "h:mmaaa").toUpperCase();
 
     // Combine parts into desired format
     return `${month} ${day} ${year} - ${time}`;
@@ -4928,101 +5065,194 @@ let dataManager = new DataManager();
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   deleteFromLocal: () => (/* binding */ deleteFromLocal),
-/* harmony export */   renderSaved: () => (/* binding */ renderSaved),
-/* harmony export */   saveToLocal: () => (/* binding */ saveToLocal)
+/* harmony export */   addFormToStorage: () => (/* binding */ addFormToStorage),
+/* harmony export */   formatNoteObject: () => (/* binding */ formatNoteObject),
+/* harmony export */   getStoredData: () => (/* binding */ getStoredData)
 /* harmony export */ });
-function renderSaved() {
-  const savedContainer = document.createElement("div");
-  savedContainer.className = "saved-container";
+/**
+ * 1. Retrieve the current data from local storage
+ * 2. parse the tretrieved data into a JS object.
+ * 3. Generate a new objec with a unique ID
+ * 4. Add the new object to the array.
+ * 5. Save the updated array back to local storage.
+ */
 
-  const objectsArray = getAllObjectsFromLocalStorage();
-
-  objectsArray.forEach((obj) => {
-    const card = document.createElement("div");
-    card.className = "card";
-
-    const title = document.createElement("h3");
-    title.textContent = `Client Name: ${obj["Client-Name"]} - Date: ${obj["Date"]}`;
-    card.appendChild(title);
-
-    const textArea = document.createElement("textarea");
-    textArea.readOnly = true;
-    textArea.value = JSON.stringify(obj, null, 2); // Pretty print the JSON object
-    card.appendChild(textArea);
-
-    savedContainer.appendChild(card);
-  });
-
-  document.body.appendChild(savedContainer);
-  return savedContainer;
+/**
+ * Returns an object called 'forms' that contains all of the saved form data as an array of objects.
+ */
+function getStoredData() {
+  let storedData = localStorage.getItem("F-Form-Gandy");
+  if (storedData) {
+    return JSON.parse(storedData);
+  } else {
+    return { forms: [] }; // Initialize an empty array if no data is found.
+  }
 }
 
-function getAllObjectsFromLocalStorage() {
-  const objectsArray = [];
+/**
+ * Returns a new Id that will be the length of the array.
+ */
+function generateUniqueID(forms) {
+  return forms.length;
+}
 
-  // Iterate over all keys in local storage
-  for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i);
-    const value = localStorage.getItem(key);
-    try {
-      const parsedValue = JSON.parse(value);
-      // Check if the value is an object (and not null)
-      if (parsedValue && typeof parsedValue === "object") {
-        objectsArray.push(parsedValue);
+function addFormToStorage(newFormData) {
+  let storedData = getStoredData();
+  let newID = generateUniqueID(storedData.forms);
+  let newFormObject = {};
+  newFormObject[`Note-${newID}`] = newFormData;
+  storedData.forms.push(newFormObject);
+  // save the updated array back to local storage
+  localStorage.setItem("F-Form-Gandy", JSON.stringify(storedData));
+}
+
+function formatNoteObject(noteObject) {
+  let formattedString = "";
+
+  for (let noteKey in noteObject) {
+    if (noteObject.hasOwnProperty(noteKey)) {
+      let note = noteObject[noteKey];
+      formattedString += `${noteKey}\n---------------\n`;
+
+      for (let key in note) {
+        if (note.hasOwnProperty(key)) {
+          if (key === "Verification") {
+            formattedString += `${key}: ${note[key].join(", ")}\n`;
+          } else if (key === "Transactions") {
+            formattedString += "Transactions\n----------------\n";
+            for (let transactionKey in note[key]) {
+              if (note[key].hasOwnProperty(transactionKey)) {
+                let transaction = note[key][transactionKey];
+                formattedString += `* ${transactionKey}:\n`;
+                for (let tKey in transaction) {
+                  if (transaction.hasOwnProperty(tKey)) {
+                    formattedString += `       ${tKey}: ${transaction[tKey]}\n`;
+                  }
+                }
+                formattedString += "\n";
+              }
+            }
+          } else {
+            formattedString += `${key}: ${
+              note[key] !== null ? note[key] : ""
+            }\n`;
+          }
+        }
       }
-    } catch (e) {
-      // Handle JSON parsing error, if any
-      console.error(`Error parsing value for key "${key}":`, e);
+
+      formattedString += "\n";
     }
   }
 
-  return objectsArray;
+  return formattedString;
 }
 
-function printObject(obj, indent = 0) {
-  let result = "";
-  const padding = " ".repeat(indent);
 
-  if (typeof obj !== "object" || obj === null) {
-    result += `${padding}${obj}\n`;
-    return result;
+
+
+/***/ }),
+
+/***/ "./src/domControl/SavedTab.mjs":
+/*!*************************************!*\
+  !*** ./src/domControl/SavedTab.mjs ***!
+  \*************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ SavedTab)
+/* harmony export */ });
+/* harmony import */ var _Save_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Save.mjs */ "./src/domControl/Save.mjs");
+
+/**
+ * This module is responsible for populating the saved tab.
+ */
+
+class SavedTab {
+  constructor() {
+    this.formsData = (0,_Save_mjs__WEBPACK_IMPORTED_MODULE_0__.getStoredData)();
   }
 
-  if (Array.isArray(obj)) {
-    result += `${padding}[\n`;
-    obj.forEach((item) => {
-      result += printObject(item, indent + 2);
+  renderList() {
+    console.log("Test");
+    // loop through the forms to get every object inside.
+    for (let i = this.formsData.forms.length - 1; i >= 0; i--) {
+      let note = this.formsData.forms[i];
+      let noteTitle = Object.keys(note)[0];
+      let date = note[noteTitle].Date;
+      let name = note[noteTitle]["Client-Name"];
+      let printPretty = (0,_Save_mjs__WEBPACK_IMPORTED_MODULE_0__.formatNoteObject)(note);
+      let title = noteTitle + " " + date + " " + name;
+      //console.log(title);
+
+      let ulElement = document.querySelector("ul.append-note");
+
+      let liElement = document.createElement("li");
+      liElement.innerHTML = `
+            <div class="overlay-note" >
+              <div class="note-title">
+              <div>${title}</div>
+                <button id="expand-modal-${noteTitle}" class = "expand-modal-btn">Show</button>
+              </div>
+              <div id="${noteTitle}" class="note-modal">
+                <button id="close-modal-${noteTitle}" class = "close-modal-btn">x</button>
+                <label for="text-area-${noteTitle}"></label>
+                <textarea
+                  class="note-print"
+                  id="text-area-${noteTitle}"
+                  wrap="hard"
+                >${printPretty}
+                </textarea>
+              </div>
+            </div>
+      `;
+      //console.log(liElement);
+      ulElement.appendChild(liElement);
+      // add event handlers
+      // first select the note modal
+      const modal = document.querySelector(`#${noteTitle}`);
+      // select the button and add event listener.
+      const expandBtn = document.querySelector(`#expand-modal-${noteTitle}`);
+      // add event handler
+      expandBtn.addEventListener("click", () => {
+        // toggle the modal to have show.
+        modal.classList.toggle("show");
+        document.querySelector(".backdrop").classList.toggle("show");
+      });
+      // add close button
+      const closeBtn = document.querySelector(`#close-modal-${noteTitle}`);
+      closeBtn.addEventListener("click", () => {
+        console.log("close btn pressed");
+        modal.classList.toggle("show");
+        document.querySelector(".backdrop").classList.toggle("show");
+      });
+    }
+  }
+
+  addModalHandlers(id) {
+    let expandBtns = document.querySelectorAll("#expand-modal");
+    expandBtns.forEach((btn) => {
+      btn.addEventListener("click", (event) => {
+        // we want to select the closest
+        const modalDiv = document.modalDiv.classList.toggle("show");
+        // add the event listener to close the modal.
+        let closeNote = document.querySelector("#close-modal");
+        closeNote.addEventListener("click", this.toggleModal);
+      });
     });
-    result += `${padding}]\n`;
-    return result;
   }
 
-  result += `${padding}{\n`;
-  for (let key in obj) {
-    if (obj.hasOwnProperty(key)) {
-      result += `${padding}  "${key}": `;
-      result += printObject(obj[key], indent + 2);
-    }
+  toggleModal() {
+    const modalDiv = document.querySelector("#note-modal");
+    const backdrop = document.querySelector(".backdrop");
+    modalDiv.classList.toggle("show");
+    backdrop.classList.toggle("show");
   }
-  result += `${padding}}\n`;
-  return result;
 }
 
-function saveToLocal(key, object) {
-  // Convert the object to a JSON string
-  const jsonString = JSON.stringify(object);
-  // Save the JSON string to local storage
-  localStorage.setItem(key, jsonString);
-  console.log("Save to local storage");
-}
-
-function deleteFromLocal(key) {
-  // Remove the item from local storage
-  localStorage.removeItem(key);
-}
-
-
+/**
+ * We get the stored forms. Now we need to generate the list items with all of the information inside.
+ */
 
 
 /***/ }),
@@ -5577,14 +5807,25 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
-/* harmony import */ var _domControl_AddTransaction_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./domControl/AddTransaction.mjs */ "./src/domControl/AddTransaction.mjs");
+/* harmony import */ var _domControl_Save_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./domControl/Save.mjs */ "./src/domControl/Save.mjs");
 /* harmony import */ var _domControl_DataManager_mjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./domControl/DataManager.mjs */ "./src/domControl/DataManager.mjs");
+/* harmony import */ var _domControl_SavedTab_mjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./domControl/SavedTab.mjs */ "./src/domControl/SavedTab.mjs");
 
 
 
-const handle = new _domControl_AddTransaction_mjs__WEBPACK_IMPORTED_MODULE_1__["default"]();
-handle.generateAddTransactionButtons();
+
 _domControl_DataManager_mjs__WEBPACK_IMPORTED_MODULE_2__.dataManager;
+let formData = (0,_domControl_Save_mjs__WEBPACK_IMPORTED_MODULE_1__.getStoredData)();
+let note = formData.forms[0];
+let noteTitle = Object.keys(note)[0];
+let date = note[noteTitle].Date;
+let name = note[noteTitle]["Client-Name"];
+console.log(note);
+let title = noteTitle + " " + date + " " + name;
+console.log(title);
+let printPretty = (0,_domControl_Save_mjs__WEBPACK_IMPORTED_MODULE_1__.formatNoteObject)(note);
+let savedTab = new _domControl_SavedTab_mjs__WEBPACK_IMPORTED_MODULE_3__["default"]();
+savedTab.renderList();
 
 /**
  * Create event handlers on the main-form-container only. Including the Notes.
