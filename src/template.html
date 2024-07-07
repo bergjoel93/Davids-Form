@@ -38,6 +38,7 @@
               id="client-name"
               name="client-name"
               data="add-to-notes"
+              data-label="Caller: "
             />
 
             <label for="additional-callers" name="additional-callers"
@@ -47,10 +48,16 @@
               type="text"
               id="additional-callers"
               name="additional-callers"
+              data-label="Additional Callers: "
             />
 
             <label for="internal-FC" name="internal-FC">Internal/FC:</label>
-            <input type="text" id="internal-FC" name="internal-FC" />
+            <input
+              type="text"
+              id="internal-FC"
+              name="internal-FC"
+              data-label="Internal/FC: "
+            />
           </section>
 
           <section class="section-2">
@@ -58,42 +65,77 @@
             <div class="checkboxes">
               <div class="checkbox">
                 <label for="MVV" name="MVV">MVV:</label>
-                <input type="checkbox" id="MVV" name="MVV" />
+                <input
+                  type="checkbox"
+                  id="MVV"
+                  name="MVV"
+                  data-label="MyVoice Verified: "
+                />
               </div>
 
               <div class="checkbox">
                 <label for="OBV" name="OBV">OBV:</label>
-                <input type="checkbox" id="OBV" name="OBV" />
+                <input
+                  type="checkbox"
+                  id="OBV"
+                  name="OBV"
+                  data-label="Outbound Verified: "
+                />
               </div>
 
               <div class="checkbox">
                 <label for="ManV" name="ManV">ManV:</label>
-                <input type="checkbox" id="ManV" name="ManV" />
+                <input
+                  type="checkbox"
+                  id="ManV"
+                  name="ManV"
+                  data-label="Manual-Verified: "
+                />
               </div>
 
               <div class="checkbox">
                 <label for="EMV" name="EMV">EMV:</label>
-                <input type="checkbox" id="EMV" name="EMV" />
+                <input
+                  type="checkbox"
+                  id="EMV"
+                  name="EMV"
+                  data-label="Enrolled MyVoice: "
+                />
               </div>
 
               <div class="checkbox">
                 <label for="OTPV" name="OTPV">OTPV:</label>
-                <input type="checkbox" id="OTPV" name="OTPV" />
+                <input
+                  type="checkbox"
+                  id="OTPV"
+                  name="OTPV"
+                  data-label="OTP Verified: "
+                />
               </div>
 
               <div class="checkbox">
                 <label for="GC" name="GC">GC:</label>
-                <input type="checkbox" id="GC" name="GC" />
+                <input
+                  type="checkbox"
+                  id="GC"
+                  name="GC"
+                  data-label="Green Checkmark: "
+                />
               </div>
 
               <div class="checkbox">
                 <label for="HRT" name="HRT">HRT:</label>
-                <input type="checkbox" id="HRT" name="HRT" />
+                <input
+                  type="checkbox"
+                  id="HRT"
+                  name="HRT"
+                  data-label="HRT Verefied: "
+                />
               </div>
 
               <div class="checkbox">
                 <label for="UCN" name="UCN">UCN:</label>
-                <input type="checkbox" id="UCN" name="UCN" />
+                <input type="checkbox" id="UCN" name="UCN" data-label="" />
               </div>
             </div>
           </section>
@@ -138,39 +180,35 @@
               <input type="text" id="COTM" name="COTM" />
             </div>
           </section>
-        </div>
-
-        <div class="notes-container">
-          <div class="notes">
-            <label for="notes">Notes</label>
-            <textarea name="notes" id="notes" placeholder="Notes..."></textarea>
+          <div class="notes-container">
+            <div class="notes">
+              <label for="notes">Notes</label>
+              <textarea
+                name="notes"
+                id="notes"
+                placeholder="Notes..."
+              ></textarea>
+            </div>
           </div>
-          <div class="notes">
-            <label for="SF-notes">SF Notes</label>
-            <textarea
-              name="Sf-notes"
-              id="SF-notes"
-              placeholder="SF Notes"
-            ></textarea>
+          <div class="submit-reset-buttons">
+            <button id="submit-button">Save</button>
+            <button id="reset-button">Reset</button>
           </div>
         </div>
-      </div>
-      <div class="second-container">
-        <div class="add-transaction">
-          <button type="button" class="add-transaction-button">
-            + Add Transaction
-          </button>
-        </div>
-        <div class="buttons-container"></div>
-        <div id="transaction-container">
-          <!-- Inject Cards here! -->
+        <!--   -->
+        <div class="second-container">
+          <div class="add-transaction">
+            <button type="button" class="add-transaction-button">
+              + Add Transaction
+            </button>
+          </div>
+          <div class="buttons-container"></div>
+          <div id="transaction-container">
+            <!-- Inject Cards here! -->
 
-          <!-- Inject Cards here^^^ -->
+            <!-- Inject Cards here^^^ -->
+          </div>
         </div>
-      </div>
-      <div class="submit-reset-buttons">
-        <button id="submit-button">Save</button>
-        <button id="reset-button">Reset</button>
       </div>
     </main>
 

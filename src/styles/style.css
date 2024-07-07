@@ -28,28 +28,27 @@ body {
   background-color: var(--backgroundColor);
 }
 
-main,
-form {
+main {
   display: flex;
   flex: 1;
   flex-direction: column;
   align-items: center;
   background-color: var(--backgroundColor);
-  overflow-y: auto;
   overflow-x: hidden;
 }
 
 .main-container {
   display: flex;
+  flex: 1;
   justify-content: center;
+  margin: 16px;
 }
 
 .main-form-container {
   margin: 12px;
-}
-
-.main-container {
-  margin: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 input {
@@ -207,10 +206,10 @@ header {
 /* Notes Container */
 
 .notes-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4px;
   padding: 8px;
+  max-height: 350px;
+  flex: 1;
+  display: flex;
 }
 
 .notes {
@@ -219,15 +218,18 @@ header {
   align-items: center;
   background-color: var(--textBackground);
   border-radius: 8px;
+  flex: 1;
 }
 
 textarea {
-  height: 90%;
-  margin: 6px;
+  width: 100%;
+  height: 100%;
+  margin: 8px;
   color: black;
   border-style: none;
   background-color: transparent;
   padding: 6px;
+  flex: 1;
 }
 
 textarea:focus {
@@ -241,10 +243,11 @@ textarea:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
   border: solid black 1px;
   border-radius: 8px;
-  height: auto;
+  max-height: 750px;
+  width: 450px;
+  overflow-y: auto;
 }
 
 .add-transaction {
@@ -267,9 +270,10 @@ textarea:focus {
 
 .buttons-container {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
-  margin: 16px;
+  margin: 12px;
 }
 
 .buttons-container button {
@@ -284,7 +288,7 @@ textarea:focus {
 
 #transaction-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 .transaction-card {
   background-color: var(--secondaryColor);
@@ -292,6 +296,39 @@ textarea:focus {
   margin: 8px;
   border-radius: 8px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.secondary-card-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-checkbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 6px;
+}
+
+.transaction-checkbox label {
+  justify-self: end;
+}
+
+.transaction-checkbox input {
+  justify-self: start;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+.transaction-title {
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .close-card {
@@ -300,7 +337,7 @@ textarea:focus {
   right: 0;
   background: none;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
   margin: 6px;
   transition: transform 1s ease-in;
@@ -364,10 +401,11 @@ textarea#persistent-notes {
 
 /* Submit Button */
 .submit-reset-buttons {
+  justify-self: end;
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 1rem;
+  margin: 0.5rem;
   gap: 16px;
 }
 
@@ -375,7 +413,7 @@ textarea#persistent-notes {
 #reset-button {
   background-color: var(--secondaryColor);
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1rem;
   border-style: none;
   border-radius: 8px;
   padding: 8px;

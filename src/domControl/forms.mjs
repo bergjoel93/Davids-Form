@@ -1,4 +1,4 @@
-function generateCard(choice, count) {
+function generateCard(choice, count, title) {
   const card = document.createElement("div");
   card.className = "transaction-card";
   card.id = `${choice}-${count}`;
@@ -6,22 +6,22 @@ function generateCard(choice, count) {
 
   switch (choice) {
     case "Moving-Money":
-      content += injectMovingMoney();
+      content += injectMovingMoney(title);
       break;
     case "Mutual-Fund-Trade":
-      content += injectMutualFundTrade();
+      content += injectMutualFundTrade(title);
       break;
     case "Equity-Trade":
-      content += injectEquityTrade();
+      content += injectEquityTrade(title);
       break;
     case "Options-Trade":
-      content += injectOptionsTrade();
+      content += injectOptionsTrade(title);
       break;
     case "Managed-Accounts":
-      content += injectManagedAccount();
+      content += injectManagedAccount(title);
       break;
     case "Other":
-      content += injectOther();
+      content += injectOther(title);
       break;
     default:
       break;
@@ -35,62 +35,46 @@ function generateCard(choice, count) {
   return card;
 }
 
-function injectMovingMoney() {
+function injectMovingMoney(title) {
   return `    
 
             <button class="close-card">X</button>
-            <h3>Moving Money</h3>
-            <label for="accountNum2">Account #</label>
-            <input type="text" id="accountNum2" name="Account-Number" />
+            <input class = "transaction-title" data-label="Transaction" value="${title}">
 
-            <div class="radio-box">
-              <label for="alerts-and-restrictions"
-                >Alerts and Restrictions?</label
-              >
-              <div class="radios">
-                <div class="radio">
-                  <input type="radio" id="alerts-and-restrictions-yes" name = "Alerts-And-Restrictions" value="yes" />
-                  <label for="alerts-and-restrictions-yes">Yes</label>
-                </div>
-                <div class="radio">
-                  <input type="radio" id="alerts-and-restrictions-no" name = "Alerts-And-Restrictions" value="no"/>
-                  <label for="alerts-and-restrictions-no">No</label>
-                </div>
-              </div>
-            </div>
-            <div class="radio-box">
-              <label for="authorized-to-trade">Authorized to Trade?</label>
-              <div class="radios">
-                <div class="radio">
-                  <input type="radio" id="authorized-to-trade-yes" name = "Authorized-To-Trade" value="yes"/>
-                  <label for="authorized-to-trade-yes">Yes</label>
-                </div>
-                <div class="radio">
-                  <input type="radio" id="authorized-to-trade-no" name = "Authorized-To-Trade" value="no"/>
-                  <label for="authorized-to-trade-no">No</label>
-                </div>
-              </div>
-            </div>
+            <div class = "secondary-card-container">
+              <label for="accountNum2">Account #</label>
+              <input type="text" id="accountNum2" name="Account-Number" />
 
-            <div class="option-container">
-              <label for="auto-investments"
-                >Auto Investments or PWS planse?</label
-              >
-              <select id="auto-investments" name="Auto-Investments">
-                <option value="null">Select Option:</option>
-                <option value="adjusted">Adjusted</option>
-                <option value="discussed-no-changes">
-                  Discussed, no changes.
-                </option>
-                <option value="na">NA</option>
-              </select>
-              <label for="action">Action:</label>
-              <select id="action" name="Action">
-                <option value="null">Select Option:</option>
-                <option value="deposit">Deposit</option>
-                <option value="withdrawal">Withdrawal</option>
-                <option value="journal">Journal</option>
-              </select>
+              <div class="transaction-checkbox">
+                <label for="alerts-and-restrictions">Alerts and Restrictions?</label>
+                <input type="checkbox" id = "alerts-and-restrictions">
+              </div>
+  
+              <div class="transaction-checkbox">
+                <label for="authorized-to-trade">Authorized to Trade?</label>
+                <input type = "checkbox" id = "authorized-to-trade">
+              </div>
+                
+              <div class="option-container">
+                <label for="auto-investments"
+                  >Auto Investments or PWS planse?</label
+                >
+                <select id="auto-investments" name="Auto-Investments">
+                  <option value="null">Select Option:</option>
+                  <option value="adjusted">Adjusted</option>
+                  <option value="discussed-no-changes">
+                    Discussed, no changes.
+                  </option>
+                  <option value="na">NA</option>
+                </select>
+                <label for="action">Action:</label>
+                <select id="action" name="Action">
+                  <option value="null">Select Option:</option>
+                  <option value="deposit">Deposit</option>
+                  <option value="withdrawal">Withdrawal</option>
+                  <option value="journal">Journal</option>
+                </select>
+              </div>
             </div>
 
           `;

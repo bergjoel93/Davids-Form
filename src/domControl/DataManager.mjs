@@ -21,7 +21,6 @@ class DataManager {
       MID: null,
       COTM: null,
       Notes: null,
-      "SF-Notes": null,
       Transactions: {},
     };
     this.transactionCount = 0;
@@ -55,7 +54,7 @@ class DataManager {
     const mid = document.querySelector("#MID");
     const cotm = document.querySelector("#COTM");
     const notes = document.querySelector("#notes");
-    const sfNotes = document.querySelector("#SF-notes");
+    // const sfNotes = document.querySelector("#SF-notes");
 
     // add event handlers to all those in main container
     cosmo.addEventListener("input", () => {
@@ -113,9 +112,9 @@ class DataManager {
     notes.addEventListener("input", () => {
       this.data.Notes = notes.value;
     });
-    sfNotes.addEventListener("input", () => {
-      this.data["SF-Notes"] = sfNotes.value;
-    });
+    // sfNotes.addEventListener("input", () => {
+    //   this.data["SF-Notes"] = sfNotes.value;
+    // });
 
     const resetBtn = document.querySelector("#reset-button");
     resetBtn.addEventListener("click", () => {

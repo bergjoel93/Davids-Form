@@ -82,7 +82,8 @@ class AddTransaction {
       button.addEventListener("click", () => {
         let choice = button.getAttribute("id");
         let count = this.options[choice].count;
-        let card = generateCard(choice, count);
+        let title = `${choice}-${count}`;
+        let card = generateCard(choice, count, title);
         console.log(card);
         console.log(`${choice} clicked`);
         if (card) {
@@ -93,7 +94,7 @@ class AddTransaction {
         }
         // initialize empty object that will be the new transaction object that will later be added to dataManager.data.Transactions.push(newTransactionObject);
         const newTransactionObjectName = `${choice}-${count}`;
-        console.log(newTransactionObjectName);
+        //console.log(newTransactionObjectName);
         // add the newTransactionObject to Transactions
         dataManager.addTransaction(newTransactionObjectName);
         // Selects all the text inputs.
