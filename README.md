@@ -30,4 +30,4 @@ You have some consle .log that show it counting the i's but it seems like there'
 - Change COTM to checkbox.
 - Make generate button under Notes textArea where user can click 'Generate' and it will print particular fields of the current form object and transaction objects.
 - Saved Tab will show everything in a table.
--
+- table column headers will include all fields from main section.
