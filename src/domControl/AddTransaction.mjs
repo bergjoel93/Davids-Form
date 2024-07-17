@@ -43,7 +43,7 @@ class AddTransaction {
   }
 
   // make handlers for the form page
-  handleTransactions() {
+  handleAddTransactionButton() {
     // select add-transaction button
     const addTransaction = document.querySelector(
       "button.add-transaction-button"
@@ -61,7 +61,7 @@ class AddTransaction {
         this.buttonsContainer.appendChild(button);
       }
       //console.log(this.options);
-      this.addButtonHandlers();
+      this.handleTransactionButtons();
     });
   }
 
@@ -72,7 +72,7 @@ class AddTransaction {
   /**
    * Add's event handlers to the generated add transaction buttons.
    */
-  addButtonHandlers() {
+  handleTransactionButtons() {
     const buttons = this.buttonsContainer.querySelectorAll("button");
     const transactionContainer = document.querySelector(
       "#transaction-container"

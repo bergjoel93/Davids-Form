@@ -25,7 +25,7 @@ class DataManager {
     };
     this.transactionCount = 0;
     this.addTransactions = addTransactions;
-    this.addTransactions.handleTransactions();
+    this.addTransactions.handleAddTransactionButton();
   }
 
   decrementTransactionCount() {

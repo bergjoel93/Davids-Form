@@ -32,3 +32,27 @@ You have some consle .log that show it counting the i's but it seems like there'
 - Saved Tab will show everything in a table.
 - table column headers will include all fields from main section.
 - Change each field into an injectable component on the transaction form.
+
+## RoadMap
+
+1. Form data is collected from local storage.
+2. dataManager is called, but instantiated in DataManager.mjs.
+3. Function in dataManager handleMain() is called. Adds event handlers to all main form stuff. Also handles Form and Saved Tab.
+4. current date is initialized.
+5. data is is initialized. This is a new form data object.
+6. addTransactions is instaniated in AddTransactions but called in constructor of dataManager.
+7. addTransactions.handleAddTransactionButton() is called. This function handles the the addTransaction button. When clicked, it shows the transaction type buttons.
+8. addTransactions initializes all of the options (object)
+
+------- ## next stage
+
+1. When add transaction button is clicked, the transaction buttons are generated.
+2. Then within the last function, handleTransactionButtons() is called which adds event handlers to all the transaction type buttons.
+3. When a transaction button is clicked, a transaction container is created. The button choice is recorded, the count for that choice in the options object is increased (for keeping track of transactions), and then the title and card is generated. The buttons container is emptied.
+4. Then the transaction object name is generated with the name and count.
+5. Then the transaction object is added to the data object.
+6. This is the part I might need to alter. Within handleTransactionButtons, after the form is created, event handlers are placed on all of the inputs.
+   \*\* a better way to do this might be to generate a transaction card, then immediately add the event handlers to that specific card. Maybe i create a function that accepts the transaction name (choice variable) and then handles it accordingly?
+
+How do we handle Moving Money?
+So we could have a function called handleMovingMoney. Let's work on that...

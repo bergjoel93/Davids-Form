@@ -50,28 +50,27 @@ body {
   background-color: var(--backgroundColor);
 }
 
-main,
-form {
+main {
   display: flex;
   flex: 1;
   flex-direction: column;
   align-items: center;
   background-color: var(--backgroundColor);
-  overflow-y: auto;
   overflow-x: hidden;
 }
 
 .main-container {
   display: flex;
+  flex: 1;
   justify-content: center;
+  margin: 16px;
 }
 
 .main-form-container {
   margin: 12px;
-}
-
-.main-container {
-  margin: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 input {
@@ -224,10 +223,10 @@ header {
 
 /* Notes Container */
 .notes-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4px;
   padding: 8px;
+  max-height: 350px;
+  flex: 1;
+  display: flex;
 }
 
 .notes {
@@ -236,15 +235,18 @@ header {
   align-items: center;
   background-color: var(--textBackground);
   border-radius: 8px;
+  flex: 1;
 }
 
 textarea {
-  height: 90%;
-  margin: 6px;
+  width: 100%;
+  height: 100%;
+  margin: 8px;
   color: black;
   border-style: none;
   background-color: transparent;
   padding: 6px;
+  flex: 1;
 }
 
 textarea:focus {
@@ -257,10 +259,11 @@ textarea:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
   border: solid black 1px;
   border-radius: 8px;
-  height: auto;
+  max-height: 750px;
+  width: 450px;
+  overflow-y: auto;
 }
 
 .add-transaction {
@@ -283,9 +286,10 @@ textarea:focus {
 
 .buttons-container {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
-  margin: 16px;
+  margin: 12px;
 }
 
 .buttons-container button {
@@ -299,7 +303,7 @@ textarea:focus {
 /* Transaction Forms */
 #transaction-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .transaction-card {
@@ -308,6 +312,39 @@ textarea:focus {
   margin: 8px;
   border-radius: 8px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.secondary-card-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-checkbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 6px;
+}
+
+.transaction-checkbox label {
+  justify-self: end;
+}
+
+.transaction-checkbox input {
+  justify-self: start;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+.transaction-title {
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .close-card {
@@ -316,7 +353,7 @@ textarea:focus {
   right: 0;
   background: none;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
   margin: 6px;
   transition: transform 1s ease-in;
@@ -379,10 +416,11 @@ textarea#persistent-notes {
 
 /* Submit Button */
 .submit-reset-buttons {
+  justify-self: end;
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 1rem;
+  margin: 0.5rem;
   gap: 16px;
 }
 
@@ -390,7 +428,7 @@ textarea#persistent-notes {
 #reset-button {
   background-color: var(--secondaryColor);
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1rem;
   border-style: none;
   border-radius: 8px;
   padding: 8px;
@@ -510,7 +548,7 @@ textarea#persistent-notes {
 
 .backdrop.show {
   opacity: 30%;
-}`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"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","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap\");\n\n:root {\n  --backgroundColor: #475569;\n  --primaryColor: #334155;\n  --secondaryColor: #4682b4;\n  --textBackground: #94a3b8;\n  --hoverColor: #4682b4;\n  --hoverTextColor: #334155;\n}\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  font-family: \"Roboto\", sans-serif;\n}\n\nhtml,\nbody {\n  height: 100%;\n  margin: 0;\n}\n\nbody {\n  display: flex;\n  flex-direction: column;\n  background-color: var(--backgroundColor);\n}\n\nmain,\nform {\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--backgroundColor);\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n\n.main-container {\n  display: flex;\n  justify-content: center;\n}\n\n.main-form-container {\n  margin: 12px;\n}\n\n.main-container {\n  margin: 16px;\n}\n\ninput {\n  background-color: var(--textBackground);\n  border-style: none;\n  border-radius: 8px;\n}\n\ninput[type=\"text\"],\noption {\n  width: 200px;\n  height: 20px;\n  padding: 5px;\n}\n\nsection {\n  border-bottom: solid black 1px;\n  margin-bottom: 6px;\n  padding-bottom: 10px;\n}\n\n/* Header */\nheader {\n  height: 40px;\n  display: flex;\n  width: 100%;\n  background-color: var(--primaryColor);\n}\n\n.nav-form,\n.nav-saved {\n  flex: 1; /* Distribute the space evenly */\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 10px;\n  cursor: pointer;\n}\n\n/* Specific styles for each tab */\n.nav-form {\n  background-color: var(--backgroundColor);\n  border-radius: 8px 8px 0px 0px;\n}\n\n.nav-saved {\n  background-color: var(--primaryColor);\n}\n\n/* Optional: Add hover effects for better user experience */\n.nav-form:hover,\n.nav-saved:hover {\n  background-color: var(\n    --hoverColor\n  ); /* Define a hover color in your variables */\n  color: var(--hoverTextColor); /* Optional: Change text color on hover */\n}\n\n/* Section 1 */\n.section-1 {\n  display: grid;\n  grid-template-columns: auto 1fr;\n  gap: 10px; /* Adjust the gap between labels and inputs as needed */\n  align-items: center; /* Center align labels and inputs vertically */\n  padding: 8px;\n}\n\n.section-1 label {\n  justify-self: end; /* Align labels to the right */\n}\n\n/* Section 2 */\n\n.section-2 {\n  display: grid;\n  grid-template-columns: 1fr;\n  gap: 10px; /* Adjust the gap as needed */\n  padding: 8px;\n}\n\n.checkbox-container-title {\n  font-weight: bold;\n}\n\n.checkboxes {\n  display: grid;\n  grid-template-columns: repeat(4, auto 1fr);\n  gap: 10px; /* Adjust the gap between labels and checkboxes as needed */\n  align-items: center; /* Center align labels and checkboxes vertically */\n}\n\n.checkbox {\n  display: contents; /* Use contents to make the children directly in the grid */\n}\n\n.checkbox label {\n  justify-self: end; /* Align labels to the right */\n}\n\n.checkbox input[type=\"checkbox\"] {\n  width: 20px; /* Set the desired width of checkbox */\n  height: 20px; /* Set the desired height of checkbox */\n  margin: 0; /* Remove default margin */\n  cursor: pointer;\n}\n\n/* Section 3 */\n\n.section-3 {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  gap: 10px; /* Adjust the gap between elements as needed */\n  align-items: center;\n  max-width: 600px; /* Adjust the width as needed */\n  margin: auto; /* Center the section */\n}\n\n.radio-container {\n  text-align: center;\n}\n\n.text-box,\n.radio-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.text-box label,\n.radio-title {\n  margin-bottom: 5px;\n}\n\n.text-box input {\n  width: 100%;\n  box-sizing: border-box;\n}\n\n.radios {\n  display: flex;\n  justify-content: space-around;\n}\n\n.radio {\n  display: flex;\n  align-items: center;\n}\n\n.radio input[type=\"radio\"] {\n  width: auto;\n  margin-right: 5px;\n  cursor: pointer;\n  margin: 4px;\n}\n\n/* Notes Container */\n\n.notes-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 4px;\n  padding: 8px;\n}\n\n.notes {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--textBackground);\n  border-radius: 8px;\n}\n\ntextarea {\n  height: 90%;\n  margin: 6px;\n  color: black;\n  border-style: none;\n  background-color: transparent;\n  padding: 6px;\n}\n\ntextarea:focus {\n  border-style: none;\n  outline: none;\n}\n\n/* Second Container */\n\n.second-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 80%;\n  border: solid black 1px;\n  border-radius: 8px;\n  height: auto;\n}\n\n.add-transaction {\n  padding: 6px;\n  text-align: center;\n}\n\n.add-transaction-button {\n  cursor: pointer;\n  transition: transform 0.3s ease-in-out;\n  border-style: none;\n  background-color: transparent;\n  font-size: 1.1rem;\n  font-weight: 250;\n}\n\n.add-transaction-button:hover {\n  transform: scale(1.2);\n}\n\n.buttons-container {\n  display: flex;\n  justify-content: space-evenly;\n  gap: 12px;\n  margin: 16px;\n}\n\n.buttons-container button {\n  padding: 8px;\n  background-color: var(--secondaryColor);\n  border-style: none;\n  border-radius: 8px;\n  cursor: pointer;\n}\n\n/* Transaction Forms */\n\n#transaction-container {\n  display: flex;\n  flex-wrap: wrap;\n}\n.transaction-card {\n  background-color: var(--secondaryColor);\n  padding: 10px;\n  margin: 8px;\n  border-radius: 8px;\n  position: relative;\n}\n\n.close-card {\n  position: absolute;\n  top: 0;\n  right: 0;\n  background: none;\n  border: none;\n  font-size: 1.2rem;\n  cursor: pointer;\n  margin: 6px;\n  transition: transform 1s ease-in;\n}\n\n.close-card:hover {\n  transform: scale(1.5);\n}\n\n.transaction-card h3 {\n  border-bottom: solid black 1px;\n  padding: 4px;\n  margin-bottom: 6px;\n}\n\n.option-container {\n  display: grid;\n  grid-template-columns: auto 1fr;\n  gap: 10px;\n  align-items: center;\n  padding: 8px;\n}\n\n/* Footer  */\n\nfooter {\n  position: sticky;\n  width: 100%;\n  padding: 10px;\n  background-color: var(--primaryColor);\n  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  bottom: 0;\n}\n\n.persistent-note {\n  width: 60%;\n}\n\ntextarea#persistent-notes {\n  width: 100%;\n}\n\n.important-buttons {\n  display: flex;\n  flex-direction: column;\n  margin: 8px;\n}\n\n#save-persistent-button,\n#reset-persistent-button {\n  padding: 8px;\n  background-color: var(--textBackground);\n  cursor: pointer;\n  margin: 6px;\n  border-style: none;\n  border-radius: 6px;\n}\n\n/* Submit Button */\n.submit-reset-buttons {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  margin: 1rem;\n  gap: 16px;\n}\n\n#submit-button,\n#reset-button {\n  background-color: var(--secondaryColor);\n  cursor: pointer;\n  font-size: 2rem;\n  border-style: none;\n  border-radius: 8px;\n  padding: 8px;\n}\n\n#submit-button:hover,\n#reset-button:hover {\n  background-color: var(--primaryColor);\n  color: var(--hoverColor);\n}\n\n/* Overlay */\n#overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: var(--primaryColor);\n  z-index: 2;\n  display: none;\n}\n\n#overlay .header {\n  display: flex;\n  width: 100%;\n}\n\n#overlay-notes-container {\n  width: 100%;\n  height: 100%;\n  padding: 24px;\n  font-size: 1.3rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n#overlay-notes-container ul {\n  padding-left: 24px;\n  margin: 0;\n}\n\n#overlay-notes-container ul li {\n  margin-bottom: 16px; /* Space between list items */\n  list-style-type: disc;\n}\n\n.overlay-note {\n  display: flex;\n  flex-direction: column;\n}\n\n.note-title {\n  display: flex;\n  gap: 12px;\n  align-items: center;\n}\n\n.expand-modal-btn {\n  padding: 5px;\n  font-size: 1rem;\n  background-color: var(--textBackground);\n  border-radius: 8px;\n  border-style: none;\n  cursor: pointer;\n}\n\n.note-modal {\n  width: 80%;\n  height: 80%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  transform-origin: center;\n  transform: translate(-50%, -50%);\n  margin: 12px;\n  padding: 12px;\n  border-radius: 8px;\n  display: none;\n  background-color: var(--textBackground);\n  opacity: 0;\n}\n\n.close-modal-btn {\n  width: 24px;\n  height: 24px;\n  position: fixed;\n  top: 0;\n  right: 0;\n  margin: 8px;\n  font-size: 1.5rem;\n  background-color: transparent;\n  border-style: none;\n  cursor: pointer;\n}\n\n.note-modal.show {\n  opacity: 100%;\n  pointer-events: all;\n  display: flex;\n  flex-direction: column;\n}\n\n.note-print {\n  padding: 12px;\n  width: 100%;\n}\n\n.backdrop {\n  pointer-events: none;\n  position: fixed;\n  inset: 0;\n  background: #000;\n  opacity: 0%;\n}\n\n.backdrop.show {\n  opacity: 30%;\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"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","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap\");\n\n:root {\n  --backgroundColor: #475569;\n  --primaryColor: #334155;\n  --secondaryColor: #4682b4;\n  --textBackground: #94a3b8;\n  --hoverColor: #4682b4;\n  --hoverTextColor: #334155;\n}\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  font-family: \"Roboto\", sans-serif;\n}\n\nhtml,\nbody {\n  height: 100%;\n  margin: 0;\n}\n\nbody {\n  display: flex;\n  flex-direction: column;\n  background-color: var(--backgroundColor);\n}\n\nmain {\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--backgroundColor);\n  overflow-x: hidden;\n}\n\n.main-container {\n  display: flex;\n  flex: 1;\n  justify-content: center;\n  margin: 16px;\n}\n\n.main-form-container {\n  margin: 12px;\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n}\n\ninput {\n  background-color: var(--textBackground);\n  border-style: none;\n  border-radius: 8px;\n}\n\ninput[type=\"text\"],\noption {\n  width: 200px;\n  height: 20px;\n  padding: 5px;\n}\n\nsection {\n  border-bottom: solid black 1px;\n  margin-bottom: 6px;\n  padding-bottom: 10px;\n}\n\n/* Header */\nheader {\n  height: 40px;\n  display: flex;\n  width: 100%;\n  background-color: var(--primaryColor);\n}\n\n.nav-form,\n.nav-saved {\n  flex: 1; /* Distribute the space evenly */\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 10px;\n  cursor: pointer;\n}\n\n/* Specific styles for each tab */\n.nav-form {\n  background-color: var(--backgroundColor);\n  border-radius: 8px 8px 0px 0px;\n}\n\n.nav-saved {\n  background-color: var(--primaryColor);\n}\n\n/* Optional: Add hover effects for better user experience */\n.nav-form:hover,\n.nav-saved:hover {\n  background-color: var(\n    --hoverColor\n  ); /* Define a hover color in your variables */\n  color: var(--hoverTextColor); /* Optional: Change text color on hover */\n}\n\n/* Section 1 */\n.section-1 {\n  display: grid;\n  grid-template-columns: auto 1fr;\n  gap: 10px; /* Adjust the gap between labels and inputs as needed */\n  align-items: center; /* Center align labels and inputs vertically */\n  padding: 8px;\n}\n\n.section-1 label {\n  justify-self: end; /* Align labels to the right */\n}\n\n/* Section 2 */\n\n.section-2 {\n  display: grid;\n  grid-template-columns: 1fr;\n  gap: 10px; /* Adjust the gap as needed */\n  padding: 8px;\n}\n\n.checkbox-container-title {\n  font-weight: bold;\n}\n\n.checkboxes {\n  display: grid;\n  grid-template-columns: repeat(4, auto 1fr);\n  gap: 10px; /* Adjust the gap between labels and checkboxes as needed */\n  align-items: center; /* Center align labels and checkboxes vertically */\n}\n\n.checkbox {\n  display: contents; /* Use contents to make the children directly in the grid */\n}\n\n.checkbox label {\n  justify-self: end; /* Align labels to the right */\n}\n\n.checkbox input[type=\"checkbox\"] {\n  width: 20px; /* Set the desired width of checkbox */\n  height: 20px; /* Set the desired height of checkbox */\n  margin: 0; /* Remove default margin */\n  cursor: pointer;\n}\n\n/* Section 3 */\n\n.section-3 {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  gap: 10px; /* Adjust the gap between elements as needed */\n  align-items: center;\n  max-width: 600px; /* Adjust the width as needed */\n  margin: auto; /* Center the section */\n}\n\n.radio-container {\n  text-align: center;\n}\n\n.text-box,\n.radio-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.text-box label,\n.radio-title {\n  margin-bottom: 5px;\n}\n\n.text-box input {\n  width: 100%;\n  box-sizing: border-box;\n}\n\n.radios {\n  display: flex;\n  justify-content: space-around;\n}\n\n.radio {\n  display: flex;\n  align-items: center;\n}\n\n.radio input[type=\"radio\"] {\n  width: auto;\n  margin-right: 5px;\n  cursor: pointer;\n  margin: 4px;\n}\n\n/* Notes Container */\n\n.notes-container {\n  padding: 8px;\n  max-height: 350px;\n  flex: 1;\n  display: flex;\n}\n\n.notes {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--textBackground);\n  border-radius: 8px;\n  flex: 1;\n}\n\ntextarea {\n  width: 100%;\n  height: 100%;\n  margin: 8px;\n  color: black;\n  border-style: none;\n  background-color: transparent;\n  padding: 6px;\n  flex: 1;\n}\n\ntextarea:focus {\n  border-style: none;\n  outline: none;\n}\n\n/* Second Container */\n\n.second-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  border: solid black 1px;\n  border-radius: 8px;\n  max-height: 750px;\n  width: 450px;\n  overflow-y: auto;\n}\n\n.add-transaction {\n  padding: 6px;\n  text-align: center;\n}\n\n.add-transaction-button {\n  cursor: pointer;\n  transition: transform 0.3s ease-in-out;\n  border-style: none;\n  background-color: transparent;\n  font-size: 1.1rem;\n  font-weight: 250;\n}\n\n.add-transaction-button:hover {\n  transform: scale(1.2);\n}\n\n.buttons-container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 12px;\n  margin: 12px;\n}\n\n.buttons-container button {\n  padding: 8px;\n  background-color: var(--secondaryColor);\n  border-style: none;\n  border-radius: 8px;\n  cursor: pointer;\n}\n\n/* Transaction Forms */\n\n#transaction-container {\n  display: flex;\n  flex-direction: column;\n}\n.transaction-card {\n  background-color: var(--secondaryColor);\n  padding: 10px;\n  margin: 8px;\n  border-radius: 8px;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n}\n\n.secondary-card-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.transaction-checkbox {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin: 6px;\n}\n\n.transaction-checkbox label {\n  justify-self: end;\n}\n\n.transaction-checkbox input {\n  justify-self: start;\n  width: 20px;\n  height: 20px;\n  margin: 0;\n  cursor: pointer;\n  margin-left: 6px;\n}\n\n.transaction-title {\n  background-color: transparent;\n  font-size: 1.2rem;\n  font-weight: bold;\n  text-align: center;\n}\n\n.close-card {\n  position: absolute;\n  top: 0;\n  right: 0;\n  background: none;\n  border: none;\n  font-size: 1rem;\n  cursor: pointer;\n  margin: 6px;\n  transition: transform 1s ease-in;\n}\n\n.close-card:hover {\n  transform: scale(1.5);\n}\n\n.transaction-card h3 {\n  border-bottom: solid black 1px;\n  padding: 4px;\n  margin-bottom: 6px;\n}\n\n.option-container {\n  display: grid;\n  grid-template-columns: auto 1fr;\n  gap: 10px;\n  align-items: center;\n  padding: 8px;\n}\n\n/* Footer  */\n\nfooter {\n  position: sticky;\n  width: 100%;\n  padding: 10px;\n  background-color: var(--primaryColor);\n  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  bottom: 0;\n}\n\n.persistent-note {\n  width: 60%;\n}\n\ntextarea#persistent-notes {\n  width: 100%;\n}\n\n.important-buttons {\n  display: flex;\n  flex-direction: column;\n  margin: 8px;\n}\n\n#save-persistent-button,\n#reset-persistent-button {\n  padding: 8px;\n  background-color: var(--textBackground);\n  cursor: pointer;\n  margin: 6px;\n  border-style: none;\n  border-radius: 6px;\n}\n\n/* Submit Button */\n.submit-reset-buttons {\n  justify-self: end;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  margin: 0.5rem;\n  gap: 16px;\n}\n\n#submit-button,\n#reset-button {\n  background-color: var(--secondaryColor);\n  cursor: pointer;\n  font-size: 1rem;\n  border-style: none;\n  border-radius: 8px;\n  padding: 8px;\n}\n\n#submit-button:hover,\n#reset-button:hover {\n  background-color: var(--primaryColor);\n  color: var(--hoverColor);\n}\n\n/* Overlay */\n#overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: var(--primaryColor);\n  z-index: 2;\n  display: none;\n}\n\n#overlay .header {\n  display: flex;\n  width: 100%;\n}\n\n#overlay-notes-container {\n  width: 100%;\n  height: 100%;\n  padding: 24px;\n  font-size: 1.3rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n#overlay-notes-container ul {\n  padding-left: 24px;\n  margin: 0;\n}\n\n#overlay-notes-container ul li {\n  margin-bottom: 16px; /* Space between list items */\n  list-style-type: disc;\n}\n\n.overlay-note {\n  display: flex;\n  flex-direction: column;\n}\n\n.note-title {\n  display: flex;\n  gap: 12px;\n  align-items: center;\n}\n\n.expand-modal-btn {\n  padding: 5px;\n  font-size: 1rem;\n  background-color: var(--textBackground);\n  border-radius: 8px;\n  border-style: none;\n  cursor: pointer;\n}\n\n.note-modal {\n  width: 80%;\n  height: 80%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  transform-origin: center;\n  transform: translate(-50%, -50%);\n  margin: 12px;\n  padding: 12px;\n  border-radius: 8px;\n  display: none;\n  background-color: var(--textBackground);\n  opacity: 0;\n}\n\n.close-modal-btn {\n  width: 24px;\n  height: 24px;\n  position: fixed;\n  top: 0;\n  right: 0;\n  margin: 8px;\n  font-size: 1.5rem;\n  background-color: transparent;\n  border-style: none;\n  cursor: pointer;\n}\n\n.note-modal.show {\n  opacity: 100%;\n  pointer-events: all;\n  display: flex;\n  flex-direction: column;\n}\n\n.note-print {\n  padding: 12px;\n  width: 100%;\n}\n\n.backdrop {\n  pointer-events: none;\n  position: fixed;\n  inset: 0;\n  background: #000;\n  opacity: 0%;\n}\n\n.backdrop.show {\n  opacity: 30%;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4629,7 +4667,7 @@ class AddTransaction {
   }
 
   // make handlers for the form page
-  handleTransactions() {
+  handleAddTransactionButton() {
     // select add-transaction button
     const addTransaction = document.querySelector(
       "button.add-transaction-button"
@@ -4647,7 +4685,7 @@ class AddTransaction {
         this.buttonsContainer.appendChild(button);
       }
       //console.log(this.options);
-      this.addButtonHandlers();
+      this.handleTransactionButtons();
     });
   }
 
@@ -4658,7 +4696,7 @@ class AddTransaction {
   /**
    * Add's event handlers to the generated add transaction buttons.
    */
-  addButtonHandlers() {
+  handleTransactionButtons() {
     const buttons = this.buttonsContainer.querySelectorAll("button");
     const transactionContainer = document.querySelector(
       "#transaction-container"
@@ -4668,7 +4706,8 @@ class AddTransaction {
       button.addEventListener("click", () => {
         let choice = button.getAttribute("id");
         let count = this.options[choice].count;
-        let card = (0,_forms_mjs__WEBPACK_IMPORTED_MODULE_0__.generateCard)(choice, count);
+        let title = `${choice}-${count}`;
+        let card = (0,_forms_mjs__WEBPACK_IMPORTED_MODULE_0__.generateCard)(choice, count, title);
         console.log(card);
         console.log(`${choice} clicked`);
         if (card) {
@@ -4679,7 +4718,7 @@ class AddTransaction {
         }
         // initialize empty object that will be the new transaction object that will later be added to dataManager.data.Transactions.push(newTransactionObject);
         const newTransactionObjectName = `${choice}-${count}`;
-        console.log(newTransactionObjectName);
+        //console.log(newTransactionObjectName);
         // add the newTransactionObject to Transactions
         _DataManager_mjs__WEBPACK_IMPORTED_MODULE_1__.dataManager.addTransaction(newTransactionObjectName);
         // Selects all the text inputs.
@@ -4835,12 +4874,11 @@ class DataManager {
       MID: null,
       COTM: null,
       Notes: null,
-      "SF-Notes": null,
       Transactions: {},
     };
     this.transactionCount = 0;
     this.addTransactions = _AddTransaction_mjs__WEBPACK_IMPORTED_MODULE_1__.addTransactions;
-    this.addTransactions.handleTransactions();
+    this.addTransactions.handleAddTransactionButton();
   }
 
   decrementTransactionCount() {
@@ -4869,7 +4907,7 @@ class DataManager {
     const mid = document.querySelector("#MID");
     const cotm = document.querySelector("#COTM");
     const notes = document.querySelector("#notes");
-    const sfNotes = document.querySelector("#SF-notes");
+    // const sfNotes = document.querySelector("#SF-notes");
 
     // add event handlers to all those in main container
     cosmo.addEventListener("input", () => {
@@ -4927,9 +4965,9 @@ class DataManager {
     notes.addEventListener("input", () => {
       this.data.Notes = notes.value;
     });
-    sfNotes.addEventListener("input", () => {
-      this.data["SF-Notes"] = sfNotes.value;
-    });
+    // sfNotes.addEventListener("input", () => {
+    //   this.data["SF-Notes"] = sfNotes.value;
+    // });
 
     const resetBtn = document.querySelector("#reset-button");
     resetBtn.addEventListener("click", () => {
@@ -5351,7 +5389,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   generateCard: () => (/* binding */ generateCard)
 /* harmony export */ });
-function generateCard(choice, count) {
+function generateCard(choice, count, title) {
   const card = document.createElement("div");
   card.className = "transaction-card";
   card.id = `${choice}-${count}`;
@@ -5359,22 +5397,22 @@ function generateCard(choice, count) {
 
   switch (choice) {
     case "Moving-Money":
-      content += injectMovingMoney();
+      content += injectMovingMoney(title);
       break;
     case "Mutual-Fund-Trade":
-      content += injectMutualFundTrade();
+      content += injectMutualFundTrade(title);
       break;
     case "Equity-Trade":
-      content += injectEquityTrade();
+      content += injectEquityTrade(title);
       break;
     case "Options-Trade":
-      content += injectOptionsTrade();
+      content += injectOptionsTrade(title);
       break;
     case "Managed-Accounts":
-      content += injectManagedAccount();
+      content += injectManagedAccount(title);
       break;
     case "Other":
-      content += injectOther();
+      content += injectOther(title);
       break;
     default:
       break;
@@ -5388,62 +5426,46 @@ function generateCard(choice, count) {
   return card;
 }
 
-function injectMovingMoney() {
+function injectMovingMoney(title) {
   return `    
 
             <button class="close-card">X</button>
-            <h3>Moving Money</h3>
-            <label for="accountNum2">Account #</label>
-            <input type="text" id="accountNum2" name="Account-Number" />
+            <input class = "transaction-title" data-label="Transaction" value="${title}">
 
-            <div class="radio-box">
-              <label for="alerts-and-restrictions"
-                >Alerts and Restrictions?</label
-              >
-              <div class="radios">
-                <div class="radio">
-                  <input type="radio" id="alerts-and-restrictions-yes" name = "Alerts-And-Restrictions" value="yes" />
-                  <label for="alerts-and-restrictions-yes">Yes</label>
-                </div>
-                <div class="radio">
-                  <input type="radio" id="alerts-and-restrictions-no" name = "Alerts-And-Restrictions" value="no"/>
-                  <label for="alerts-and-restrictions-no">No</label>
-                </div>
-              </div>
-            </div>
-            <div class="radio-box">
-              <label for="authorized-to-trade">Authorized to Trade?</label>
-              <div class="radios">
-                <div class="radio">
-                  <input type="radio" id="authorized-to-trade-yes" name = "Authorized-To-Trade" value="yes"/>
-                  <label for="authorized-to-trade-yes">Yes</label>
-                </div>
-                <div class="radio">
-                  <input type="radio" id="authorized-to-trade-no" name = "Authorized-To-Trade" value="no"/>
-                  <label for="authorized-to-trade-no">No</label>
-                </div>
-              </div>
-            </div>
+            <div class = "secondary-card-container">
+              <label for="accountNum2">Account #</label>
+              <input type="text" id="accountNum2" name="Account-Number" />
 
-            <div class="option-container">
-              <label for="auto-investments"
-                >Auto Investments or PWS planse?</label
-              >
-              <select id="auto-investments" name="Auto-Investments">
-                <option value="null">Select Option:</option>
-                <option value="adjusted">Adjusted</option>
-                <option value="discussed-no-changes">
-                  Discussed, no changes.
-                </option>
-                <option value="na">NA</option>
-              </select>
-              <label for="action">Action:</label>
-              <select id="action" name="Action">
-                <option value="null">Select Option:</option>
-                <option value="deposit">Deposit</option>
-                <option value="withdrawal">Withdrawal</option>
-                <option value="journal">Journal</option>
-              </select>
+              <div class="transaction-checkbox">
+                <label for="alerts-and-restrictions">Alerts and Restrictions?</label>
+                <input type="checkbox" id = "alerts-and-restrictions">
+              </div>
+  
+              <div class="transaction-checkbox">
+                <label for="authorized-to-trade">Authorized to Trade?</label>
+                <input type = "checkbox" id = "authorized-to-trade">
+              </div>
+                
+              <div class="option-container">
+                <label for="auto-investments"
+                  >Auto Investments or PWS planse?</label
+                >
+                <select id="auto-investments" name="Auto-Investments">
+                  <option value="null">Select Option:</option>
+                  <option value="adjusted">Adjusted</option>
+                  <option value="discussed-no-changes">
+                    Discussed, no changes.
+                  </option>
+                  <option value="na">NA</option>
+                </select>
+                <label for="action">Action:</label>
+                <select id="action" name="Action">
+                  <option value="null">Select Option:</option>
+                  <option value="deposit">Deposit</option>
+                  <option value="withdrawal">Withdrawal</option>
+                  <option value="journal">Journal</option>
+                </select>
+              </div>
             </div>
 
           `;
