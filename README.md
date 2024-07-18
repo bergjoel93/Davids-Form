@@ -56,3 +56,15 @@ You have some consle .log that show it counting the i's but it seems like there'
 
 How do we handle Moving Money?
 So we could have a function called handleMovingMoney. Let's work on that...
+
+This is turning out to be really complicated... Adding the event listener to each input is very tedious and taking literally forever.
+
+Therefore, i'm thinking up a new strategy. The strategy is, to have some kind of focus button or a save button on each transaction form. The user will have to click save on each one. Once save is clicked, it builds an object for the transaction form, and then that object is appended to the Transactions spot in the main data object.
+We can place a check for save check on the main save button. That way, if the user forgets to click save, maybe the program can highlight which ones were'nt saved.
+
+I guess the hard part will be knowing where to branch the object.
+Or maybe I can build the object based on focus. If the transaction container is in focus, then an event lister will listen for when the box goes out of focus. This will construct the object and then apply it.
+
+So how do we do this?
+
+Well, we'll start by making the transaction forms first. Then we'll add an event listener to listern for when the user focuses, then we'll add an event listener insdie of that one to wait for unfocus. When unfocus happens, then we'll scan all the inputs, checkboxes, and radio buttons to gather the data as one single object called cardId. Good plan.

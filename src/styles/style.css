@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
   --backgroundColor: #475569;
@@ -7,13 +7,14 @@
   --textBackground: #94a3b8;
   --hoverColor: #4682b4;
   --hoverTextColor: #334155;
+  --textBoxColor: white;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 html,
@@ -52,14 +53,12 @@ main {
 }
 
 input {
-  background-color: var(--textBackground);
+  background-color: var(--textBoxColor);
   border-style: none;
-  border-radius: 8px;
 }
 
-input[type="text"],
+input[type='text'],
 option {
-  width: 200px;
   height: 20px;
   padding: 5px;
 }
@@ -148,7 +147,7 @@ header {
   justify-self: end; /* Align labels to the right */
 }
 
-.checkbox input[type="checkbox"] {
+.checkbox input[type='checkbox'] {
   width: 20px; /* Set the desired width of checkbox */
   height: 20px; /* Set the desired height of checkbox */
   margin: 0; /* Remove default margin */
@@ -166,41 +165,18 @@ header {
   margin: auto; /* Center the section */
 }
 
-.radio-container {
-  text-align: center;
-}
-
-.text-box,
-.radio-container {
+.text-box {
   display: flex;
   flex-direction: column;
 }
 
-.text-box label,
-.radio-title {
+.text-box label {
   margin-bottom: 5px;
 }
 
 .text-box input {
   width: 100%;
   box-sizing: border-box;
-}
-
-.radios {
-  display: flex;
-  justify-content: space-around;
-}
-
-.radio {
-  display: flex;
-  align-items: center;
-}
-
-.radio input[type="radio"] {
-  width: auto;
-  margin-right: 5px;
-  cursor: pointer;
-  margin: 4px;
 }
 
 /* Notes Container */
@@ -312,7 +288,7 @@ textarea:focus {
 }
 
 .transaction-checkbox label {
-  justify-self: end;
+  justify-self: start;
 }
 
 .transaction-checkbox input {
@@ -355,10 +331,48 @@ textarea:focus {
 
 .option-container {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
+
+  padding: 6px;
+}
+
+.option-container label {
+  justify-self: start;
+}
+
+.text-input-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 8px;
+  gap: 10px;
+  padding: 6px;
+}
+.text-input-container label {
+  justify-self: start;
+  padding-right: 6px;
+}
+
+.radio-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 6px;
+}
+
+.radios {
+  display: flex;
+  justify-content: start;
+  gap: 12px;
+}
+
+.tax-witholding-container {
+  border: solid black 1px;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.text-input-container.three {
+  grid-template-columns: 1fr 0.9fr 0.1fr;
 }
 
 /* Footer  */

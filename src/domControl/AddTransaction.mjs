@@ -1,5 +1,5 @@
-import { generateCard } from "./forms.mjs";
-import { dataManager } from "./DataManager.mjs";
+import { generateCard } from '../components/forms.mjs';
+import { dataManager } from './DataManager.mjs';
 import {
   MovingMoney,
   MutualFundTrade,
@@ -7,20 +7,21 @@ import {
   OptionsTrade,
   ManagedAccounts,
   Other,
-} from "./Transaction.mjs";
+} from './Transaction.mjs';
+import { handleTransaction } from './HandleTransaction.mjs';
 /**
- * This module is responsible for setting up all handlers. Instantiate the object then call the methods for handling certain things.
+ * This module is responsible for setting the handler on the "Add Transaction " button, then generating the different transaction options buttons, then handling those buttons to generate the transaction form and object that is added to the data object. It has a lot of responsibility and might need to be broken down.
  */
 
 class AddTransaction {
   constructor() {
-    this.buttonsContainer = document.querySelector(".buttons-container");
+    this.buttonsContainer = document.querySelector('.buttons-container');
     this.options = {
-      "Moving-Money": { count: 0 },
-      "Mutual-Fund-Trade": { count: 0 },
-      "Equity-Trade": { count: 0 },
-      "Options-Trade": { count: 0 },
-      "Managed-Accounts": { count: 0 },
+      'Moving-Money': { count: 0 },
+      'Mutual-Fund-Trade': { count: 0 },
+      'Equity-Trade': { count: 0 },
+      'Options-Trade': { count: 0 },
+      'Managed-Accounts': { count: 0 },
       Other: { count: 0 },
     };
   }
@@ -28,36 +29,36 @@ class AddTransaction {
   resetTransactions() {
     this.options = {};
     this.options = {
-      "Moving-Money": { count: 0 },
-      "Mutual-Fund-Trade": { count: 0 },
-      "Equity-Trade": { count: 0 },
-      "Options-Trade": { count: 0 },
-      "Managed-Accounts": { count: 0 },
+      'Moving-Money': { count: 0 },
+      'Mutual-Fund-Trade': { count: 0 },
+      'Equity-Trade': { count: 0 },
+      'Options-Trade': { count: 0 },
+      'Managed-Accounts': { count: 0 },
       Other: { count: 0 },
     };
 
     const transactionContainer = document.querySelector(
-      "#transaction-container"
+      '#transaction-container'
     );
-    transactionContainer.innerHTML = "";
+    transactionContainer.innerHTML = '';
   }
 
   // make handlers for the form page
   handleAddTransactionButton() {
     // select add-transaction button
     const addTransaction = document.querySelector(
-      "button.add-transaction-button"
+      'button.add-transaction-button'
     );
     // add event listener for add-transaction
-    addTransaction.addEventListener("click", () => {
+    addTransaction.addEventListener('click', () => {
       // Clear existing buttons before adding new ones
-      this.buttonsContainer.innerHTML = "";
+      this.buttonsContainer.innerHTML = '';
       // Generate buttons for options that haven't been clicked yet
       for (let option in this.options) {
-        let button = document.createElement("button");
+        let button = document.createElement('button');
         button.id = option;
         button.innerHTML = this.formatString(option);
-        button.setAttribute("type", "button");
+        button.setAttribute('type', 'button');
         this.buttonsContainer.appendChild(button);
       }
       //console.log(this.options);
@@ -73,19 +74,19 @@ class AddTransaction {
    * Add's event handlers to the generated add transaction buttons.
    */
   handleTransactionButtons() {
-    const buttons = this.buttonsContainer.querySelectorAll("button");
+    const buttons = this.buttonsContainer.querySelectorAll('button');
     const transactionContainer = document.querySelector(
-      "#transaction-container"
+      '#transaction-container'
     );
 
     buttons.forEach((button) => {
-      button.addEventListener("click", () => {
-        let choice = button.getAttribute("id");
+      button.addEventListener('click', () => {
+        let choice = button.getAttribute('id');
         let count = this.options[choice].count;
         let title = `${choice}-${count}`;
-        let card = generateCard(choice, count, title);
-        console.log(card);
-        console.log(`${choice} clicked`);
+        let card = generateCard(choice, count, title); // Card is generated.
+        //console.log(card);
+        //console.log(`${choice} clicked`);
         if (card) {
           transactionContainer.appendChild(card);
           // increase count on option
@@ -97,54 +98,59 @@ class AddTransaction {
         //console.log(newTransactionObjectName);
         // add the newTransactionObject to Transactions
         dataManager.addTransaction(newTransactionObjectName);
-        // Selects all the text inputs.
-        let textInputs = card.querySelectorAll('input[type= "text"]');
-        if (textInputs) {
-          textInputs.forEach((input) => {
-            // dataManager.data.Transactions[newTransactionObjectName][
-            //   input.name
-            // ] = null;
-            input.addEventListener("input", () => {
-              // get the object key
-              let key = input.name;
-              // get the object value
-              let value = input.value;
-              // update the object.
-              dataManager.data.Transactions[newTransactionObjectName][key] =
-                value;
-            });
-          });
-        }
-        // Handle radio buttons
-        let radioButtons = card.querySelectorAll('input[type="radio"]');
-        if (radioButtons) {
-          radioButtons.forEach((radio) => {
-            radio.addEventListener("change", () => {
-              if (radio.checked) {
-                let key = radio.name;
-                let value = radio.value;
-                dataManager.data.Transactions[newTransactionObjectName][key] =
-                  value;
-              }
-            });
-          });
-        }
+        /**
+         * Event handler adding goes here to handle the transaction form.
+         */
+        handleTransaction(card);
 
-        // Handle select dropdowns
-        let selects = card.querySelectorAll("select");
-        if (selects) {
-          selects.forEach((select) => {
-            select.addEventListener("change", () => {
-              let key = select.name;
-              let value = select.value;
-              dataManager.data.Transactions[newTransactionObjectName][key] =
-                value;
-            });
-          });
-        }
+        // // Selects all the text inputs.
+        // let textInputs = card.querySelectorAll('input[type= "text"]');
+        // if (textInputs) {
+        //   textInputs.forEach((input) => {
+        //     // dataManager.data.Transactions[newTransactionObjectName][
+        //     //   input.name
+        //     // ] = null;
+        //     input.addEventListener('input', () => {
+        //       // get the object key
+        //       let key = input.name;
+        //       // get the object value
+        //       let value = input.value;
+        //       // update the object.
+        //       dataManager.data.Transactions[newTransactionObjectName][key] =
+        //         value;
+        //     });
+        //   });
+        // }
+        // // Handle radio buttons
+        // let radioButtons = card.querySelectorAll('input[type="radio"]');
+        // if (radioButtons) {
+        //   radioButtons.forEach((radio) => {
+        //     radio.addEventListener('change', () => {
+        //       if (radio.checked) {
+        //         let key = radio.name;
+        //         let value = radio.value;
+        //         dataManager.data.Transactions[newTransactionObjectName][key] =
+        //           value;
+        //       }
+        //     });
+        //   });
+        // }
+
+        // // Handle select dropdowns
+        // let selects = card.querySelectorAll('select');
+        // if (selects) {
+        //   selects.forEach((select) => {
+        //     select.addEventListener('change', () => {
+        //       let key = select.name;
+        //       let value = select.value;
+        //       dataManager.data.Transactions[newTransactionObjectName][key] =
+        //         value;
+        //     });
+        //   });
+        // }
 
         // Event Handler to close the card.
-        card.querySelector(".close-card").addEventListener("click", () => {
+        card.querySelector('.close-card').addEventListener('click', () => {
           card.remove();
           // remove options count
           this.options[choice].count--;
@@ -163,22 +169,22 @@ class AddTransaction {
   createTransactionObject(choice, count) {
     let newTransaction = {};
     switch (choice) {
-      case "Moving-Money":
+      case 'Moving-Money':
         newTransaction = new MovingMoney(count);
         break;
-      case "Mutual-Fund-Trade":
+      case 'Mutual-Fund-Trade':
         newTransaction = new MutualFundTrade(count);
         break;
-      case "Equity-Trade":
+      case 'Equity-Trade':
         newTransaction = new EquityTrade(count);
         break;
-      case "Options-Trade":
+      case 'Options-Trade':
         newTransaction = new OptionsTrade(count);
         break;
-      case "Managed-Accounts":
+      case 'Managed-Accounts':
         newTransaction = new ManagedAccounts(count);
         break;
-      case "Other":
+      case 'Other':
         newTransaction = new Other(count);
         break;
       default:
@@ -188,7 +194,7 @@ class AddTransaction {
   }
 
   formatString(input) {
-    return input.split("-").join(" ");
+    return input.split('-').join(' ');
   }
 }
 

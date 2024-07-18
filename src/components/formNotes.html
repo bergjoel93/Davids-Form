@@ -1,0 +1,191 @@
+<!-- Transaction -> Action -> Deposit -->
+<div class="transaction-card" id="Moving-Money-0">
+  <button class="close-card">X</button>
+  <input
+    class="transaction-title"
+    data-label="Transaction"
+    value="Moving-Money-0"
+  />
+  <div class="secondary-card-container">
+    <div class="text-input-container">
+      <label for="Moving-Money-0-accountNum">Account #</label>
+      <input
+        type="text"
+        id="Moving-Money-0-accountNum"
+        name="Account-Number"
+        data-label="Acct:"
+      />
+    </div>
+
+    <div class="transaction-checkbox">
+      <label for="Moving-Money-0-alerts-and-restrictions"
+        >Alerts and Restrictions?</label
+      >
+      <input
+        type="checkbox"
+        id="Moving-Money-0-alerts-and-restrictions"
+        name="Alerts-and-Restrictions"
+      />
+    </div>
+
+    <div class="transaction-checkbox">
+      <label for="Moving-Money-0-authorized-to-trade"
+        >Authorized to Trade?</label
+      >
+      <input
+        type="checkbox"
+        id="Moving-Money-0-authorized-to-trade"
+        name="Authorized-to-Trade"
+      />
+    </div>
+
+    <div class="option-container">
+      <label for="Moving-Money-0-auto-investments"
+        >Auto Investments/PWS plans?</label
+      >
+      <select
+        id="Moving-Money-0-auto-investments"
+        name="Auto-Investments"
+        data-label="PWS plan(s):"
+      >
+        <option value="none">Select Option:</option>
+        <option value="adjusted">Adjusted</option>
+        <option value="Discussed - no changes">Discussed, no changes.</option>
+        <option value="NA">NA</option>
+      </select>
+    </div>
+
+    <div class="action-container">
+      <div class="option-container">
+        <label for="Moving-Money-0-action" data-label="Action:">Action:</label>
+        <select id="Moving-Money-0-action" name="Action" data-label="Action">
+          <option value="null">Select Option:</option>
+          <option value="deposit">Deposit</option>
+          <option value="withdrawal">Withdrawal</option>
+          <option value="journal">Journal</option>
+        </select>
+      </div>
+
+      <div class="option-container">
+        <label for="Moving-Money-0-account-type">Account Type</label>
+        <select name="Account-Type" id="Moving-Money-0-account-type">
+          <option value="null">Select Option:</option>
+          <option value="retirement">Retirement</option>
+          <option value="non-retirement"></option>
+        </select>
+      </div>
+
+      <div class="text-input-container">
+        <label for="Moving-Money-0-amount">Amount:</label>
+        <input
+          type="text"
+          id="Moving-Money-0-amount"
+          name="Amount"
+          data-label="Amount:"
+        />
+      </div>
+
+      <div class="text-input-container">
+        <label for="Moving-Money-0-from-where">From Where:</label>
+        <input
+          type="text"
+          id="Moving-Money-0-from-where"
+          name="From-Where"
+          data-label="From where:"
+        />
+      </div>
+
+      <div class="contribution-container">
+        <div class="radio-container">
+          <div class="radio-title">Contribution Year:</div>
+          <div class="radios">
+            <div class="radio">
+              <label for="Moving-Money-0-contribution-CYC">CYC</label>
+              <input
+                type="radio"
+                id="Moving-Money-0-contribution-CYC"
+                name="contribution-year"
+                value="CYC"
+              />
+            </div>
+            <div class="radio">
+              <label for="Moving-Money-0-contribution-PYC">PYC</label>
+              <input
+                type="radio"
+                id="Moving-Money-0-contribution-PYC"
+                name="contribution-year"
+                value="PYC"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-input-container">
+        <label for="Moving-Money-0-ICP-Work-Order">ICP/Work Order#:</label>
+        <input
+          type="text"
+          id="Moving-Money-0-ICP-Work-Order"
+          name="ICP-Work-Order"
+          data-label="ICP/Work Order #:"
+        />
+      </div>
+
+      <div class="transaction-checkbox">
+        <label for="Moving-Money-0-Review-Transaction"
+          >Review Transaction?</label
+        >
+        <input
+          type="checkbox"
+          id="Moving-Money-0-Review-Transaction"
+          name="Review-transaction"
+        />
+      </div>
+
+      <div class="transaction-checkbox">
+        <label for="Moving-Money-0-Enter-Salesforce-Notes"
+          >Enter Salesforce Notes?</label
+        >
+        <input
+          type="checkbox"
+          id="Moving-Money-0-Enter-Salesforce-Notes"
+          name="Enter-Salesforce-Notes"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Transaction Action Withdrawl Retirement -->
+<div class="tax-witholding-container">
+  <!-- Make sure this is set to display=none -->
+  <h5>Tax Withholding</h5>
+  <div class="text-input-container three">
+    <label for="${cardId}-tax-witholding-fed">Federal:</label>
+    <input type="number" id="${cardId}-tax-witholding-fed" />
+    <label for="${cardId}-tax-witholding-fed">%</label>
+  </div>
+  <div class="text-input-container three">
+    <label for="${cardId}-tax-witholding-state">State:</label>
+    <input type="number" id="${cardId}-tax-witholding-state" />
+    <label for="${cardId}-tax-witholding-state">%</label>
+  </div>
+  <div class="transaction-checkbox">
+    <label for="${cardId}-gross-up">Grossed Up</label>
+    <input
+      type="checkbox"
+      id="${cardId}-gross-up"
+      name="grossed-up"
+      data-label="Grossed up"
+    />
+  </div>
+</div>
+<div class="text-input-container">
+  <label for="${this.cardId}-to-where">To Where:</label>
+  <input
+    type="text"
+    id="${this.cardId}-to-where"
+    name="To-Where"
+    data-label="From where:"
+  />
+</div>

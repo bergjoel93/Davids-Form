@@ -9,7 +9,7 @@ export default class SavedTab {
   }
 
   renderList() {
-    console.log("Test");
+    //console.log("Test");
     // loop through the forms to get every object inside.
     for (let i = this.formsData.forms.length - 1; i >= 0; i--) {
       let note = this.formsData.forms[i];

@@ -1,27 +1,35 @@
-function generateCard(choice, count, title) {
-  const card = document.createElement("div");
-  card.className = "transaction-card";
+import { transactionComponent } from './TransactionComponents.mjs';
+/**
+ *
+ * @param {string} choice One of the transaction types
+ * @param {number} count The id or occurance of the transaction type clicked by user.
+ * @param {*} cardId The title which is just the choice + the count in this format "Moving-Money-0"
+ * @returns The card html element with the id being the title.
+ */
+function generateCard(choice, count, cardId) {
+  const card = document.createElement('div');
+  card.className = 'transaction-card';
   card.id = `${choice}-${count}`;
   let content = ``;
 
   switch (choice) {
-    case "Moving-Money":
-      content += injectMovingMoney(title);
+    case 'Moving-Money':
+      content += injectMovingMoney(cardId);
       break;
-    case "Mutual-Fund-Trade":
-      content += injectMutualFundTrade(title);
+    case 'Mutual-Fund-Trade':
+      content += injectMutualFundTrade(cardId);
       break;
-    case "Equity-Trade":
-      content += injectEquityTrade(title);
+    case 'Equity-Trade':
+      content += injectEquityTrade(cardId);
       break;
-    case "Options-Trade":
-      content += injectOptionsTrade(title);
+    case 'Options-Trade':
+      content += injectOptionsTrade(cardId);
       break;
-    case "Managed-Accounts":
-      content += injectManagedAccount(title);
+    case 'Managed-Accounts':
+      content += injectManagedAccount(cardId);
       break;
-    case "Other":
-      content += injectOther(title);
+    case 'Other':
+      content += injectOther(cardId);
       break;
     default:
       break;
@@ -35,49 +43,17 @@ function generateCard(choice, count, title) {
   return card;
 }
 
-function injectMovingMoney(title) {
-  return `    
-
-            <button class="close-card">X</button>
-            <input class = "transaction-title" data-label="Transaction" value="${title}">
-
-            <div class = "secondary-card-container">
-              <label for="accountNum2">Account #</label>
-              <input type="text" id="accountNum2" name="Account-Number" />
-
-              <div class="transaction-checkbox">
-                <label for="alerts-and-restrictions">Alerts and Restrictions?</label>
-                <input type="checkbox" id = "alerts-and-restrictions">
-              </div>
-  
-              <div class="transaction-checkbox">
-                <label for="authorized-to-trade">Authorized to Trade?</label>
-                <input type = "checkbox" id = "authorized-to-trade">
-              </div>
-                
-              <div class="option-container">
-                <label for="auto-investments"
-                  >Auto Investments or PWS planse?</label
-                >
-                <select id="auto-investments" name="Auto-Investments">
-                  <option value="null">Select Option:</option>
-                  <option value="adjusted">Adjusted</option>
-                  <option value="discussed-no-changes">
-                    Discussed, no changes.
-                  </option>
-                  <option value="na">NA</option>
-                </select>
-                <label for="action">Action:</label>
-                <select id="action" name="Action">
-                  <option value="null">Select Option:</option>
-                  <option value="deposit">Deposit</option>
-                  <option value="withdrawal">Withdrawal</option>
-                  <option value="journal">Journal</option>
-                </select>
-              </div>
-            </div>
-
-          `;
+function injectMovingMoney(cardId) {
+  const html =
+    transactionComponent.injectTitle(cardId) +
+    `<div class = "secondary-card-container">` +
+    transactionComponent.injectAccountNumber(cardId) +
+    transactionComponent.injectAlertsAndRestrictions(cardId) +
+    transactionComponent.injectAuthorizedToTrade(cardId) +
+    transactionComponent.injectAutoInvestments(cardId) +
+    transactionComponent.injectAction1(cardId) +
+    `</div>`; // TODO add options contiainer?
+  return html;
 }
 
 function injectMutualFundTrade() {
@@ -349,7 +325,7 @@ function injectOther() {
 }
 
 function formatString(input) {
-  return input.split("-").join(" ");
+  return input.split('-').join(' ');
 }
 
 export { generateCard };

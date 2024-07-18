@@ -9,16 +9,16 @@ import SavedTab from "./domControl/SavedTab.mjs";
 
 dataManager;
 
-let formData = getStoredData();
-let note = formData.forms[0];
-let noteTitle = Object.keys(note)[0];
-let date = note[noteTitle].Date;
-let name = note[noteTitle]["Client-Name"];
-console.log(note);
-let title = noteTitle + " " + date + " " + name;
-console.log(title);
+// let formData = getStoredData();
+// let note = formData.forms[0];
+// let noteTitle = Object.keys(note)[0];
+// let date = note[noteTitle].Date;
+// let name = note[noteTitle]["Client-Name"];
+// //console.log(note);
+// let title = noteTitle + " " + date + " " + name;
+// //console.log(title);
 
-let printPretty = formatNoteObject(note);
+// let printPretty = formatNoteObject(note);
 let savedTab = new SavedTab();
 
 savedTab.renderList();
