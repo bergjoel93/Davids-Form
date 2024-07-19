@@ -1,3 +1,46 @@
+<!-- dropdown template -->
+<div class="option-container">
+  <label for="${cardId}-${name}">${label}</label>
+  <select id="${cardId}-${name}" name="${name}" data-label="${dataLabel}">
+    <option value="none">Select Option:</option>
+    <option value="${options[0]}">${formatString(options[0])}</option>
+    <option value="${options[1]}">${formatString(options[1])}</option>
+    <option value="${options[2]}">${formatString(options[2])}</option>
+  </select>
+</div>
+<!-- Two radio buttons options -->
+<div class="radio-container">
+  <div class="radio-title">Cash or In-Kind</div>
+  <div class="radios">
+    <div class="radio">
+      <label for="${cardId}-cash">Cash</label>
+      <input type="radio" id="${cardId}-cash" name="cash" value="cash" />
+    </div>
+    <div class="radio">
+      <label for="${cardId}-in-kind">In-Kind</label>
+      <input
+        type="radio"
+        id="${cardId}-in-kind"
+        name="in-kind"
+        value="in-kind"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- Checkbox -->
+<div class="transaction-checkbox">
+  <label for="${cardId}-negative-balance"
+    >Check Balances - Negative Balance?</label
+  >
+  <input
+    type="checkbox"
+    id="${cardId}-negative-balance"
+    name="negative-balance"
+    value="yes"
+  />
+</div>
+
 <!-- Transaction -> Action -> Deposit -->
 <div class="transaction-card" id="Moving-Money-0">
   <button class="close-card">X</button>

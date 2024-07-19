@@ -68,3 +68,5 @@ Or maybe I can build the object based on focus. If the transaction container is 
 So how do we do this?
 
 Well, we'll start by making the transaction forms first. Then we'll add an event listener to listern for when the user focuses, then we'll add an event listener insdie of that one to wait for unfocus. When unfocus happens, then we'll scan all the inputs, checkboxes, and radio buttons to gather the data as one single object called cardId. Good plan.
+
+Fix ordering for the Transaction title (if one is deleted in the middle it starts from length of array.)

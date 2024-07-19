@@ -1,4 +1,4 @@
-import { generateCard } from '../components/forms.mjs';
+import GenerateCard from '../components/GenerateCard.mjs';
 import { dataManager } from './DataManager.mjs';
 import {
   MovingMoney,
@@ -83,8 +83,9 @@ class AddTransaction {
       button.addEventListener('click', () => {
         let choice = button.getAttribute('id');
         let count = this.options[choice].count;
-        let title = `${choice}-${count}`;
-        let card = generateCard(choice, count, title); // Card is generated.
+        let cardId = `${choice}-${count}`;
+        const generateCard = new GenerateCard(cardId, choice); // declare generate card object
+        let card = generateCard.generate(); // Card is generated.
         //console.log(card);
         //console.log(`${choice} clicked`);
         if (card) {
@@ -94,7 +95,7 @@ class AddTransaction {
           this.buttonsContainer.innerHTML = ``;
         }
         // initialize empty object that will be the new transaction object that will later be added to dataManager.data.Transactions.push(newTransactionObject);
-        const newTransactionObjectName = `${choice}-${count}`;
+        const newTransactionObjectName = `${cardId}`;
         //console.log(newTransactionObjectName);
         // add the newTransactionObject to Transactions
         dataManager.addTransaction(newTransactionObjectName);
