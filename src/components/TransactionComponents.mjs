@@ -98,7 +98,7 @@ export default class TransactionComponent {
           <option value="discussed">Discussed</option>
       </select>
     </div>
-    <div class = "reason-text-box" style = "display: none">
+    <div id = "reason-text-box" class = "text-input-container" style = "display: none">
       <label for = "${this.cardId}-comission-reason" data-label="Reason:">Reason:</label>
       <input type = "text" id = "${this.cardId}-comission-reason" name = "comission-reason">
     </div>
@@ -191,6 +191,15 @@ export default class TransactionComponent {
 
       <div class = "action-container"></div>
     `;
+  }
+
+  injectNotes() {
+    return `
+    <div class="notes-container">
+      <div class="notes">
+        <textarea name="notes" id="${this.cardId}-notes" placeholder="Notes..."></textarea>
+      </div>
+    </div>`;
   }
 }
 // const transactionComponent = new TransactionComponent();

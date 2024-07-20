@@ -276,6 +276,11 @@ textarea:focus {
   flex-direction: column;
 }
 
+.transaction-card:focus,
+.transaction-card:active {
+  border: solid black 1px;
+}
+
 .secondary-card-container {
   display: flex;
   flex-direction: column;

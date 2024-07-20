@@ -8,7 +8,7 @@ function handleTransaction(card) {
   // handle close button is within AddTransaction. handleTransaction()
   const transactionType = formatType(card.id);
   const cardId = card.id;
-  console.log(transactionType);
+  //console.log(transactionType);
   // select card on document
   const cardElement = document.querySelector(`#${cardId}`);
   //console.log(cardElement);
@@ -29,7 +29,7 @@ function handleTransaction(card) {
       //handleManagedAccounts(cardElement, cardId);
       break;
     case 'Other':
-      //handleOther(cardElement, cardId);
+      handleOther(cardElement, cardId);
       break;
     default:
       error.log('Invalid type of Transaction for handling.');
@@ -37,10 +37,97 @@ function handleTransaction(card) {
   }
 }
 
+// Create a universal function that will handle the individual cards input by making a new object and appending it to the data object.
+
+function getCardData(cardId) {
+  const card = document.querySelector(`#${cardId}`);
+  const inputs = card.querySelectorAll('input, textarea, select');
+
+  card.addEventListener('focusin', () => {
+    card.classList.add('focused');
+  });
+
+  card.addEventListener('focusout', (event) => {
+    if (!card.contains(event.relatedTarget)) {
+      const data = {};
+
+      inputs.forEach((input) => {
+        if (input.type === 'checkbox') {
+          data[input.name] = input.checked ? 'yes' : 'no';
+        } else if (input.type === 'radio') {
+          if (input.checked) {
+            data[input.name] = input.value;
+          }
+        } else if (input.tagName.toLowerCase() === 'select') {
+          data[input.name] = input.value;
+        } else {
+          data[input.name] = input.value;
+        }
+      });
+
+      const cardData = {
+        [card.querySelector('.transaction-title').value]: data,
+      };
+
+      console.log('Collected Data', cardData);
+
+      card.classList.remove('focused');
+      dataManager.addTransaction(cardId, cardData);
+      console.log(dataManager.data);
+    }
+  });
+}
+
+function handleOther(cardElement, cardId) {
+  const cardData = getCardData(cardElement, cardId);
+  //console.log('Collected Data for Other:', cardData);
+}
+
 function handleOptionsTrade(cardElement, cardId) {
   // we need to handle the showing of reason text box for comission.
   // TODO You left off here! You need to handle what happens with the comission option select. If you select Waived then you show the reason text box.
   // Next, you need to handle the number of legs option container. It's still called 'action-container' so you can call that. Then add the action forms to it. build them in actionComonents.
+  const actionComponents = new ActionComponents(cardId);
+  const actionContainer = cardElement.querySelector('.action-container');
+  const comission = cardElement.querySelector(`#${cardId}-comission`);
+  const reasonTextBox = cardElement.querySelector(`#reason-text-box`);
+  // select #oflegs
+  const numLegs = cardElement.querySelector(`#${cardId}-num-of-legs`);
+
+  comission.addEventListener('change', () => {
+    let comissionValue = comission.value;
+    if (comissionValue === 'waived') {
+      reasonTextBox.style.display = 'grid';
+    } else {
+      reasonTextBox.style.display = 'none';
+    }
+    // get card data
+    getCardData(cardId);
+  });
+
+  numLegs.addEventListener('change', () => {
+    let numLegsValue = numLegs.value;
+    if (numLegsValue === 'single-leg') {
+      actionContainer.innerHTML = ``;
+      actionContainer.insertAdjacentHTML(
+        'beforeend',
+        actionComponents.optionsSingleLeg()
+      );
+    } else if (numLegsValue === 'multi-leg') {
+      actionContainer.innerHTML = ``;
+      actionContainer.insertAdjacentHTML(
+        'beforeend',
+        actionComponents.optionsMultiLeg()
+      );
+    } else {
+      actionContainer.innerHTML = ``;
+    }
+    // get card data
+    getCardData(cardId);
+  });
+
+  // get card data
+  getCardData(cardId);
 }
 
 function handleEquityTrade(cardElement, cardId) {
@@ -77,7 +164,11 @@ function handleEquityTrade(cardElement, cardId) {
         actionComponents.equityActionSellShort()
       );
     }
+    // get card data
+    getCardData(cardId);
   });
+  // get card data
+  getCardData(cardId);
 }
 
 function handleMutualFundTrade(cardElement, cardId) {
@@ -114,7 +205,11 @@ function handleMutualFundTrade(cardElement, cardId) {
         actionComponents.actionSellToBuy()
       );
     }
+    // get card data
+    getCardData(cardId);
   });
+  // get card data
+  getCardData(cardId);
 }
 
 /**
@@ -125,6 +220,8 @@ function handleMutualFundTrade(cardElement, cardId) {
 function handleMovingMoney(cardElement, cardId) {
   handleAction1(cardElement, cardId);
   // TODO Once the form is ready, add event handler to handle saving the data as an object to then append to data.
+  // get card data
+  getCardData(cardId);
 }
 
 function handleAction1(cardElement, cardId) {
@@ -136,8 +233,7 @@ function handleAction1(cardElement, cardId) {
   accountType.addEventListener('change', () => {
     let actionValue = action1.value;
     let accountTypeValue = accountType.value;
-    console.log(actionValue);
-    console.log(accountTypeValue);
+
     // If user selects Deposit on Action 1
     if (actionValue === 'deposit') {
       actionContainer.innerHTML = ``;
@@ -182,69 +278,10 @@ function handleAction1(cardElement, cardId) {
     } else {
       actionContainer.innerHTML = ``;
     }
+    // get card data
+    getCardData(cardId);
   });
 }
-
-// function handleAutoInvestments(cardElement, cardId) {
-//   const autoInvestments = cardElement.querySelector(
-//     `#${cardId}-auto-investments`
-//   );
-//   let key = autoInvestments.name;
-//   dataManager.data.Transactions[cardId][key] = ``;
-//   autoInvestments.addEventListener('change', () => {
-//     let value = autoInvestments.value;
-//     dataManager.data.Transactions[cardId][key] = value;
-//     console.log(dataManager.data);
-//   });
-// }
-
-// function handleAuthorizedToTrade(cardElement, cardId) {
-//   const authorizedToTrade = cardElement.querySelector(
-//     `#${cardId}-authorized-to-trade`
-//   );
-//   let key = authorizedToTrade.name; // create key
-//   dataManager.data.Transactions[cardId][key] = 'No'; // by default add object to data.
-//   authorizedToTrade.addEventListener('change', (e) => {
-//     if (e.target.checked) {
-//       dataManager.data.Transactions[cardId][key] = 'Yes';
-//     } else {
-//       //console.log("checkbox is unchecked");
-//       dataManager.data.Transactions[cardId][key] = 'No';
-//     }
-//     console.log(dataManager.data);
-//   });
-// }
-
-// function handleAlertsAndRestrictions(cardElement, cardId) {
-//   const alertsAndRestrictions = cardElement.querySelector(
-//     `#${cardId}-alerts-and-restrictions`
-//   );
-//   let key = alertsAndRestrictions.name; // create key
-//   dataManager.data.Transactions[cardId][key] = 'No'; // by default add object to data.
-//   alertsAndRestrictions.addEventListener('change', (e) => {
-//     if (e.target.checked) {
-//       //console.log("checkbox is checked.");
-//       dataManager.data.Transactions[cardId][key] = 'Yes';
-//     } else {
-//       //console.log("checkbox is unchecked");
-//       dataManager.data.Transactions[cardId][key] = 'No';
-//     }
-//   });
-// }
-
-// function handleAccountNumber(cardElement, cardId) {
-//   const accountNum = cardElement.querySelector(`#${cardId}-accountNum`);
-//   // update the object that will be updated to the data object.
-//   // get the object key
-//   let key = accountNum.name;
-//   dataManager.data.Transactions[cardId][key] = ``;
-//   accountNum.addEventListener('input', () => {
-//     // get the object value
-//     let value = accountNum.value;
-//     // update the object.
-//     dataManager.data.Transactions[cardId][key] = value;
-//   });
-// }
 
 /**
  *

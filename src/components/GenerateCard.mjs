@@ -34,17 +34,12 @@ export default class GenerateCard {
         content += injectManagedAccount();
         break;
       case 'Other':
-        content += injectOther();
+        content += this.injectOther();
         break;
       default:
         break;
     }
     card.innerHTML = content;
-    // Add event listener to close button
-    // card.querySelector(".close-card").addEventListener("click", () => {
-    //   card.remove();
-    // });
-
     return card;
   }
 
@@ -89,14 +84,28 @@ export default class GenerateCard {
   }
 
   injectOptionsTrade() {
-    this.transactionComponent.injectTitle(this.card) +
+    const html =
+      this.transactionComponent.injectTitle(this.card) +
       `<div class = "secondary-card-container">` +
       this.transactionComponent.injectAccountNumber(this.cardId) +
       this.transactionComponent.injectAuthorizedToTrade(this.cardId) +
       this.transactionComponent.injectOrders() +
       this.transactionComponent.injectAutoInvestments(this.cardId) +
-      this.transactionComponent.injectCommission();
-    `</div>`;
+      this.transactionComponent.injectComission() +
+      this.transactionComponent.injectNumOfLegs() +
+      `</div>`;
+    return html;
+  }
+
+  injectOther() {
+    const html =
+      this.transactionComponent.injectTitle(this.card) +
+      `<div class = "secondary-card-container">` +
+      this.transactionComponent.injectAccountNumber(this.cardId) +
+      this.transactionComponent.injectAlertsAndRestrictions(this.cardId) +
+      this.transactionComponent.injectAuthorizedToTrade(this.cardId) +
+      this.transactionComponent.injectNotes(this.cardId) +
+      `</div>`;
     return html;
   }
 }

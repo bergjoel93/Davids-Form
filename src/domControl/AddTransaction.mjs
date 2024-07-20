@@ -104,60 +104,13 @@ class AddTransaction {
          */
         handleTransaction(card);
 
-        // // Selects all the text inputs.
-        // let textInputs = card.querySelectorAll('input[type= "text"]');
-        // if (textInputs) {
-        //   textInputs.forEach((input) => {
-        //     // dataManager.data.Transactions[newTransactionObjectName][
-        //     //   input.name
-        //     // ] = null;
-        //     input.addEventListener('input', () => {
-        //       // get the object key
-        //       let key = input.name;
-        //       // get the object value
-        //       let value = input.value;
-        //       // update the object.
-        //       dataManager.data.Transactions[newTransactionObjectName][key] =
-        //         value;
-        //     });
-        //   });
-        // }
-        // // Handle radio buttons
-        // let radioButtons = card.querySelectorAll('input[type="radio"]');
-        // if (radioButtons) {
-        //   radioButtons.forEach((radio) => {
-        //     radio.addEventListener('change', () => {
-        //       if (radio.checked) {
-        //         let key = radio.name;
-        //         let value = radio.value;
-        //         dataManager.data.Transactions[newTransactionObjectName][key] =
-        //           value;
-        //       }
-        //     });
-        //   });
-        // }
-
-        // // Handle select dropdowns
-        // let selects = card.querySelectorAll('select');
-        // if (selects) {
-        //   selects.forEach((select) => {
-        //     select.addEventListener('change', () => {
-        //       let key = select.name;
-        //       let value = select.value;
-        //       dataManager.data.Transactions[newTransactionObjectName][key] =
-        //         value;
-        //     });
-        //   });
-        // }
-
         // Event Handler to close the card.
         card.querySelector('.close-card').addEventListener('click', () => {
           card.remove();
           // remove options count
           this.options[choice].count--;
           // TODO - Remove the object from the data.
-          delete dataManager.data.Transactions[newTransactionObjectName]; // Remove the object from the data
-          dataManager.decrementTransactionCount();
+          dataManager.deleteTransaction(cardId);
         });
       });
     });

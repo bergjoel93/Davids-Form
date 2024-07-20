@@ -241,9 +241,61 @@ export default class ActionComponents {
     return string;
   }
 
-  optionsSingleLeg() {}
+  optionsSingleLeg() {
+    const string =
+      this.injectAmount() +
+      this.injectSymbol() +
+      this.injectOptionAction() +
+      this.injectOrderType() +
+      this.injectLimitPrice() +
+      this.injectStopPrice() +
+      this.injectTimeInForce() +
+      this.injectCheckBalances() +
+      this.injectProvideQuote() +
+      this.injectDIAPenny() +
+      this.injectOver2Mil() +
+      this.injectEnterOrderInRWOE() +
+      this.injectCheckOrderReview() +
+      this.injectUpdateOrderLog() +
+      this.injectEnterSFNotes();
+    return string;
+  }
 
-  optionsMultiLeg() {}
+  optionsMultiLeg() {
+    let string = '';
+    for (let i = 0; i < 5; i++) {
+      string +=
+        this.injectAmount() + this.injectSymbol() + this.injectOptionAction();
+    }
+    string +=
+      this.injectOrderType() +
+      this.injectLimitPrice() +
+      this.injectStopPrice() +
+      this.injectTimeInForce() +
+      this.injectCheckBalances() +
+      this.injectProvideQuote() +
+      this.injectDIAPenny() +
+      this.injectOver2Mil() +
+      this.injectEnterOrderInRWOE() +
+      this.injectCheckOrderReview() +
+      this.injectUpdateOrderLog() +
+      this.injectEnterSFNotes();
+    return string;
+  }
+
+  injectOptionAction() {
+    const options = {
+      'BCO Buy Calls to Open': 'BCO',
+      'BCO Buy Puts to Open': 'BPO',
+      'BCC Buy Calls to Close': 'BCC',
+      'BPC Buy PUts to Close': 'BPC',
+      'SCO Sell Calls to Open': 'SCO',
+      'SPO Sell Puts to Open': 'SPO',
+      'SCC Sell Calls to Close': 'SCC',
+      'SPC Sell Puts to Close': 'SPC',
+    };
+    return this.createDropDown('action', 'Action', options, 'Action');
+  }
 
   injectDollarsShares() {
     const htmlString = this.createRadio('Dollars or Shares', [
