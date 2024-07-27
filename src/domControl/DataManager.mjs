@@ -28,6 +28,10 @@ class DataManager {
     this.addTransactions.handleAddTransactionButton();
   }
 
+  getTransactionCount() {
+    return this.transactionCount;
+  }
+
   deleteTransaction(transactionName) {
     if (this.data.Transactions && this.data.Transactions[transactionName]) {
       delete this.data.Transactions[transactionName];
@@ -141,7 +145,9 @@ class DataManager {
     saveBtn.addEventListener('click', () => {
       console.log(this.data);
       // save the data object to local storage.
-      // TODO
+      // TODO save the notes
+      const notesElement = document.querySelector('#notes');
+      this.data.notes = notesElement.value;
       addFormToStorage(this.data);
     });
 

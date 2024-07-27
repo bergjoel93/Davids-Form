@@ -72,3 +72,10 @@ Well, we'll start by making the transaction forms first. Then we'll add an event
 Fix ordering for the Transaction title (if one is deleted in the middle it starts from length of array.)
 
 TODO when you close out a transaction card you need to delete that object from the data object.
+
+The transaction card is named due to the current count. Therefore, before the count is made and is used to name the card, create a check that looks to see what the latest count was, and use that.
+
+We got the generate notes button working. Now we need to change the saved tab.
+Do the following:
+When you click the "Saved" Tab, re render the stuff.
+Instead of rendering a list, make it a nice and neat table inside a table container that has a y-scroll. Include most of the information in the demographics section. Also, in Form tab, when you press save, it should reset everything!

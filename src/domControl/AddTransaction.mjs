@@ -84,7 +84,7 @@ class AddTransaction {
         let choice = button.getAttribute('id');
         let count = this.options[choice].count;
         let cardId = `${choice}-${count}`;
-        const generateCard = new GenerateCard(cardId, choice); // declare generate card object
+        const generateCard = new GenerateCard(cardId, choice, count); // declare generate card object
         let card = generateCard.generate(); // Card is generated.
         //console.log(card);
         //console.log(`${choice} clicked`);
@@ -108,7 +108,7 @@ class AddTransaction {
         card.querySelector('.close-card').addEventListener('click', () => {
           card.remove();
           // remove options count
-          this.options[choice].count--;
+          //this.options[choice].count--; // removed count decrementing
           // TODO - Remove the object from the data.
           dataManager.deleteTransaction(cardId);
         });

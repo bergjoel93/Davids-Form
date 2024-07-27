@@ -69,6 +69,24 @@ section {
   padding-bottom: 10px;
 }
 
+button.generate-notes {
+  padding: 8px;
+  background-color: var(--backgroundColor);
+  color: white;
+  border-radius: 8px;
+  margin: 6px;
+  cursor: pointer;
+}
+
+button.generate-notes:hover {
+  color: var(--backgroundColor);
+  background-color: #94a3b8;
+}
+
+.transaction-title {
+  pointer-events: none;
+}
+
 /* Header */
 header {
   height: 40px;

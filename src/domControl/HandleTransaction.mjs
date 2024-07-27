@@ -69,11 +69,11 @@ function getCardData(cardId) {
         [card.querySelector('.transaction-title').value]: data,
       };
 
-      console.log('Collected Data', cardData);
+      // console.log('Collected Data', cardData);
 
       card.classList.remove('focused');
       dataManager.addTransaction(cardId, cardData);
-      console.log(dataManager.data);
+      //console.log(dataManager.data);
     }
   });
 }
@@ -178,7 +178,7 @@ function handleMutualFundTrade(cardElement, cardId) {
 
   action.addEventListener('change', () => {
     let actionValue = action.value;
-    console.log(actionValue);
+    //console.log(actionValue);
 
     if (actionValue === 'buy') {
       actionContainer.innerHTML = ``;
@@ -265,11 +265,13 @@ function handleAction1(cardElement, cardId) {
       }
     } else if (actionValue === 'journal') {
       if (accountTypeValue === 'retirement') {
+        actionContainer.innerHTML = ``;
         actionContainer.insertAdjacentHTML(
           'beforeend',
           actionComponents.actionJournalRetirement()
         );
       } else if (accountTypeValue === 'non-retirement') {
+        actionContainer.innerHTML = ``;
         actionContainer.insertAdjacentHTML(
           'beforeend',
           actionComponents.actionJournalNonRetirement()

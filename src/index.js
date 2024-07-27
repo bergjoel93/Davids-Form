@@ -1,13 +1,17 @@
-import "./styles/style.css";
+import './styles/style.css';
 import {
   addFormToStorage,
   getStoredData,
   formatNoteObject,
-} from "./domControl/Save.mjs";
-import { dataManager } from "./domControl/DataManager.mjs";
-import SavedTab from "./domControl/SavedTab.mjs";
+} from './domControl/Save.mjs';
+import { dataManager } from './domControl/DataManager.mjs';
+import SavedTab from './domControl/SavedTab.mjs';
+import NoteGenerator from './domControl/GenerateNotes.mjs';
 
 dataManager;
+
+// handle the generateNotes for salesforce notes.
+const noteGenerate = new NoteGenerator();
 
 // let formData = getStoredData();
 // let note = formData.forms[0];

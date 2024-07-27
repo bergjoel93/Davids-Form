@@ -1,3 +1,4 @@
+import { dataManager } from '../domControl/DataManager.mjs';
 /**
  * This module contains all of the functions that make up the inner html individual form components for a transaction form. This makes organizing easier.
  */
@@ -11,7 +12,7 @@ export default class TransactionComponent {
   injectTitle() {
     return `
         <button class="close-card">X</button>
-        <input class = "transaction-title" data-label="Transaction" value="${this.cardId}">`;
+        <input class = "transaction-title" data-label="Transaction" value="${this.cardId}" data-branch = 'true'>`;
   }
   injectAccountNumber() {
     return `
@@ -21,7 +22,7 @@ export default class TransactionComponent {
           type="text"
           id="${this.cardId}-accountNum"
           name="Account-Number"
-          data-label="Acct:"
+          data-label="Acct"
         />
       </div>
     `;
@@ -57,8 +58,8 @@ export default class TransactionComponent {
   injectAutoInvestments() {
     return `
       <div class="option-container">
-        <label for="${this.cardId}-auto-investments">Auto Investments or PWS planse?</label>
-        <select id="${this.cardId}-auto-investments" name="Auto-Investments" data-label="PWS plan(s):">
+        <label for="${this.cardId}-auto-investments">Auto Investments or PWS plans?</label>
+        <select id="${this.cardId}-auto-investments" name="Auto-Investments" data-label="PWS plan(s)">
             <option value="none">Select Option:</option>
             <option value="adjusted">Adjusted</option>
             <option value="Discussed - no changes">
@@ -91,7 +92,7 @@ export default class TransactionComponent {
   injectComission() {
     return `  
     <div class = "option-container">
-      <label for="${this.cardId}-comission" data-label="Comission:" >Comission:</label>
+      <label for="${this.cardId}-comission">Comission:</label>
       <select id="${this.cardId}-comission" name="Comission" data-label = "Comission">
           <option value="null">Select Option:</option>
           <option value="waived">Waived</option>

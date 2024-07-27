@@ -54,12 +54,12 @@ export default class ActionComponents {
   actionJournalRetirement() {
     const string =
       this.injectAmount() +
-      this.injectFromWhere +
+      this.injectFromWhere() +
       this.injectCashInKind() +
       this.injectTaxWitholding() +
       this.injectContributionYear() +
       this.injectToWhere() +
-      this.injectCheckBalances +
+      this.injectCheckBalances() +
       this.injectLikeUnlikeRegistrations() +
       this.injectICP() +
       this.injectReviewTransaction() +
@@ -70,10 +70,10 @@ export default class ActionComponents {
   actionJournalNonRetirement() {
     const string =
       this.injectAmount() +
-      this.injectFromWhere +
+      this.injectFromWhere() +
       this.injectCashInKind() +
       this.injectToWhere() +
-      this.injectCheckBalances +
+      this.injectCheckBalances() +
       this.injectLikeUnlikeRegistrations() +
       this.injectICP() +
       this.injectReviewTransaction() +
@@ -499,15 +499,21 @@ export default class ActionComponents {
       <div class="radios">
         <div class="radio">
           <label for="${this.cardId}-cash">Cash</label>
-          <input type="radio" id="${this.cardId}-cash" name="cash" value="cash" />
+          <input 
+            type="radio" 
+            id="${this.cardId}-cash" 
+            name="cash-or-in-kind" 
+            value="cash" 
+            data-label= "Cash or In-Kind" />
         </div>
         <div class="radio">
           <label for="${this.cardId}-in-kind">In-Kind</label>
           <input
             type="radio"
             id="${this.cardId}-in-kind"
-            name="in-kind"
+            name="cash-or-in-kind"
             value="in-kind"
+            data-label= "Cash or In-Kind"
           />
         </div>
       </div>
@@ -522,7 +528,7 @@ export default class ActionComponents {
         type="text"
         id="${this.cardId}-to-where"
         name="To-Where"
-        data-label="From where:"
+        data-label="From where"
       />
     </div>`;
   }
@@ -533,12 +539,12 @@ export default class ActionComponents {
       <h5>Tax Withholding</h5>
       <div class="text-input-container three">
         <label for="${this.cardId}-tax-witholding-fed">Federal:</label>
-        <input type="number" id="${this.cardId}-tax-witholding-fed" />
+        <input type="number" id="${this.cardId}-tax-witholding-fed" data-label="x% Fed" />
         <label for="${this.cardId}-tax-witholding-fed">%</label>
       </div>
       <div class="text-input-container three">
         <label for="${this.cardId}-tax-witholding-state">State:</label>
-        <input type="number" id="${this.cardId}-tax-witholding-state" />
+        <input type="number" id="${this.cardId}-tax-witholding-state" data-label="x% State" />
         <label for="${this.cardId}-tax-witholding-state">%</label>
       </div>
       <div class="transaction-checkbox">
@@ -573,7 +579,7 @@ export default class ActionComponents {
                   type="text"
                   id="${this.cardId}-amount"
                   name="Amount"
-                  data-label="Amount:"
+                  data-label="Amount"
                   />
               </div>
           `;
@@ -587,7 +593,7 @@ export default class ActionComponents {
             type="text"
             id="${this.cardId}-from-where"
             name="From-Where"
-            data-label="From where:"
+            data-label="From where"
           />
         </div>`;
   }
@@ -629,7 +635,7 @@ export default class ActionComponents {
             type="text"
             id="${this.cardId}-ICP-Work-Order"
             name="ICP-Work-Order"
-            data-label="ICP/Work Order #:"
+            data-label="ICP/Work Order #"
           />
         </div>`;
   }
