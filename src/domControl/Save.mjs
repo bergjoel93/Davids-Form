@@ -10,7 +10,7 @@
  * Returns an object called 'forms' that contains all of the saved form data as an array of objects.
  */
 function getStoredData() {
-  let storedData = localStorage.getItem("F-Form-Gandy");
+  let storedData = localStorage.getItem('F-Form-Gandy');
   if (storedData) {
     return JSON.parse(storedData);
   } else {
@@ -32,11 +32,11 @@ function addFormToStorage(newFormData) {
   newFormObject[`Note-${newID}`] = newFormData;
   storedData.forms.push(newFormObject);
   // save the updated array back to local storage
-  localStorage.setItem("F-Form-Gandy", JSON.stringify(storedData));
+  localStorage.setItem('F-Form-Gandy', JSON.stringify(storedData));
 }
 
 function formatNoteObject(noteObject) {
-  let formattedString = "";
+  let formattedString = '';
 
   for (let noteKey in noteObject) {
     if (noteObject.hasOwnProperty(noteKey)) {
@@ -45,31 +45,33 @@ function formatNoteObject(noteObject) {
 
       for (let key in note) {
         if (note.hasOwnProperty(key)) {
-          if (key === "Verification") {
-            formattedString += `${key}: ${note[key].join(", ")}\n`;
-          } else if (key === "Transactions") {
-            formattedString += "Transactions\n----------------\n";
+          if (key === 'Verification') {
+            formattedString += `${key}: ${note[key].join(', ')}\n`;
+          } else if (key === 'Transactions') {
+            formattedString += 'Transactions\n----------------\n';
             for (let transactionKey in note[key]) {
               if (note[key].hasOwnProperty(transactionKey)) {
                 let transaction = note[key][transactionKey];
                 formattedString += `* ${transactionKey}:\n`;
-                for (let tKey in transaction) {
-                  if (transaction.hasOwnProperty(tKey)) {
-                    formattedString += `       ${tKey}: ${transaction[tKey]}\n`;
+                // Handling the nested object within the transaction
+                let innerTransaction = transaction[transactionKey];
+                for (let tKey in innerTransaction) {
+                  if (innerTransaction.hasOwnProperty(tKey)) {
+                    formattedString += `       ${tKey}: ${innerTransaction[tKey]}\n`;
                   }
                 }
-                formattedString += "\n";
+                formattedString += '\n';
               }
             }
           } else {
             formattedString += `${key}: ${
-              note[key] !== null ? note[key] : ""
+              note[key] !== null ? note[key] : ''
             }\n`;
           }
         }
       }
 
-      formattedString += "\n";
+      formattedString += '\n';
     }
   }
 

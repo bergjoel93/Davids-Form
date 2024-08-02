@@ -8,6 +8,7 @@ function handleTransaction(card) {
   // handle close button is within AddTransaction. handleTransaction()
   const transactionType = formatType(card.id);
   const cardId = card.id;
+  console.log(card.id);
   //console.log(transactionType);
   // select card on document
   const cardElement = document.querySelector(`#${cardId}`);
@@ -79,7 +80,7 @@ function getCardData(cardId) {
 }
 
 function handleOther(cardElement, cardId) {
-  const cardData = getCardData(cardElement, cardId);
+  const cardData = getCardData(cardId);
   //console.log('Collected Data for Other:', cardData);
 }
 

@@ -23,9 +23,6 @@ const noteGenerate = new NoteGenerator();
 // //console.log(title);
 
 // let printPretty = formatNoteObject(note);
-let savedTab = new SavedTab();
-
-savedTab.renderList();
 
 /**
  * Create event handlers on the main-form-container only. Including the Notes.

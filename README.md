@@ -78,4 +78,4 @@ The transaction card is named due to the current count. Therefore, before the co
 We got the generate notes button working. Now we need to change the saved tab.
 Do the following:
 When you click the "Saved" Tab, re render the stuff.
-Instead of rendering a list, make it a nice and neat table inside a table container that has a y-scroll. Include most of the information in the demographics section. Also, in Form tab, when you press save, it should reset everything!
+Instead of rendering a list, make it a nice and neat table inside a table container that has a y-scroll. Include most of the information in the demographics section. Also, in Form tab, when you press save, it should reset everything! Also, there are errors when printing the saved objects.

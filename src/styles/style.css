@@ -429,11 +429,19 @@ textarea#persistent-notes {
 #save-persistent-button,
 #reset-persistent-button {
   padding: 8px;
-  background-color: var(--textBackground);
+  background-color: var(--secondaryColor);
   cursor: pointer;
   margin: 6px;
   border-style: none;
   border-radius: 6px;
+}
+#reset-persistent-button {
+  background-color: var(--textBackground);
+}
+
+#save-persistent-button:hover,
+#reset-persistent-button:hover {
+  background-color: var(--backgroundColor);
 }
 
 /* Submit Button */
@@ -487,6 +495,27 @@ textarea#persistent-notes {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+table {
+  margin: 1rem;
+  background-color: var(--textBackground);
+}
+
+tr,
+td,
+th {
+  padding: 0.5rem;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  font-size: 16px;
+  text-align: center;
 }
 
 #overlay-notes-container ul {
@@ -513,10 +542,13 @@ textarea#persistent-notes {
 .expand-modal-btn {
   padding: 5px;
   font-size: 1rem;
-  background-color: var(--textBackground);
+  background-color: var(--secondaryColor);
   border-radius: 8px;
   border-style: none;
   cursor: pointer;
+}
+.expand-modal-btn:hover {
+  background-color: var(--backgroundColor);
 }
 
 .note-modal {

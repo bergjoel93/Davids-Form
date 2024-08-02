@@ -444,11 +444,20 @@ textarea#persistent-notes {
 #save-persistent-button,
 #reset-persistent-button {
   padding: 8px;
-  background-color: var(--textBackground);
+  background-color: var(--secondaryColor);
   cursor: pointer;
   margin: 6px;
   border-style: none;
   border-radius: 6px;
+}
+
+#reset-persistent-button {
+  background-color: var(--textBackground);
+}
+
+#save-persistent-button:hover,
+#reset-persistent-button:hover {
+  background-color: var(--backgroundColor);
 }
 
 /* Submit Button */
@@ -502,6 +511,27 @@ textarea#persistent-notes {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+table {
+  margin: 1rem;
+  background-color: var(--textBackground);
+}
+
+tr,
+td,
+th {
+  padding: 0.5rem;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  font-size: 16px;
+  text-align: center;
 }
 
 #overlay-notes-container ul {
@@ -528,10 +558,14 @@ textarea#persistent-notes {
 .expand-modal-btn {
   padding: 5px;
   font-size: 1rem;
-  background-color: var(--textBackground);
+  background-color: var(--secondaryColor);
   border-radius: 8px;
   border-style: none;
   cursor: pointer;
+}
+
+.expand-modal-btn:hover {
+  background-color: var(--backgroundColor);
 }
 
 .note-modal {
@@ -585,7 +619,7 @@ textarea#persistent-notes {
 
 .backdrop.show {
   opacity: 30%;
-}`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"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","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');\n\n:root {\n  --backgroundColor: #475569;\n  --primaryColor: #334155;\n  --secondaryColor: #4682b4;\n  --textBackground: #94a3b8;\n  --hoverColor: #4682b4;\n  --hoverTextColor: #334155;\n  --textBoxColor: white;\n}\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  font-family: 'Roboto', sans-serif;\n}\n\nhtml,\nbody {\n  height: 100%;\n  margin: 0;\n}\n\nbody {\n  display: flex;\n  flex-direction: column;\n  background-color: var(--backgroundColor);\n}\n\nmain {\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--backgroundColor);\n  overflow-x: hidden;\n}\n\n.main-container {\n  display: flex;\n  flex: 1;\n  justify-content: center;\n  margin: 16px;\n}\n\n.main-form-container {\n  margin: 12px;\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n}\n\ninput {\n  background-color: var(--textBoxColor);\n  border-style: none;\n}\n\ninput[type='text'],\noption {\n  height: 20px;\n  padding: 5px;\n}\n\nsection {\n  border-bottom: solid black 1px;\n  margin-bottom: 6px;\n  padding-bottom: 10px;\n}\n\nbutton.generate-notes {\n  padding: 8px;\n  background-color: var(--backgroundColor);\n  color: white;\n  border-radius: 8px;\n  margin: 6px;\n  cursor: pointer;\n}\n\nbutton.generate-notes:hover {\n  color: var(--backgroundColor);\n  background-color: #94a3b8;\n}\n\n.transaction-title {\n  pointer-events: none;\n}\n\n/* Header */\nheader {\n  height: 40px;\n  display: flex;\n  width: 100%;\n  background-color: var(--primaryColor);\n}\n\n.nav-form,\n.nav-saved {\n  flex: 1; /* Distribute the space evenly */\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 10px;\n  cursor: pointer;\n}\n\n/* Specific styles for each tab */\n.nav-form {\n  background-color: var(--backgroundColor);\n  border-radius: 8px 8px 0px 0px;\n}\n\n.nav-saved {\n  background-color: var(--primaryColor);\n}\n\n/* Optional: Add hover effects for better user experience */\n.nav-form:hover,\n.nav-saved:hover {\n  background-color: var(\n    --hoverColor\n  ); /* Define a hover color in your variables */\n  color: var(--hoverTextColor); /* Optional: Change text color on hover */\n}\n\n/* Section 1 */\n.section-1 {\n  display: grid;\n  grid-template-columns: auto 1fr;\n  gap: 10px; /* Adjust the gap between labels and inputs as needed */\n  align-items: center; /* Center align labels and inputs vertically */\n  padding: 8px;\n}\n\n.section-1 label {\n  justify-self: end; /* Align labels to the right */\n}\n\n/* Section 2 */\n\n.section-2 {\n  display: grid;\n  grid-template-columns: 1fr;\n  gap: 10px; /* Adjust the gap as needed */\n  padding: 8px;\n}\n\n.checkbox-container-title {\n  font-weight: bold;\n}\n\n.checkboxes {\n  display: grid;\n  grid-template-columns: repeat(4, auto 1fr);\n  gap: 10px; /* Adjust the gap between labels and checkboxes as needed */\n  align-items: center; /* Center align labels and checkboxes vertically */\n}\n\n.checkbox {\n  display: contents; /* Use contents to make the children directly in the grid */\n}\n\n.checkbox label {\n  justify-self: end; /* Align labels to the right */\n}\n\n.checkbox input[type='checkbox'] {\n  width: 20px; /* Set the desired width of checkbox */\n  height: 20px; /* Set the desired height of checkbox */\n  margin: 0; /* Remove default margin */\n  cursor: pointer;\n}\n\n/* Section 3 */\n\n.section-3 {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  gap: 10px; /* Adjust the gap between elements as needed */\n  align-items: center;\n  max-width: 600px; /* Adjust the width as needed */\n  margin: auto; /* Center the section */\n}\n\n.text-box {\n  display: flex;\n  flex-direction: column;\n}\n\n.text-box label {\n  margin-bottom: 5px;\n}\n\n.text-box input {\n  width: 100%;\n  box-sizing: border-box;\n}\n\n/* Notes Container */\n\n.notes-container {\n  padding: 8px;\n  max-height: 350px;\n  flex: 1;\n  display: flex;\n}\n\n.notes {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--textBackground);\n  border-radius: 8px;\n  flex: 1;\n}\n\ntextarea {\n  width: 100%;\n  height: 100%;\n  margin: 8px;\n  color: black;\n  border-style: none;\n  background-color: transparent;\n  padding: 6px;\n  flex: 1;\n}\n\ntextarea:focus {\n  border-style: none;\n  outline: none;\n}\n\n/* Second Container */\n\n.second-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  border: solid black 1px;\n  border-radius: 8px;\n  max-height: 750px;\n  width: 450px;\n  overflow-y: auto;\n}\n\n.add-transaction {\n  padding: 6px;\n  text-align: center;\n}\n\n.add-transaction-button {\n  cursor: pointer;\n  transition: transform 0.3s ease-in-out;\n  border-style: none;\n  background-color: transparent;\n  font-size: 1.1rem;\n  font-weight: 250;\n}\n\n.add-transaction-button:hover {\n  transform: scale(1.2);\n}\n\n.buttons-container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 12px;\n  margin: 12px;\n}\n\n.buttons-container button {\n  padding: 8px;\n  background-color: var(--secondaryColor);\n  border-style: none;\n  border-radius: 8px;\n  cursor: pointer;\n}\n\n/* Transaction Forms */\n\n#transaction-container {\n  display: flex;\n  flex-direction: column;\n}\n.transaction-card {\n  background-color: var(--secondaryColor);\n  padding: 10px;\n  margin: 8px;\n  border-radius: 8px;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n}\n\n.transaction-card:focus,\n.transaction-card:active {\n  border: solid black 1px;\n}\n\n.secondary-card-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.transaction-checkbox {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin: 6px;\n}\n\n.transaction-checkbox label {\n  justify-self: start;\n}\n\n.transaction-checkbox input {\n  justify-self: start;\n  width: 20px;\n  height: 20px;\n  margin: 0;\n  cursor: pointer;\n  margin-left: 6px;\n}\n\n.transaction-title {\n  background-color: transparent;\n  font-size: 1.2rem;\n  font-weight: bold;\n  text-align: center;\n}\n\n.close-card {\n  position: absolute;\n  top: 0;\n  right: 0;\n  background: none;\n  border: none;\n  font-size: 1rem;\n  cursor: pointer;\n  margin: 6px;\n  transition: transform 1s ease-in;\n}\n\n.close-card:hover {\n  transform: scale(1.5);\n}\n\n.transaction-card h3 {\n  border-bottom: solid black 1px;\n  padding: 4px;\n  margin-bottom: 6px;\n}\n\n.option-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 10px;\n\n  padding: 6px;\n}\n\n.option-container label {\n  justify-self: start;\n}\n\n.text-input-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  align-items: center;\n  gap: 10px;\n  padding: 6px;\n}\n.text-input-container label {\n  justify-self: start;\n  padding-right: 6px;\n}\n\n.radio-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  padding: 6px;\n}\n\n.radios {\n  display: flex;\n  justify-content: start;\n  gap: 12px;\n}\n\n.tax-witholding-container {\n  border: solid black 1px;\n  padding: 6px;\n  border-radius: 6px;\n}\n\n.text-input-container.three {\n  grid-template-columns: 1fr 0.9fr 0.1fr;\n}\n\n/* Footer  */\n\nfooter {\n  position: sticky;\n  width: 100%;\n  padding: 10px;\n  background-color: var(--primaryColor);\n  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  bottom: 0;\n}\n\n.persistent-note {\n  width: 60%;\n}\n\ntextarea#persistent-notes {\n  width: 100%;\n}\n\n.important-buttons {\n  display: flex;\n  flex-direction: column;\n  margin: 8px;\n}\n\n#save-persistent-button,\n#reset-persistent-button {\n  padding: 8px;\n  background-color: var(--textBackground);\n  cursor: pointer;\n  margin: 6px;\n  border-style: none;\n  border-radius: 6px;\n}\n\n/* Submit Button */\n.submit-reset-buttons {\n  justify-self: end;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  margin: 0.5rem;\n  gap: 16px;\n}\n\n#submit-button,\n#reset-button {\n  background-color: var(--secondaryColor);\n  cursor: pointer;\n  font-size: 1rem;\n  border-style: none;\n  border-radius: 8px;\n  padding: 8px;\n}\n\n#submit-button:hover,\n#reset-button:hover {\n  background-color: var(--primaryColor);\n  color: var(--hoverColor);\n}\n\n/* Overlay */\n#overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: var(--primaryColor);\n  z-index: 2;\n  display: none;\n}\n\n#overlay .header {\n  display: flex;\n  width: 100%;\n}\n\n#overlay-notes-container {\n  width: 100%;\n  height: 100%;\n  padding: 24px;\n  font-size: 1.3rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n#overlay-notes-container ul {\n  padding-left: 24px;\n  margin: 0;\n}\n\n#overlay-notes-container ul li {\n  margin-bottom: 16px; /* Space between list items */\n  list-style-type: disc;\n}\n\n.overlay-note {\n  display: flex;\n  flex-direction: column;\n}\n\n.note-title {\n  display: flex;\n  gap: 12px;\n  align-items: center;\n}\n\n.expand-modal-btn {\n  padding: 5px;\n  font-size: 1rem;\n  background-color: var(--textBackground);\n  border-radius: 8px;\n  border-style: none;\n  cursor: pointer;\n}\n\n.note-modal {\n  width: 80%;\n  height: 80%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  transform-origin: center;\n  transform: translate(-50%, -50%);\n  margin: 12px;\n  padding: 12px;\n  border-radius: 8px;\n  display: none;\n  background-color: var(--textBackground);\n  opacity: 0;\n}\n\n.close-modal-btn {\n  width: 24px;\n  height: 24px;\n  position: fixed;\n  top: 0;\n  right: 0;\n  margin: 8px;\n  font-size: 1.5rem;\n  background-color: transparent;\n  border-style: none;\n  cursor: pointer;\n}\n\n.note-modal.show {\n  opacity: 100%;\n  pointer-events: all;\n  display: flex;\n  flex-direction: column;\n}\n\n.note-print {\n  padding: 12px;\n  width: 100%;\n}\n\n.backdrop {\n  pointer-events: none;\n  position: fixed;\n  inset: 0;\n  background: #000;\n  opacity: 0%;\n}\n\n.backdrop.show {\n  opacity: 30%;\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAEA;EACE,0BAAA;EACA,uBAAA;EACA,yBAAA;EACA,yBAAA;EACA,qBAAA;EACA,yBAAA;EACA,qBAAA;AAAF;;AAGA;EACE,sBAAA;EACA,UAAA;EACA,SAAA;EACA,iCAAA;AAAF;;AAGA;;EAEE,YAAA;EACA,SAAA;AAAF;;AAGA;EACE,aAAA;EACA,sBAAA;EACA,wCAAA;AAAF;;AAGA;EACE,aAAA;EACA,OAAA;EACA,sBAAA;EACA,mBAAA;EACA,wCAAA;EACA,kBAAA;AAAF;;AAGA;EACE,aAAA;EACA,OAAA;EACA,uBAAA;EACA,YAAA;AAAF;;AAGA;EACE,YAAA;EACA,OAAA;EACA,aAAA;EACA,sBAAA;AAAF;;AAGA;EACE,qCAAA;EACA,kBAAA;AAAF;;AAGA;;EAEE,YAAA;EACA,YAAA;AAAF;;AAGA;EACE,8BAAA;EACA,kBAAA;EACA,oBAAA;AAAF;;AAGA;EACE,YAAA;EACA,wCAAA;EACA,YAAA;EACA,kBAAA;EACA,WAAA;EACA,eAAA;AAAF;;AAGA;EACE,6BAAA;EACA,yBAAA;AAAF;;AAGA;EACE,oBAAA;AAAF;;AAGA,WAAA;AACA;EACE,YAAA;EACA,aAAA;EACA,WAAA;EACA,qCAAA;AAAF;;AAGA;;EAEE,OAAA,EAAA,gCAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,aAAA;EACA,eAAA;AAAF;;AAGA,iCAAA;AACA;EACE,wCAAA;EACA,8BAAA;AAAF;;AAGA;EACE,qCAAA;AAAF;;AAGA,2DAAA;AACA;;EAEE,mCAAA,EAEG,2CAAA;EACH,4BAAA,EAAA,yCAAA;AAFF;;AAKA,cAAA;AACA;EACE,aAAA;EACA,+BAAA;EACA,SAAA,EAAA,uDAAA;EACA,mBAAA,EAAA,8CAAA;EACA,YAAA;AAFF;;AAKA;EACE,iBAAA,EAAA,8BAAA;AAFF;;AAKA,cAAA;AAEA;EACE,aAAA;EACA,0BAAA;EACA,SAAA,EAAA,6BAAA;EACA,YAAA;AAHF;;AAMA;EACE,iBAAA;AAHF;;AAMA;EACE,aAAA;EACA,0CAAA;EACA,SAAA,EAAA,2DAAA;EACA,mBAAA,EAAA,kDAAA;AAHF;;AAMA;EACE,iBAAA,EAAA,2DAAA;AAHF;;AAMA;EACE,iBAAA,EAAA,8BAAA;AAHF;;AAMA;EACE,WAAA,EAAA,sCAAA;EACA,YAAA,EAAA,uCAAA;EACA,SAAA,EAAA,0BAAA;EACA,eAAA;AAHF;;AAMA,cAAA;AAEA;EACE,aAAA;EACA,qCAAA;EACA,SAAA,EAAA,8CAAA;EACA,mBAAA;EACA,gBAAA,EAAA,+BAAA;EACA,YAAA,EAAA,uBAAA;AAJF;;AAOA;EACE,aAAA;EACA,sBAAA;AAJF;;AAOA;EACE,kBAAA;AAJF;;AAOA;EACE,WAAA;EACA,sBAAA;AAJF;;AAOA,oBAAA;AAEA;EACE,YAAA;EACA,iBAAA;EACA,OAAA;EACA,aAAA;AALF;;AAQA;EACE,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uCAAA;EACA,kBAAA;EACA,OAAA;AALF;;AAQA;EACE,WAAA;EACA,YAAA;EACA,WAAA;EACA,YAAA;EACA,kBAAA;EACA,6BAAA;EACA,YAAA;EACA,OAAA;AALF;;AAQA;EACE,kBAAA;EACA,aAAA;AALF;;AAQA,qBAAA;AAEA;EACE,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,kBAAA;EACA,iBAAA;EACA,YAAA;EACA,gBAAA;AANF;;AASA;EACE,YAAA;EACA,kBAAA;AANF;;AASA;EACE,eAAA;EACA,sCAAA;EACA,kBAAA;EACA,6BAAA;EACA,iBAAA;EACA,gBAAA;AANF;;AASA;EACE,qBAAA;AANF;;AASA;EACE,aAAA;EACA,eAAA;EACA,uBAAA;EACA,SAAA;EACA,YAAA;AANF;;AASA;EACE,YAAA;EACA,uCAAA;EACA,kBAAA;EACA,kBAAA;EACA,eAAA;AANF;;AASA,sBAAA;AAEA;EACE,aAAA;EACA,sBAAA;AAPF;;AASA;EACE,uCAAA;EACA,aAAA;EACA,WAAA;EACA,kBAAA;EACA,kBAAA;EACA,aAAA;EACA,sBAAA;AANF;;AASA;;EAEE,uBAAA;AANF;;AASA;EACE,aAAA;EACA,sBAAA;AANF;;AASA;EACE,aAAA;EACA,8BAAA;EACA,WAAA;AANF;;AASA;EACE,mBAAA;AANF;;AASA;EACE,mBAAA;EACA,WAAA;EACA,YAAA;EACA,SAAA;EACA,eAAA;EACA,gBAAA;AANF;;AASA;EACE,6BAAA;EACA,iBAAA;EACA,iBAAA;EACA,kBAAA;AANF;;AASA;EACE,kBAAA;EACA,MAAA;EACA,QAAA;EACA,gBAAA;EACA,YAAA;EACA,eAAA;EACA,eAAA;EACA,WAAA;EACA,gCAAA;AANF;;AASA;EACE,qBAAA;AANF;;AASA;EACE,8BAAA;EACA,YAAA;EACA,kBAAA;AANF;;AASA;EACE,aAAA;EACA,8BAAA;EACA,SAAA;EAEA,YAAA;AAPF;;AAUA;EACE,mBAAA;AAPF;;AAUA;EACE,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,SAAA;EACA,YAAA;AAPF;;AASA;EACE,mBAAA;EACA,kBAAA;AANF;;AASA;EACE,aAAA;EACA,8BAAA;EACA,YAAA;AANF;;AASA;EACE,aAAA;EACA,sBAAA;EACA,SAAA;AANF;;AASA;EACE,uBAAA;EACA,YAAA;EACA,kBAAA;AANF;;AASA;EACE,sCAAA;AANF;;AASA,YAAA;AAEA;EACE,gBAAA;EACA,WAAA;EACA,aAAA;EACA,qCAAA;EACA,yCAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,SAAA;AAPF;;AAUA;EACE,UAAA;AAPF;;AAUA;EACE,WAAA;AAPF;;AAUA;EACE,aAAA;EACA,sBAAA;EACA,WAAA;AAPF;;AAUA;;EAEE,YAAA;EACA,uCAAA;EACA,eAAA;EACA,WAAA;EACA,kBAAA;EACA,kBAAA;AAPF;;AASA;EACE,uCAAA;AANF;;AASA;;EAEE,wCAAA;AANF;;AASA,kBAAA;AACA;EACE,iBAAA;EACA,WAAA;EACA,aAAA;EACA,uBAAA;EACA,cAAA;EACA,SAAA;AANF;;AASA;;EAEE,uCAAA;EACA,eAAA;EACA,eAAA;EACA,kBAAA;EACA,kBAAA;EACA,YAAA;AANF;;AASA;;EAEE,qCAAA;EACA,wBAAA;AANF;;AASA,YAAA;AACA;EACE,eAAA;EACA,MAAA;EACA,OAAA;EACA,WAAA;EACA,YAAA;EACA,qCAAA;EACA,UAAA;EACA,aAAA;AANF;;AASA;EACE,aAAA;EACA,WAAA;AANF;;AASA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,gBAAA;EACA,gBAAA;AANF;;AASA;EACE,YAAA;EACA,uCAAA;AANF;;AASA;;;EAGE,eAAA;AANF;;AASA;;;EAGE,uBAAA;EACA,eAAA;EACA,kBAAA;AANF;;AASA;EACE,kBAAA;EACA,SAAA;AANF;;AASA;EACE,mBAAA,EAAA,6BAAA;EACA,qBAAA;AANF;;AASA;EACE,aAAA;EACA,sBAAA;AANF;;AASA;EACE,aAAA;EACA,SAAA;EACA,mBAAA;AANF;;AASA;EACE,YAAA;EACA,eAAA;EACA,uCAAA;EACA,kBAAA;EACA,kBAAA;EACA,eAAA;AANF;;AAQA;EACE,wCAAA;AALF;;AAQA;EACE,UAAA;EACA,WAAA;EACA,eAAA;EACA,QAAA;EACA,SAAA;EACA,wBAAA;EACA,gCAAA;EACA,YAAA;EACA,aAAA;EACA,kBAAA;EACA,aAAA;EACA,uCAAA;EACA,UAAA;AALF;;AAQA;EACE,WAAA;EACA,YAAA;EACA,eAAA;EACA,MAAA;EACA,QAAA;EACA,WAAA;EACA,iBAAA;EACA,6BAAA;EACA,kBAAA;EACA,eAAA;AALF;;AAQA;EACE,aAAA;EACA,mBAAA;EACA,aAAA;EACA,sBAAA;AALF;;AAQA;EACE,aAAA;EACA,WAAA;AALF;;AAQA;EACE,oBAAA;EACA,eAAA;EACA,QAAA;EACA,gBAAA;EACA,WAAA;AALF;;AAQA;EACE,YAAA;AALF","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');\n\n:root {\n  --backgroundColor: #475569;\n  --primaryColor: #334155;\n  --secondaryColor: #4682b4;\n  --textBackground: #94a3b8;\n  --hoverColor: #4682b4;\n  --hoverTextColor: #334155;\n  --textBoxColor: white;\n}\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  font-family: 'Roboto', sans-serif;\n}\n\nhtml,\nbody {\n  height: 100%;\n  margin: 0;\n}\n\nbody {\n  display: flex;\n  flex-direction: column;\n  background-color: var(--backgroundColor);\n}\n\nmain {\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--backgroundColor);\n  overflow-x: hidden;\n}\n\n.main-container {\n  display: flex;\n  flex: 1;\n  justify-content: center;\n  margin: 16px;\n}\n\n.main-form-container {\n  margin: 12px;\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n}\n\ninput {\n  background-color: var(--textBoxColor);\n  border-style: none;\n}\n\ninput[type='text'],\noption {\n  height: 20px;\n  padding: 5px;\n}\n\nsection {\n  border-bottom: solid black 1px;\n  margin-bottom: 6px;\n  padding-bottom: 10px;\n}\n\nbutton.generate-notes {\n  padding: 8px;\n  background-color: var(--backgroundColor);\n  color: white;\n  border-radius: 8px;\n  margin: 6px;\n  cursor: pointer;\n}\n\nbutton.generate-notes:hover {\n  color: var(--backgroundColor);\n  background-color: #94a3b8;\n}\n\n.transaction-title {\n  pointer-events: none;\n}\n\n/* Header */\nheader {\n  height: 40px;\n  display: flex;\n  width: 100%;\n  background-color: var(--primaryColor);\n}\n\n.nav-form,\n.nav-saved {\n  flex: 1; /* Distribute the space evenly */\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 10px;\n  cursor: pointer;\n}\n\n/* Specific styles for each tab */\n.nav-form {\n  background-color: var(--backgroundColor);\n  border-radius: 8px 8px 0px 0px;\n}\n\n.nav-saved {\n  background-color: var(--primaryColor);\n}\n\n/* Optional: Add hover effects for better user experience */\n.nav-form:hover,\n.nav-saved:hover {\n  background-color: var(\n    --hoverColor\n  ); /* Define a hover color in your variables */\n  color: var(--hoverTextColor); /* Optional: Change text color on hover */\n}\n\n/* Section 1 */\n.section-1 {\n  display: grid;\n  grid-template-columns: auto 1fr;\n  gap: 10px; /* Adjust the gap between labels and inputs as needed */\n  align-items: center; /* Center align labels and inputs vertically */\n  padding: 8px;\n}\n\n.section-1 label {\n  justify-self: end; /* Align labels to the right */\n}\n\n/* Section 2 */\n\n.section-2 {\n  display: grid;\n  grid-template-columns: 1fr;\n  gap: 10px; /* Adjust the gap as needed */\n  padding: 8px;\n}\n\n.checkbox-container-title {\n  font-weight: bold;\n}\n\n.checkboxes {\n  display: grid;\n  grid-template-columns: repeat(4, auto 1fr);\n  gap: 10px; /* Adjust the gap between labels and checkboxes as needed */\n  align-items: center; /* Center align labels and checkboxes vertically */\n}\n\n.checkbox {\n  display: contents; /* Use contents to make the children directly in the grid */\n}\n\n.checkbox label {\n  justify-self: end; /* Align labels to the right */\n}\n\n.checkbox input[type='checkbox'] {\n  width: 20px; /* Set the desired width of checkbox */\n  height: 20px; /* Set the desired height of checkbox */\n  margin: 0; /* Remove default margin */\n  cursor: pointer;\n}\n\n/* Section 3 */\n\n.section-3 {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  gap: 10px; /* Adjust the gap between elements as needed */\n  align-items: center;\n  max-width: 600px; /* Adjust the width as needed */\n  margin: auto; /* Center the section */\n}\n\n.text-box {\n  display: flex;\n  flex-direction: column;\n}\n\n.text-box label {\n  margin-bottom: 5px;\n}\n\n.text-box input {\n  width: 100%;\n  box-sizing: border-box;\n}\n\n/* Notes Container */\n\n.notes-container {\n  padding: 8px;\n  max-height: 350px;\n  flex: 1;\n  display: flex;\n}\n\n.notes {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--textBackground);\n  border-radius: 8px;\n  flex: 1;\n}\n\ntextarea {\n  width: 100%;\n  height: 100%;\n  margin: 8px;\n  color: black;\n  border-style: none;\n  background-color: transparent;\n  padding: 6px;\n  flex: 1;\n}\n\ntextarea:focus {\n  border-style: none;\n  outline: none;\n}\n\n/* Second Container */\n\n.second-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  border: solid black 1px;\n  border-radius: 8px;\n  max-height: 750px;\n  width: 450px;\n  overflow-y: auto;\n}\n\n.add-transaction {\n  padding: 6px;\n  text-align: center;\n}\n\n.add-transaction-button {\n  cursor: pointer;\n  transition: transform 0.3s ease-in-out;\n  border-style: none;\n  background-color: transparent;\n  font-size: 1.1rem;\n  font-weight: 250;\n}\n\n.add-transaction-button:hover {\n  transform: scale(1.2);\n}\n\n.buttons-container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 12px;\n  margin: 12px;\n}\n\n.buttons-container button {\n  padding: 8px;\n  background-color: var(--secondaryColor);\n  border-style: none;\n  border-radius: 8px;\n  cursor: pointer;\n}\n\n/* Transaction Forms */\n\n#transaction-container {\n  display: flex;\n  flex-direction: column;\n}\n.transaction-card {\n  background-color: var(--secondaryColor);\n  padding: 10px;\n  margin: 8px;\n  border-radius: 8px;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n}\n\n.transaction-card:focus,\n.transaction-card:active {\n  border: solid black 1px;\n}\n\n.secondary-card-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.transaction-checkbox {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin: 6px;\n}\n\n.transaction-checkbox label {\n  justify-self: start;\n}\n\n.transaction-checkbox input {\n  justify-self: start;\n  width: 20px;\n  height: 20px;\n  margin: 0;\n  cursor: pointer;\n  margin-left: 6px;\n}\n\n.transaction-title {\n  background-color: transparent;\n  font-size: 1.2rem;\n  font-weight: bold;\n  text-align: center;\n}\n\n.close-card {\n  position: absolute;\n  top: 0;\n  right: 0;\n  background: none;\n  border: none;\n  font-size: 1rem;\n  cursor: pointer;\n  margin: 6px;\n  transition: transform 1s ease-in;\n}\n\n.close-card:hover {\n  transform: scale(1.5);\n}\n\n.transaction-card h3 {\n  border-bottom: solid black 1px;\n  padding: 4px;\n  margin-bottom: 6px;\n}\n\n.option-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 10px;\n\n  padding: 6px;\n}\n\n.option-container label {\n  justify-self: start;\n}\n\n.text-input-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  align-items: center;\n  gap: 10px;\n  padding: 6px;\n}\n.text-input-container label {\n  justify-self: start;\n  padding-right: 6px;\n}\n\n.radio-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  padding: 6px;\n}\n\n.radios {\n  display: flex;\n  justify-content: start;\n  gap: 12px;\n}\n\n.tax-witholding-container {\n  border: solid black 1px;\n  padding: 6px;\n  border-radius: 6px;\n}\n\n.text-input-container.three {\n  grid-template-columns: 1fr 0.9fr 0.1fr;\n}\n\n/* Footer  */\n\nfooter {\n  position: sticky;\n  width: 100%;\n  padding: 10px;\n  background-color: var(--primaryColor);\n  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  bottom: 0;\n}\n\n.persistent-note {\n  width: 60%;\n}\n\ntextarea#persistent-notes {\n  width: 100%;\n}\n\n.important-buttons {\n  display: flex;\n  flex-direction: column;\n  margin: 8px;\n}\n\n#save-persistent-button,\n#reset-persistent-button {\n  padding: 8px;\n  background-color: var(--secondaryColor);\n  cursor: pointer;\n  margin: 6px;\n  border-style: none;\n  border-radius: 6px;\n}\n#reset-persistent-button {\n  background-color: var(--textBackground);\n}\n\n#save-persistent-button:hover,\n#reset-persistent-button:hover {\n  background-color: var(--backgroundColor);\n}\n\n/* Submit Button */\n.submit-reset-buttons {\n  justify-self: end;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  margin: 0.5rem;\n  gap: 16px;\n}\n\n#submit-button,\n#reset-button {\n  background-color: var(--secondaryColor);\n  cursor: pointer;\n  font-size: 1rem;\n  border-style: none;\n  border-radius: 8px;\n  padding: 8px;\n}\n\n#submit-button:hover,\n#reset-button:hover {\n  background-color: var(--primaryColor);\n  color: var(--hoverColor);\n}\n\n/* Overlay */\n#overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: var(--primaryColor);\n  z-index: 2;\n  display: none;\n}\n\n#overlay .header {\n  display: flex;\n  width: 100%;\n}\n\n#overlay-notes-container {\n  width: 100%;\n  height: 100%;\n  padding: 24px;\n  font-size: 1.3rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  overflow-y: auto;\n  overflow-x: auto;\n}\n\ntable {\n  margin: 1rem;\n  background-color: var(--textBackground);\n}\n\ntr,\ntd,\nth {\n  padding: 0.5rem;\n}\n\ntable,\nth,\ntd {\n  border: 1px solid black;\n  font-size: 16px;\n  text-align: center;\n}\n\n#overlay-notes-container ul {\n  padding-left: 24px;\n  margin: 0;\n}\n\n#overlay-notes-container ul li {\n  margin-bottom: 16px; /* Space between list items */\n  list-style-type: disc;\n}\n\n.overlay-note {\n  display: flex;\n  flex-direction: column;\n}\n\n.note-title {\n  display: flex;\n  gap: 12px;\n  align-items: center;\n}\n\n.expand-modal-btn {\n  padding: 5px;\n  font-size: 1rem;\n  background-color: var(--secondaryColor);\n  border-radius: 8px;\n  border-style: none;\n  cursor: pointer;\n}\n.expand-modal-btn:hover {\n  background-color: var(--backgroundColor);\n}\n\n.note-modal {\n  width: 80%;\n  height: 80%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  transform-origin: center;\n  transform: translate(-50%, -50%);\n  margin: 12px;\n  padding: 12px;\n  border-radius: 8px;\n  display: none;\n  background-color: var(--textBackground);\n  opacity: 0;\n}\n\n.close-modal-btn {\n  width: 24px;\n  height: 24px;\n  position: fixed;\n  top: 0;\n  right: 0;\n  margin: 8px;\n  font-size: 1.5rem;\n  background-color: transparent;\n  border-style: none;\n  cursor: pointer;\n}\n\n.note-modal.show {\n  opacity: 100%;\n  pointer-events: all;\n  display: flex;\n  flex-direction: column;\n}\n\n.note-print {\n  padding: 12px;\n  width: 100%;\n}\n\n.backdrop {\n  pointer-events: none;\n  position: fixed;\n  inset: 0;\n  background: #000;\n  opacity: 0%;\n}\n\n.backdrop.show {\n  opacity: 30%;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6329,9 +6363,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   dataManager: () => (/* binding */ dataManager)
 /* harmony export */ });
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/format.mjs");
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! date-fns */ "./node_modules/date-fns/format.mjs");
 /* harmony import */ var _Save_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Save.mjs */ "./src/domControl/Save.mjs");
 /* harmony import */ var _AddTransaction_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AddTransaction.mjs */ "./src/domControl/AddTransaction.mjs");
+/* harmony import */ var _SavedTab_mjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SavedTab.mjs */ "./src/domControl/SavedTab.mjs");
+
 
 
 
@@ -6354,12 +6390,43 @@ class DataManager {
       Restrictions: null,
       MID: null,
       COTM: null,
-      Notes: null,
+      notes: null,
       Transactions: {},
     };
     this.transactionCount = 0;
     this.addTransactions = _AddTransaction_mjs__WEBPACK_IMPORTED_MODULE_1__.addTransactions;
     this.addTransactions.handleAddTransactionButton();
+    this.handlePersistantNotes();
+  }
+
+  handlePersistantNotes() {
+    this.populatePersistantNotes();
+    const save = document.querySelector('#save-persistent-button');
+    save.addEventListener('click', () => {
+      const note = document.querySelector('#persistent-notes').value;
+      this.savePersistentNotes(note);
+    });
+    const reset = document.querySelector('#reset-persistent-button');
+    reset.addEventListener('click', () => {
+      const note = document.querySelector('#persistent-notes');
+      note.value = '';
+      localStorage.setItem('PersistentNote', '');
+    });
+  }
+
+  populatePersistantNotes() {
+    const note = document.querySelector('#persistent-notes');
+    if (localStorage.getItem('PersistentNote') !== null) {
+      const persistentNote = localStorage.getItem('PersistentNote');
+      note.value = persistentNote;
+    } else {
+      note.value = '';
+    }
+  }
+
+  savePersistentNotes(note) {
+    localStorage.setItem('PersistentNote', note);
+    return 'PersistentNote';
   }
 
   getTransactionCount() {
@@ -6423,22 +6490,18 @@ class DataManager {
       this.data['Additional-Callers'] = additionalCallers.value;
     });
     internal.addEventListener('input', () => {
-      this.data['Input-FC'] = internal.value;
+      this.data['Internal-FC'] = internal.value;
     });
     verification.forEach((checkbox) => {
-      // if there is a change to any of the checkboxes update.
       checkbox.addEventListener('change', () => {
-        // first clear the verifaction array.
-        this.data.Verification = [];
-        // recapture all the checkboxes to check if they're checked or unchecked.
-        const checkboxes = document.querySelectorAll(
-          '.checkbox input[type="checkbox"]'
-        );
-        checkboxes.forEach((check) => {
-          if (check.checked) {
-            this.data.Verification.push(checkbox.id);
+        if (checkbox.checked) {
+          this.data.Verification.push(checkbox.id);
+        } else {
+          const index = this.data.Verification.indexOf(checkbox.id);
+          if (index > -1) {
+            this.data.Verification.splice(index, 1);
           }
-        });
+        }
       });
     });
     accountNum.addEventListener('input', () => {
@@ -6478,16 +6541,17 @@ class DataManager {
     const saveBtn = document.querySelector('#submit-button');
     saveBtn.addEventListener('click', () => {
       console.log(this.data);
-      // save the data object to local storage.
-      // TODO save the notes
       const notesElement = document.querySelector('#notes');
       this.data.notes = notesElement.value;
       (0,_Save_mjs__WEBPACK_IMPORTED_MODULE_0__.addFormToStorage)(this.data);
+      this.resetForm();
     });
 
     const savedTab = document.querySelector('#to-saved');
     savedTab.addEventListener('click', () => {
       // render the saved data and then add it as an overlay on top of window.
+      let savedTab = new _SavedTab_mjs__WEBPACK_IMPORTED_MODULE_2__["default"]();
+      savedTab.renderList();
       // TODO
       //   const savedContainer = renderSaved();
       const savedPage = document.querySelector('#overlay');
@@ -6559,6 +6623,7 @@ class DataManager {
       textarea.value = '';
     });
     console.log('Form and data object have been reset');
+    this.handlePersistantNotes();
 
     // reset the transaction stuff and clear forms.
     this.addTransactions.resetTransactions();
@@ -6582,10 +6647,10 @@ class DataManager {
     };
 
     // Format parts of the date
-    const month = (0,date_fns__WEBPACK_IMPORTED_MODULE_2__.format)(date, 'MMM');
-    const day = getDayWithSuffix((0,date_fns__WEBPACK_IMPORTED_MODULE_2__.format)(date, 'd'));
-    const year = (0,date_fns__WEBPACK_IMPORTED_MODULE_2__.format)(date, 'yyyy');
-    const time = (0,date_fns__WEBPACK_IMPORTED_MODULE_2__.format)(date, 'h:mmaaa').toUpperCase();
+    const month = (0,date_fns__WEBPACK_IMPORTED_MODULE_3__.format)(date, 'MMM');
+    const day = getDayWithSuffix((0,date_fns__WEBPACK_IMPORTED_MODULE_3__.format)(date, 'd'));
+    const year = (0,date_fns__WEBPACK_IMPORTED_MODULE_3__.format)(date, 'yyyy');
+    const time = (0,date_fns__WEBPACK_IMPORTED_MODULE_3__.format)(date, 'h:mmaaa').toUpperCase();
 
     // Combine parts into desired format
     return `${month} ${day} ${year} - ${time}`;
@@ -6710,6 +6775,7 @@ function handleTransaction(card) {
   // handle close button is within AddTransaction. handleTransaction()
   const transactionType = formatType(card.id);
   const cardId = card.id;
+  console.log(card.id);
   //console.log(transactionType);
   // select card on document
   const cardElement = document.querySelector(`#${cardId}`);
@@ -6781,7 +6847,7 @@ function getCardData(cardId) {
 }
 
 function handleOther(cardElement, cardId) {
-  const cardData = getCardData(cardElement, cardId);
+  const cardData = getCardData(cardId);
   //console.log('Collected Data for Other:', cardData);
 }
 
@@ -7026,7 +7092,7 @@ __webpack_require__.r(__webpack_exports__);
  * Returns an object called 'forms' that contains all of the saved form data as an array of objects.
  */
 function getStoredData() {
-  let storedData = localStorage.getItem("F-Form-Gandy");
+  let storedData = localStorage.getItem('F-Form-Gandy');
   if (storedData) {
     return JSON.parse(storedData);
   } else {
@@ -7048,11 +7114,11 @@ function addFormToStorage(newFormData) {
   newFormObject[`Note-${newID}`] = newFormData;
   storedData.forms.push(newFormObject);
   // save the updated array back to local storage
-  localStorage.setItem("F-Form-Gandy", JSON.stringify(storedData));
+  localStorage.setItem('F-Form-Gandy', JSON.stringify(storedData));
 }
 
 function formatNoteObject(noteObject) {
-  let formattedString = "";
+  let formattedString = '';
 
   for (let noteKey in noteObject) {
     if (noteObject.hasOwnProperty(noteKey)) {
@@ -7061,31 +7127,33 @@ function formatNoteObject(noteObject) {
 
       for (let key in note) {
         if (note.hasOwnProperty(key)) {
-          if (key === "Verification") {
-            formattedString += `${key}: ${note[key].join(", ")}\n`;
-          } else if (key === "Transactions") {
-            formattedString += "Transactions\n----------------\n";
+          if (key === 'Verification') {
+            formattedString += `${key}: ${note[key].join(', ')}\n`;
+          } else if (key === 'Transactions') {
+            formattedString += 'Transactions\n----------------\n';
             for (let transactionKey in note[key]) {
               if (note[key].hasOwnProperty(transactionKey)) {
                 let transaction = note[key][transactionKey];
                 formattedString += `* ${transactionKey}:\n`;
-                for (let tKey in transaction) {
-                  if (transaction.hasOwnProperty(tKey)) {
-                    formattedString += `       ${tKey}: ${transaction[tKey]}\n`;
+                // Handling the nested object within the transaction
+                let innerTransaction = transaction[transactionKey];
+                for (let tKey in innerTransaction) {
+                  if (innerTransaction.hasOwnProperty(tKey)) {
+                    formattedString += `       ${tKey}: ${innerTransaction[tKey]}\n`;
                   }
                 }
-                formattedString += "\n";
+                formattedString += '\n';
               }
             }
           } else {
             formattedString += `${key}: ${
-              note[key] !== null ? note[key] : ""
+              note[key] !== null ? note[key] : ''
             }\n`;
           }
         }
       }
 
-      formattedString += "\n";
+      formattedString += '\n';
     }
   }
 
@@ -7116,82 +7184,129 @@ __webpack_require__.r(__webpack_exports__);
 class SavedTab {
   constructor() {
     this.formsData = (0,_Save_mjs__WEBPACK_IMPORTED_MODULE_0__.getStoredData)();
+    this.table = document.querySelector('table');
   }
 
   renderList() {
     //console.log("Test");
     // loop through the forms to get every object inside.
+    //create the table headers.
+
     for (let i = this.formsData.forms.length - 1; i >= 0; i--) {
       let note = this.formsData.forms[i];
       let noteTitle = Object.keys(note)[0];
       let date = note[noteTitle].Date;
-      let name = note[noteTitle]["Client-Name"];
+      let cosmo = note[noteTitle]['Cosmo-Whisper'];
+      let name = note[noteTitle]['Client-Name'];
+      let additionalCallers = note[noteTitle]['Additional-Callers'];
+      let internalFC = note[noteTitle]['Internal-FC'];
+      let verification = this.arrayToString(note[noteTitle]['Verification']);
+      let accountNum = note[noteTitle]['Account-Number'];
+      let restrictions = note[noteTitle]['Restrictions'];
+      let mid = note[noteTitle]['MID'];
+      let cotm = note[noteTitle]['COTM'];
       let printPretty = (0,_Save_mjs__WEBPACK_IMPORTED_MODULE_0__.formatNoteObject)(note);
-      let title = noteTitle + " " + date + " " + name;
-      //console.log(title);
+      let show = document.createElement('div');
 
-      let ulElement = document.querySelector("ul.append-note");
+      show.innerHTML = `
+        <div class="overlay-note" >
 
-      let liElement = document.createElement("li");
-      liElement.innerHTML = `
-            <div class="overlay-note" >
-              <div class="note-title">
-              <div>${title}</div>
-                <button id="expand-modal-${noteTitle}" class = "expand-modal-btn">Show</button>
-              </div>
-              <div id="${noteTitle}" class="note-modal">
-                <button id="close-modal-${noteTitle}" class = "close-modal-btn">x</button>
-                <label for="text-area-${noteTitle}"></label>
-                <textarea
-                  class="note-print"
-                  id="text-area-${noteTitle}"
-                  wrap="hard"
-                >${printPretty}
-                </textarea>
-              </div>
-            </div>
+            <button id="expand-modal-${noteTitle}" class = "expand-modal-btn">Show</button>
+
+          <div id="${noteTitle}" class="note-modal">
+            <button id="close-modal-${noteTitle}" class = "close-modal-btn">x</button>
+            <label for="text-area-${noteTitle}"></label>
+            <textarea
+              class="note-print"
+              id="text-area-${noteTitle}"
+              wrap="hard"
+            >${printPretty}
+            </textarea>
+          </div>
+        </div>
       `;
-      //console.log(liElement);
-      ulElement.appendChild(liElement);
+      const dataArray = [
+        noteTitle,
+        date,
+        cosmo,
+        name,
+        additionalCallers,
+        internalFC,
+        verification,
+        accountNum,
+        restrictions,
+        mid,
+        cotm,
+        show,
+      ];
+      // first create a tr
+      const tr = document.createElement('tr');
+      // then create all of the td elements. and append them to tr.
+      // Create `td` elements for each item in `dataArray`
+      for (let j = 0; j < dataArray.length; j++) {
+        const td = document.createElement('td');
+
+        // Check if the current item is a DOM element
+        if (dataArray[j] instanceof HTMLElement) {
+          // If it's an HTMLElement, append it directly
+          td.appendChild(dataArray[j]);
+        } else {
+          // Otherwise, set it as innerHTML
+          td.innerHTML = dataArray[j];
+        }
+
+        tr.appendChild(td);
+      }
+      this.table.appendChild(tr);
       // add event handlers
       // first select the note modal
+
+      /////
       const modal = document.querySelector(`#${noteTitle}`);
       // select the button and add event listener.
       const expandBtn = document.querySelector(`#expand-modal-${noteTitle}`);
       // add event handler
-      expandBtn.addEventListener("click", () => {
+      expandBtn.addEventListener('click', () => {
         // toggle the modal to have show.
-        modal.classList.toggle("show");
-        document.querySelector(".backdrop").classList.toggle("show");
+        modal.classList.toggle('show');
+        document.querySelector('.backdrop').classList.toggle('show');
       });
       // add close button
       const closeBtn = document.querySelector(`#close-modal-${noteTitle}`);
-      closeBtn.addEventListener("click", () => {
-        console.log("close btn pressed");
-        modal.classList.toggle("show");
-        document.querySelector(".backdrop").classList.toggle("show");
+      closeBtn.addEventListener('click', () => {
+        console.log('close btn pressed');
+        modal.classList.toggle('show');
+        document.querySelector('.backdrop').classList.toggle('show');
       });
     }
   }
 
+  arrayToString(arr) {
+    if (Array.isArray(arr)) {
+      return arr.join(', ');
+    } else {
+      return '';
+    }
+  }
+
   addModalHandlers(id) {
-    let expandBtns = document.querySelectorAll("#expand-modal");
+    let expandBtns = document.querySelectorAll('#expand-modal');
     expandBtns.forEach((btn) => {
-      btn.addEventListener("click", (event) => {
+      btn.addEventListener('click', (event) => {
         // we want to select the closest
-        const modalDiv = document.modalDiv.classList.toggle("show");
+        const modalDiv = document.modalDiv.classList.toggle('show');
         // add the event listener to close the modal.
-        let closeNote = document.querySelector("#close-modal");
-        closeNote.addEventListener("click", this.toggleModal);
+        let closeNote = document.querySelector('#close-modal');
+        closeNote.addEventListener('click', this.toggleModal);
       });
     });
   }
 
   toggleModal() {
-    const modalDiv = document.querySelector("#note-modal");
-    const backdrop = document.querySelector(".backdrop");
-    modalDiv.classList.toggle("show");
-    backdrop.classList.toggle("show");
+    const modalDiv = document.querySelector('#note-modal');
+    const backdrop = document.querySelector('.backdrop');
+    modalDiv.classList.toggle('show');
+    backdrop.classList.toggle('show');
   }
 }
 
@@ -7391,8 +7506,6 @@ const noteGenerate = new _domControl_GenerateNotes_mjs__WEBPACK_IMPORTED_MODULE_
 // //console.log(title);
 
 // let printPretty = formatNoteObject(note);
-let savedTab = new _domControl_SavedTab_mjs__WEBPACK_IMPORTED_MODULE_3__["default"]();
-savedTab.renderList();
 
 /**
  * Create event handlers on the main-form-container only. Including the Notes.

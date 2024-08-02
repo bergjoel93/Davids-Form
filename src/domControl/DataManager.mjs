@@ -1,6 +1,7 @@
 import { format } from 'date-fns';
 import { addFormToStorage, getStoredData } from './Save.mjs';
 import { addTransactions } from './AddTransaction.mjs';
+import SavedTab from './SavedTab.mjs';
 /**
  * Resonsible for managing all of the data. Adds handlers and event listeners to the page. Creates the data object which is used for saving and displaying the data.
  */
@@ -20,12 +21,43 @@ class DataManager {
       Restrictions: null,
       MID: null,
       COTM: null,
-      Notes: null,
+      notes: null,
       Transactions: {},
     };
     this.transactionCount = 0;
     this.addTransactions = addTransactions;
     this.addTransactions.handleAddTransactionButton();
+    this.handlePersistantNotes();
+  }
+
+  handlePersistantNotes() {
+    this.populatePersistantNotes();
+    const save = document.querySelector('#save-persistent-button');
+    save.addEventListener('click', () => {
+      const note = document.querySelector('#persistent-notes').value;
+      this.savePersistentNotes(note);
+    });
+    const reset = document.querySelector('#reset-persistent-button');
+    reset.addEventListener('click', () => {
+      const note = document.querySelector('#persistent-notes');
+      note.value = '';
+      localStorage.setItem('PersistentNote', '');
+    });
+  }
+
+  populatePersistantNotes() {
+    const note = document.querySelector('#persistent-notes');
+    if (localStorage.getItem('PersistentNote') !== null) {
+      const persistentNote = localStorage.getItem('PersistentNote');
+      note.value = persistentNote;
+    } else {
+      note.value = '';
+    }
+  }
+
+  savePersistentNotes(note) {
+    localStorage.setItem('PersistentNote', note);
+    return 'PersistentNote';
   }
 
   getTransactionCount() {
@@ -89,22 +121,18 @@ class DataManager {
       this.data['Additional-Callers'] = additionalCallers.value;
     });
     internal.addEventListener('input', () => {
-      this.data['Input-FC'] = internal.value;
+      this.data['Internal-FC'] = internal.value;
     });
     verification.forEach((checkbox) => {
-      // if there is a change to any of the checkboxes update.
       checkbox.addEventListener('change', () => {
-        // first clear the verifaction array.
-        this.data.Verification = [];
-        // recapture all the checkboxes to check if they're checked or unchecked.
-        const checkboxes = document.querySelectorAll(
-          '.checkbox input[type="checkbox"]'
-        );
-        checkboxes.forEach((check) => {
-          if (check.checked) {
-            this.data.Verification.push(checkbox.id);
+        if (checkbox.checked) {
+          this.data.Verification.push(checkbox.id);
+        } else {
+          const index = this.data.Verification.indexOf(checkbox.id);
+          if (index > -1) {
+            this.data.Verification.splice(index, 1);
           }
-        });
+        }
       });
     });
     accountNum.addEventListener('input', () => {
@@ -144,16 +172,17 @@ class DataManager {
     const saveBtn = document.querySelector('#submit-button');
     saveBtn.addEventListener('click', () => {
       console.log(this.data);
-      // save the data object to local storage.
-      // TODO save the notes
       const notesElement = document.querySelector('#notes');
       this.data.notes = notesElement.value;
       addFormToStorage(this.data);
+      this.resetForm();
     });
 
     const savedTab = document.querySelector('#to-saved');
     savedTab.addEventListener('click', () => {
       // render the saved data and then add it as an overlay on top of window.
+      let savedTab = new SavedTab();
+      savedTab.renderList();
       // TODO
       //   const savedContainer = renderSaved();
       const savedPage = document.querySelector('#overlay');
@@ -225,6 +254,7 @@ class DataManager {
       textarea.value = '';
     });
     console.log('Form and data object have been reset');
+    this.handlePersistantNotes();
 
     // reset the transaction stuff and clear forms.
     this.addTransactions.resetTransactions();
