@@ -94,14 +94,14 @@ export default class TransactionComponent {
     <div class = "option-container">
       <label for="${this.cardId}-comission">Comission:</label>
       <select id="${this.cardId}-comission" name="Comission" data-label = "Comission">
-          <option value="null">Select Option:</option>
+          <option value="none">Select Option:</option>
           <option value="waived">Waived</option>
           <option value="discussed">Discussed</option>
       </select>
     </div>
     <div id = "reason-text-box" class = "text-input-container" style = "display: none">
-      <label for = "${this.cardId}-comission-reason" data-label="Reason:">Reason:</label>
-      <input type = "text" id = "${this.cardId}-comission-reason" name = "comission-reason">
+      <label for = "${this.cardId}-comission-reason" >Reason:</label>
+      <input type = "text" id = "${this.cardId}-comission-reason" name = "comission-reason" data-label="Reason:">
     </div>
   `;
   }
@@ -151,9 +151,9 @@ export default class TransactionComponent {
   injectAction2() {
     return `  
     <div class = "option-container">
-    <label for="${this.cardId}-action" data-label="Action:" >Action:</label>
+    <label for="${this.cardId}-action">Action:</label>
     <select id="${this.cardId}-action" name="Action" data-label = "Action">
-        <option value="null">Select Option:</option>
+        <option value="none">Select Option:</option>
         <option value="buy">Buy</option>
         <option value="sell">Sell</option>
         <option value="exchange">Exchange</option>
@@ -173,9 +173,9 @@ export default class TransactionComponent {
   injectAction1() {
     return `  
       <div class = "option-container">
-      <label for="${this.cardId}-action" data-label="Action:" >Action:</label>
+      <label for="${this.cardId}-action">Action:</label>
       <select id="${this.cardId}-action" name="Action" data-label = "Action">
-          <option value="null">Select Option:</option>
+          <option value="none">Select Option:</option>
           <option value="deposit">Deposit</option>
           <option value="withdrawal">Withdrawal</option>
           <option value="journal">Journal</option>
@@ -183,8 +183,8 @@ export default class TransactionComponent {
       </div>
       <div class="option-container">
           <label for="${this.cardId}-account-type">Account Type</label>
-          <select name="Account-Type" id="${this.cardId}-account-type">
-            <option value="null">Select Option:</option>
+          <select name="Account-Type" id="${this.cardId}-account-type" data-label="Account Type">
+            <option value="none">Select Option:</option>
             <option value="retirement">Retirement</option>
             <option value="non-retirement">Non Retirement</option>
           </select>

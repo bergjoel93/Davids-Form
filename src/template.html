@@ -27,7 +27,7 @@
             <th>Account #</th>
             <th>Restrictions</th>
             <th>MID</th>
-            <th>COTM</th>
+            <th>Interaction Model</th>
             <th>Show</th>
           </tr>
         </table>
@@ -78,6 +78,12 @@
 
           <section class="section-2">
             <div class="checkbox-container-title">Verification</div>
+            <input
+              type="text"
+              data-label="Verification"
+              style="display: none"
+              value="verification"
+            />
             <div class="checkboxes">
               <div class="checkbox">
                 <label for="MVV" name="MVV">MVV:</label>
@@ -85,7 +91,7 @@
                   type="checkbox"
                   id="MVV"
                   name="MVV"
-                  data-label="MyVoice Verified "
+                  data-label="MyVoice"
                 />
               </div>
 
@@ -95,37 +101,7 @@
                   type="checkbox"
                   id="OBV"
                   name="OBV"
-                  data-label="Outbound Verified "
-                />
-              </div>
-
-              <div class="checkbox">
-                <label for="ManV" name="ManV">ManV:</label>
-                <input
-                  type="checkbox"
-                  id="ManV"
-                  name="ManV"
-                  data-label="Manual-Verified "
-                />
-              </div>
-
-              <div class="checkbox">
-                <label for="EMV" name="EMV">EMV:</label>
-                <input
-                  type="checkbox"
-                  id="EMV"
-                  name="EMV"
-                  data-label="Enrolled MyVoice "
-                />
-              </div>
-
-              <div class="checkbox">
-                <label for="OTPV" name="OTPV">OTPV:</label>
-                <input
-                  type="checkbox"
-                  id="OTPV"
-                  name="OTPV"
-                  data-label="OTP Verified"
+                  data-label="Outbound Verified"
                 />
               </div>
 
@@ -136,6 +112,46 @@
                   id="GC"
                   name="GC"
                   data-label="Green Checkmark"
+                />
+              </div>
+
+              <div class="checkbox">
+                <label for="IV" name="IV">IV:</label>
+                <input
+                  type="checkbox"
+                  id="IV"
+                  name="IV"
+                  data-label="Internal Verified"
+                />
+              </div>
+
+              <div class="checkbox">
+                <label for="ManV" name="ManV">ManV:</label>
+                <input
+                  type="checkbox"
+                  id="ManV"
+                  name="ManV"
+                  data-label="Manual Verified"
+                />
+              </div>
+
+              <div class="checkbox">
+                <label for="EMV" name="EMV">EMV:</label>
+                <input
+                  type="checkbox"
+                  id="EMV"
+                  name="EMV"
+                  data-label="Enrolled MyVoice"
+                />
+              </div>
+
+              <div class="checkbox">
+                <label for="OTPV" name="OTPV">OTPV:</label>
+                <input
+                  type="checkbox"
+                  id="OTPV"
+                  name="OTPV"
+                  data-label="OTP Verified"
                 />
               </div>
 
@@ -163,37 +179,68 @@
               >
               <input type="text" id="account-number" name="account-number" />
             </div>
-            <div class="radio-container">
-              <div class="radio-title">Restrictions</div>
-              <div class="radios">
-                <div class="radio">
-                  <label for="restrictions-yes">Yes</label>
-                  <input
-                    type="radio"
-                    id="restrictions-yes"
-                    name="restrictions"
-                    value="yes"
-                  />
-                </div>
-                <div class="radio">
-                  <label for="restrictions-no">No</label>
-                  <input
-                    type="radio"
-                    id="restrictions-no"
-                    name="restrictions"
-                    value="no"
-                  />
-                </div>
-              </div>
+
+            <div class="checkbox-restrictions">
+              <label for="restrictions" name="restrictions">
+                Restrictions?
+              </label>
+              <input type="checkbox" id="restrictions" name="restrictions" />
             </div>
 
             <div class="text-box">
               <label for="MID">MID:</label>
               <input type="text" id="MID" />
             </div>
-            <div class="text-box">
-              <label for="COTM">COTM:</label>
-              <input type="text" id="COTM" name="COTM" />
+          </section>
+          <section class="section-4">
+            <div class="checkbox-container-title">Interaction Model</div>
+            <div class="checkboxes">
+              <div class="checkbox">
+                <label for="Title" name="title">Title</label>
+                <input type="checkbox" id="Title" name="title" />
+              </div>
+
+              <div class="checkbox">
+                <label for="Cosmo" name="cosmo">Cosmo</label>
+                <input type="checkbox" id="Cosmo" name="cosmo" />
+              </div>
+
+              <div class="checkbox">
+                <label for="Reassure" name="reassure">Reassure</label>
+                <input type="checkbox" id="Reassure" name="reassure" />
+              </div>
+
+              <div class="checkbox">
+                <label for="Clarify" name="clarify">Clarify</label>
+                <input type="checkbox" id="Clarify" name="clarify" />
+              </div>
+
+              <div class="checkbox">
+                <label for="Agenda" name="agenda">Agenda</label>
+                <input type="checkbox" id="Agenda" name="agenda" />
+              </div>
+
+              <div class="checkbox">
+                <label for="time" name="time">Time</label>
+                <input type="checkbox" id="time" name="time" />
+              </div>
+
+              <div class="checkbox">
+                <label for="Recap" name="recap">Recap</label>
+                <input type="checkbox" id="Recap" name="recap" />
+              </div>
+
+              <div class="checkbox">
+                <label for="Appreciation" name="appreciation"
+                  >Appreciation</label
+                >
+                <input type="checkbox" id="Appreciation" name="appreciation" />
+              </div>
+
+              <div class="checkbox">
+                <label for="COTM" name="COTM">COTM</label>
+                <input type="checkbox" id="COTM" name="COTM" />
+              </div>
             </div>
           </section>
           <div class="notes-container">
@@ -234,7 +281,7 @@
       </div>
 
       <div class="notes persistent-note">
-        <label for="persistent-notes">Persistent Notes</label>
+        <label for="persistent-notes"></label>
         <textarea
           id="persistent-notes"
           placeholder="Persistant Notes..."

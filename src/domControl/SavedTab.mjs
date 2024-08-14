@@ -26,7 +26,9 @@ export default class SavedTab {
       let accountNum = note[noteTitle]['Account-Number'];
       let restrictions = note[noteTitle]['Restrictions'];
       let mid = note[noteTitle]['MID'];
-      let cotm = note[noteTitle]['COTM'];
+      let interactionModel = this.arrayToString(
+        note[noteTitle]['Interaction-Model']
+      );
       let printPretty = formatNoteObject(note);
       let show = document.createElement('div');
 
@@ -58,7 +60,7 @@ export default class SavedTab {
         accountNum,
         restrictions,
         mid,
-        cotm,
+        interactionModel,
         show,
       ];
       // first create a tr

@@ -18,9 +18,9 @@ class DataManager {
       'Internal-FC': null,
       Verification: [],
       'Account-Number': null,
-      Restrictions: null,
+      Restrictions: 'no',
       MID: null,
-      COTM: null,
+      'Interaction-Model': [],
       notes: null,
       Transactions: {},
     };
@@ -96,17 +96,20 @@ class DataManager {
     const name = document.querySelector('#client-name');
     const additionalCallers = document.querySelector('#additional-callers');
     const internal = document.querySelector('#internal-FC');
-    const verification = document.querySelectorAll(
+    // selecting for verification only
+    const verificationBox = document.querySelector('.section-2');
+    const verification = verificationBox.querySelectorAll(
       '.checkbox input[type="checkbox"]'
     );
     const accountNum = document.querySelector('#account-number');
-    const restrictions = document.querySelectorAll(
-      'input[name="restrictions"]'
-    );
+    const restrictions = document.querySelector('input[name="restrictions"]');
     const mid = document.querySelector('#MID');
-    const cotm = document.querySelector('#COTM');
+    const interactionModelBox = document.querySelector('.section-4');
+    const interactionModel = interactionModelBox.querySelectorAll(
+      '.checkbox input[type="checkbox"]'
+    );
+
     const notes = document.querySelector('#notes');
-    // const sfNotes = document.querySelector("#SF-notes");
 
     // add event handlers to all those in main container
     cosmo.addEventListener('input', () => {
@@ -135,34 +138,37 @@ class DataManager {
         }
       });
     });
+
+    interactionModel.forEach((checkbox) => {
+      checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+          this.data['Interaction-Model'].push(checkbox.id);
+        } else {
+          const index = this.data['Interaction-Model'].indexOf(checkbox.id);
+          if (index > -1) {
+            this.data['Interaction-Model'].splice(index, 1);
+          }
+        }
+      });
+    });
+
     accountNum.addEventListener('input', () => {
       this.data['Account-Number'] = accountNum.value;
     });
-    restrictions.forEach((radio) => {
-      //detect a change to any of those radio buttons.
-      radio.addEventListener('change', () => {
-        // select only the button that has been checked.
-        const selectedRadio = document.querySelector(
-          'input[name="restrictions"]:checked'
-        );
-        if (selectedRadio) {
-          this.data.Restrictions = selectedRadio.value;
-        }
-        console.log(this.data);
-      });
+
+    restrictions.addEventListener('change', () => {
+      restrictions.checked
+        ? (this.data.Restrictions = 'yes')
+        : (this.data.Restrictions = 'no');
     });
+
     mid.addEventListener('input', () => {
       this.data.MID = mid.value;
     });
-    cotm.addEventListener('input', () => {
-      this.data.COTM = cotm.value;
-    });
+
     notes.addEventListener('input', () => {
       this.data.Notes = notes.value;
     });
-    // sfNotes.addEventListener("input", () => {
-    //   this.data["SF-Notes"] = sfNotes.value;
-    // });
 
     const resetBtn = document.querySelector('#reset-button');
     resetBtn.addEventListener('click', () => {

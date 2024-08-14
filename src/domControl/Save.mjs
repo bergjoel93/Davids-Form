@@ -45,7 +45,7 @@ function formatNoteObject(noteObject) {
 
       for (let key in note) {
         if (note.hasOwnProperty(key)) {
-          if (key === 'Verification') {
+          if (key === 'Verification' || key === 'Interaction-Model') {
             formattedString += `${key}: ${note[key].join(', ')}\n`;
           } else if (key === 'Transactions') {
             formattedString += 'Transactions\n----------------\n';

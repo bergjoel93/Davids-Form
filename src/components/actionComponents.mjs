@@ -35,6 +35,7 @@ export default class ActionComponents {
       this.injectAmount() +
       this.injectTaxWitholding() +
       this.injectToWhere() +
+      this.injectCheckBalances() +
       this.injectICP() +
       this.injectReviewTransaction() +
       this.injectEnterSFNotes();
@@ -45,6 +46,7 @@ export default class ActionComponents {
     const string =
       this.injectAmount() +
       this.injectToWhere() +
+      this.injectCheckBalances() +
       this.injectICP() +
       this.injectReviewTransaction() +
       this.injectEnterSFNotes();
@@ -298,10 +300,11 @@ export default class ActionComponents {
   }
 
   injectDollarsShares() {
-    const htmlString = this.createRadio('Dollars or Shares', [
-      'dollars',
-      'shares',
-    ]);
+    const htmlString = this.createRadio(
+      'Dollars or Shares',
+      ['dollars', 'shares'],
+      'Dollars or Shares'
+    );
     return htmlString;
   }
 
@@ -309,27 +312,35 @@ export default class ActionComponents {
     return this.createCheckbox('Fractional Shares?', 'fractional-shares');
   }
 
-  // TODO add data label
   injectFromSymbol() {
-    const htmlString = this.createTextInput('from-symbol', 'From Symbol');
+    const htmlString = this.createTextInput(
+      'from-symbol',
+      'From Symbol',
+      'From Symbol'
+    );
     return htmlString;
   }
-  // TODO add data label
+
   injectToSymbol() {
-    const htmlString = this.createTextInput('to-symbol', 'To Symbol');
+    const htmlString = this.createTextInput(
+      'to-symbol',
+      'To Symbol',
+      'To Symbol'
+    );
     return htmlString;
   }
 
   injectSolicitedUnsolicited() {
-    const htmlString = this.createRadio('Solicited or Unsolicited?', [
-      'solicited',
-      'unsolicited',
-    ]);
+    const htmlString = this.createRadio(
+      'Solicited or Unsolicited?',
+      ['solicited', 'unsolicited'],
+      'Solicited or Unsolicited'
+    );
     return htmlString;
   }
 
   injectSymbol() {
-    const htmlString = this.createTextInput('symbol', 'Symbol');
+    const htmlString = this.createTextInput('symbol', 'Symbol', 'Symbol');
     return htmlString;
   }
 
@@ -416,7 +427,8 @@ export default class ActionComponents {
     const htmlString = this.createDropDown(
       'non-fidelity-funds',
       'Non-Fidelity-Funds - NFT?',
-      options
+      options,
+      'Non-Fidelity Funds'
     );
     return htmlString;
   }
@@ -487,7 +499,8 @@ export default class ActionComponents {
         type="checkbox"
         id="${this.cardId}-negative-balance"
         name="negative-balance"
-        value="yes"
+        data-label="Negative Balance?"
+        value="Yes"
       />
     </div>`;
   }
@@ -539,12 +552,12 @@ export default class ActionComponents {
       <h5>Tax Withholding</h5>
       <div class="text-input-container three">
         <label for="${this.cardId}-tax-witholding-fed">Federal:</label>
-        <input type="number" id="${this.cardId}-tax-witholding-fed" data-label="x% Fed" />
+        <input type="number" id="${this.cardId}-tax-witholding-fed" data-label="Fed" />
         <label for="${this.cardId}-tax-witholding-fed">%</label>
       </div>
       <div class="text-input-container three">
         <label for="${this.cardId}-tax-witholding-state">State:</label>
-        <input type="number" id="${this.cardId}-tax-witholding-state" data-label="x% State" />
+        <input type="number" id="${this.cardId}-tax-witholding-state" data-label="State" />
         <label for="${this.cardId}-tax-witholding-state">%</label>
       </div>
       <div class="transaction-checkbox">
@@ -554,6 +567,7 @@ export default class ActionComponents {
           id="${this.cardId}-gross-up"
           name="grossed-up"
           data-label="Grossed up"
+          value="Yes"
         />
       </div>
     </div>`;
