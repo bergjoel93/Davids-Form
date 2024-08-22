@@ -638,7 +638,12 @@ td {
 
 .backdrop.show {
   opacity: 30%;
-}`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"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AAA;EACA,WAAA;EACA,kBAAA;EACA,kBAAA;EACA,aAAA;EACA,sBAAA;AANF;;AASA;;EAEE,uBAAA;AANF;;AASA;EACE,aAAA;EACA,sBAAA;AANF;;AASA;EACE,aAAA;EACA,8BAAA;EACA,WAAA;AANF;;AASA;EACE,mBAAA;AANF;;AASA;EACE,mBAAA;EACA,WAAA;EACA,YAAA;EACA,SAAA;EACA,eAAA;EACA,gBAAA;AANF;;AASA;EACE,6BAAA;EACA,iBAAA;EACA,iBAAA;EACA,kBAAA;AANF;;AASA;EACE,kBAAA;EACA,MAAA;EACA,QAAA;EACA,gBAAA;EACA,YAAA;EACA,eAAA;EACA,eAAA;EACA,WAAA;EACA,gCAAA;AANF;;AASA;EACE,qBAAA;AANF;;AASA;EACE,8BAAA;EACA,YAAA;EACA,kBAAA;AANF;;AASA;EACE,aAAA;EACA,8BAAA;EACA,SAAA;EAEA,YAAA;AAPF;;AAUA;EACE,mBAAA;AAPF;;AAUA;EACE,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,SAAA;EACA,YAAA;AAPF;;AASA;EACE,mBAAA;EACA,kBAAA;AANF;;AASA;EACE,aAAA;EACA,8BAAA;EACA,YAAA;AANF;;AASA;EACE,aAAA;EACA,sBAAA;EACA,SAAA;AANF;;AASA;EACE,uBAAA;EACA,YAAA;EACA,kBAAA;AANF;;AASA;EACE,sCAAA;AANF;;AASA,YAAA;AAEA;EACE,gBAAA;EACA,WAAA;EACA,aAAA;EACA,qCAAA;EACA,yCAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,SAAA;AAPF;;AAUA;EACE,UAAA;AAPF;;AAUA;EACE,WAAA;AAPF;;AAUA;EACE,aAAA;EACA,sBAAA;EACA,WAAA;AAPF;;AAUA;;EAEE,YAAA;EACA,uCAAA;EACA,eAAA;EACA,WAAA;EACA,kBAAA;EACA,kBAAA;AAPF;;AASA;EACE,uCAAA;AANF;;AASA;;EAEE,wCAAA;AANF;;AASA,kBAAA;AACA;EACE,WAAA;EACA,aAAA;EACA,uBAAA;EACA,SAAA;AANF;;AASA;;EAEE,uCAAA;EACA,eAAA;EACA,eAAA;EACA,kBAAA;EACA,kBAAA;EACA,YAAA;AANF;;AASA;;EAEE,qCAAA;EACA,wBAAA;AANF;;AASA,YAAA;AACA;EACE,eAAA;EACA,MAAA;EACA,OAAA;EACA,WAAA;EACA,YAAA;EACA,qCAAA;EACA,UAAA;EACA,aAAA;AANF;;AASA;EACE,aAAA;EACA,WAAA;AANF;;AASA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,gBAAA;EACA,gBAAA;AANF;;AASA;EACE,YAAA;EACA,uCAAA;AANF;;AASA;;;EAGE,eAAA;AANF;;AASA;;;EAGE,uBAAA;EACA,eAAA;EACA,kBAAA;AANF;;AASA;EACE,kBAAA;EACA,SAAA;AANF;;AASA;EACE,mBAAA,EAAA,6BAAA;EACA,qBAAA;AANF;;AASA;EACE,aAAA;EACA,sBAAA;AANF;;AASA;EACE,aAAA;EACA,SAAA;EACA,mBAAA;AANF;;AASA;EACE,YAAA;EACA,eAAA;EACA,uCAAA;EACA,kBAAA;EACA,kBAAA;EACA,eAAA;AANF;;AAQA;EACE,wCAAA;AALF;;AAQA;EACE,UAAA;EACA,WAAA;EACA,eAAA;EACA,QAAA;EACA,SAAA;EACA,wBAAA;EACA,gCAAA;EACA,YAAA;EACA,aAAA;EACA,kBAAA;EACA,aAAA;EACA,uCAAA;EACA,UAAA;AALF;;AAQA;EACE,WAAA;EACA,YAAA;EACA,eAAA;EACA,MAAA;EACA,QAAA;EACA,WAAA;EACA,iBAAA;EACA,6BAAA;EACA,kBAAA;EACA,eAAA;AALF;;AAQA;EACE,aAAA;EACA,mBAAA;EACA,aAAA;EACA,sBAAA;AALF;;AAQA;EACE,aAAA;EACA,WAAA;AALF;;AAQA;EACE,oBAAA;EACA,eAAA;EACA,QAAA;EACA,gBAAA;EACA,WAAA;AALF;;AAQA;EACE,YAAA;AALF","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');\n\n:root {\n  --backgroundColor: #475569;\n  --primaryColor: #334155;\n  --secondaryColor: #4682b4;\n  --textBackground: #94a3b8;\n  --hoverColor: #4682b4;\n  --hoverTextColor: #334155;\n  --textBoxColor: white;\n}\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  font-family: 'Roboto', sans-serif;\n}\n\nhtml,\nbody {\n  height: 100%;\n  margin: 0;\n}\n\nbody {\n  display: flex;\n  flex-direction: column;\n  background-color: var(--backgroundColor);\n}\n\nmain {\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--backgroundColor);\n  overflow-x: hidden;\n}\n\n.main-container {\n  display: flex;\n  height: 100%;\n  flex: 1;\n  justify-content: center;\n}\n\n.main-form-container {\n  margin: 12px;\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n}\n\ninput {\n  background-color: var(--textBoxColor);\n  border-style: none;\n}\n\ninput[type='text'],\noption {\n  height: 20px;\n  padding: 5px;\n}\n\nsection {\n  border-bottom: solid black 1px;\n  margin-bottom: 6px;\n  padding-bottom: 10px;\n}\n\nbutton.generate-notes {\n  padding: 8px;\n  background-color: var(--backgroundColor);\n  color: white;\n  border-radius: 8px;\n  margin-top: 4px;\n  cursor: pointer;\n  font-size: 11px;\n}\n\nbutton.generate-notes:hover {\n  color: var(--backgroundColor);\n  background-color: #94a3b8;\n}\n\n.transaction-title {\n  pointer-events: none;\n}\n\n/* Header */\nheader {\n  height: 40px;\n  display: flex;\n  width: 100%;\n  background-color: var(--primaryColor);\n}\n\n.nav-form,\n.nav-saved {\n  flex: 1; /* Distribute the space evenly */\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 10px;\n  cursor: pointer;\n}\n\n/* Specific styles for each tab */\n.nav-form {\n  background-color: var(--backgroundColor);\n  border-radius: 8px 8px 0px 0px;\n}\n\n.nav-saved {\n  background-color: var(--primaryColor);\n}\n\n/* Optional: Add hover effects for better user experience */\n.nav-form:hover,\n.nav-saved:hover {\n  background-color: var(\n    --hoverColor\n  ); /* Define a hover color in your variables */\n  color: var(--hoverTextColor); /* Optional: Change text color on hover */\n}\n\n/* Section 1 */\n.section-1 {\n  display: grid;\n  grid-template-columns: auto 1fr;\n  gap: 10px; /* Adjust the gap between labels and inputs as needed */\n  align-items: center; /* Center align labels and inputs vertically */\n  padding: 8px;\n}\n\n.section-1 label {\n  justify-self: end; /* Align labels to the right */\n}\n\n/* Section 2 */\n\n.section-2 {\n  display: grid;\n  grid-template-columns: 1fr;\n  gap: 10px; /* Adjust the gap as needed */\n  padding: 8px;\n}\n\n.checkbox-container-title {\n  font-weight: bold;\n}\n\n.checkboxes {\n  display: grid;\n  grid-template-columns: repeat(3, auto 1fr);\n  gap: 10px; /* Adjust the gap between labels and checkboxes as needed */\n  align-items: center; /* Center align labels and checkboxes vertically */\n}\n\n.checkbox {\n  display: contents; /* Use contents to make the children directly in the grid */\n}\n\n.checkbox label {\n  justify-self: end; /* Align labels to the right */\n}\n\n.checkbox input[type='checkbox'] {\n  width: 20px; /* Set the desired width of checkbox */\n  height: 20px; /* Set the desired height of checkbox */\n  margin: 0; /* Remove default margin */\n  cursor: pointer;\n}\n\n/* Section 3 */\n\n.section-3,\n.section-4 {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  gap: 10px; /* Adjust the gap between elements as needed */\n  align-items: center;\n  max-width: 600px; /* Adjust the width as needed */\n  margin: auto; /* Center the section */\n}\n\n.checkbox-restrictions {\n  display: flex;\n  gap: 12px;\n  align-items: end;\n  justify-content: center;\n  width: 100%;\n  height: 100%;\n}\n\n.checkbox-restrictions input[type='checkbox'] {\n  cursor: pointer;\n  width: 20px;\n  height: 20px;\n}\n\n.checkbox-restrictions label {\n  font-size: 18px;\n}\n\n.text-box {\n  display: flex;\n  flex-direction: column;\n}\n\n.text-box label {\n  margin-bottom: 5px;\n}\n\n.text-box input {\n  width: 100%;\n  box-sizing: border-box;\n}\n\n/* Notes Container */\n\n.notes-container {\n  padding: 8px;\n  min-height: 400px;\n  flex: 1;\n  display: flex;\n}\n\n.notes {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--textBackground);\n  border-radius: 8px;\n  flex: 1;\n}\n\ntextarea {\n  width: 100%;\n  height: 100%;\n  margin: 8px;\n  color: black;\n  border-style: none;\n  background-color: transparent;\n  padding: 6px;\n  flex: 1;\n}\n\ntextarea:focus {\n  border-style: none;\n  outline: none;\n}\n\n/* Second Container */\n\n.second-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  border: solid black 1px;\n  border-radius: 8px;\n  width: 450px;\n  overflow-y: auto;\n  margin: 12px;\n}\n\n.add-transaction {\n  padding: 6px;\n  text-align: center;\n}\n\n.add-transaction-button {\n  cursor: pointer;\n  transition: transform 0.3s ease-in-out;\n  border-style: none;\n  background-color: transparent;\n  font-size: 1.1rem;\n  font-weight: 250;\n}\n\n.add-transaction-button:hover {\n  transform: scale(1.2);\n}\n\n.buttons-container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 12px;\n  margin: 12px;\n}\n\n.buttons-container button {\n  padding: 8px;\n  background-color: var(--secondaryColor);\n  border-style: none;\n  border-radius: 8px;\n  cursor: pointer;\n}\n\n/* Transaction Forms */\n\n#transaction-container {\n  display: flex;\n  flex-direction: column;\n}\n.transaction-card {\n  background-color: var(--secondaryColor);\n  padding: 10px;\n  margin: 8px;\n  border-radius: 8px;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n}\n\n.transaction-card:focus,\n.transaction-card:active {\n  border: solid black 1px;\n}\n\n.secondary-card-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.transaction-checkbox {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin: 6px;\n}\n\n.transaction-checkbox label {\n  justify-self: start;\n}\n\n.transaction-checkbox input {\n  justify-self: start;\n  width: 20px;\n  height: 20px;\n  margin: 0;\n  cursor: pointer;\n  margin-left: 6px;\n}\n\n.transaction-title {\n  background-color: transparent;\n  font-size: 1.2rem;\n  font-weight: bold;\n  text-align: center;\n}\n\n.close-card {\n  position: absolute;\n  top: 0;\n  right: 0;\n  background: none;\n  border: none;\n  font-size: 1rem;\n  cursor: pointer;\n  margin: 6px;\n  transition: transform 1s ease-in;\n}\n\n.close-card:hover {\n  transform: scale(1.5);\n}\n\n.transaction-card h3 {\n  border-bottom: solid black 1px;\n  padding: 4px;\n  margin-bottom: 6px;\n}\n\n.option-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 10px;\n\n  padding: 6px;\n}\n\n.option-container label {\n  justify-self: start;\n}\n\n.text-input-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  align-items: center;\n  gap: 10px;\n  padding: 6px;\n}\n.text-input-container label {\n  justify-self: start;\n  padding-right: 6px;\n}\n\n.radio-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  padding: 6px;\n}\n\n.radios {\n  display: flex;\n  justify-content: start;\n  gap: 12px;\n}\n\n.tax-witholding-container {\n  border: solid black 1px;\n  padding: 6px;\n  border-radius: 6px;\n}\n\n.text-input-container.three {\n  grid-template-columns: 1fr 0.9fr 0.1fr;\n}\n\n/* Footer  */\n\nfooter {\n  position: sticky;\n  width: 100%;\n  padding: 10px;\n  background-color: var(--primaryColor);\n  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  bottom: 0;\n}\n\n.persistent-note {\n  width: 60%;\n}\n\ntextarea#persistent-notes {\n  width: 100%;\n}\n\n.important-buttons {\n  display: flex;\n  flex-direction: column;\n  margin: 8px;\n}\n\n#save-persistent-button,\n#reset-persistent-button {\n  padding: 8px;\n  background-color: var(--secondaryColor);\n  cursor: pointer;\n  margin: 6px;\n  border-style: none;\n  border-radius: 6px;\n}\n#reset-persistent-button {\n  background-color: var(--textBackground);\n}\n\n#save-persistent-button:hover,\n#reset-persistent-button:hover {\n  background-color: var(--backgroundColor);\n}\n\n/* Submit Button */\n.submit-reset-buttons {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  gap: 16px;\n}\n\n#submit-button,\n#reset-button {\n  background-color: var(--secondaryColor);\n  cursor: pointer;\n  font-size: 16px;\n  border-style: none;\n  border-radius: 8px;\n  padding: 8px;\n}\n\n#submit-button:hover,\n#reset-button:hover {\n  background-color: var(--primaryColor);\n  color: var(--hoverColor);\n}\n\n/* Overlay */\n#overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: var(--primaryColor);\n  z-index: 2;\n  display: none;\n}\n\n#overlay .header {\n  display: flex;\n  width: 100%;\n}\n\n#overlay-notes-container {\n  width: 100%;\n  height: 100%;\n  padding: 24px;\n  font-size: 1.3rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  overflow-y: auto;\n  overflow-x: auto;\n}\n\ntable {\n  margin: 1rem;\n  background-color: var(--textBackground);\n}\n\ntr,\ntd,\nth {\n  padding: 0.5rem;\n}\n\ntable,\nth,\ntd {\n  border: 1px solid black;\n  font-size: 16px;\n  text-align: center;\n}\n\n#overlay-notes-container ul {\n  padding-left: 24px;\n  margin: 0;\n}\n\n#overlay-notes-container ul li {\n  margin-bottom: 16px; /* Space between list items */\n  list-style-type: disc;\n}\n\n.overlay-note {\n  display: flex;\n  flex-direction: column;\n}\n\n.note-title {\n  display: flex;\n  gap: 12px;\n  align-items: center;\n}\n\n.expand-modal-btn {\n  padding: 5px;\n  font-size: 1rem;\n  background-color: var(--secondaryColor);\n  border-radius: 8px;\n  border-style: none;\n  cursor: pointer;\n}\n.expand-modal-btn:hover {\n  background-color: var(--backgroundColor);\n}\n\n.note-modal {\n  width: 80%;\n  height: 80%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  transform-origin: center;\n  transform: translate(-50%, -50%);\n  margin: 12px;\n  padding: 12px;\n  border-radius: 8px;\n  display: none;\n  background-color: var(--textBackground);\n  opacity: 0;\n}\n\n.close-modal-btn {\n  width: 24px;\n  height: 24px;\n  position: fixed;\n  top: 0;\n  right: 0;\n  margin: 8px;\n  font-size: 1.5rem;\n  background-color: transparent;\n  border-style: none;\n  cursor: pointer;\n}\n\n.note-modal.show {\n  opacity: 100%;\n  pointer-events: all;\n  display: flex;\n  flex-direction: column;\n}\n\n.note-print {\n  padding: 12px;\n  width: 100%;\n}\n\n.backdrop {\n  pointer-events: none;\n  position: fixed;\n  inset: 0;\n  background: #000;\n  opacity: 0%;\n}\n\n.backdrop.show {\n  opacity: 30%;\n}\n"],"sourceRoot":""}]);
+}
+
+/* Misc. */
+.red-text {
+  color: rgb(185, 7, 7);
+}`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"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AAA;EACA,WAAA;EACA,kBAAA;EACA,kBAAA;EACA,aAAA;EACA,sBAAA;AANF;;AASA;;EAEE,uBAAA;AANF;;AASA;EACE,aAAA;EACA,sBAAA;AANF;;AASA;EACE,aAAA;EACA,8BAAA;EACA,WAAA;AANF;;AASA;EACE,mBAAA;AANF;;AASA;EACE,mBAAA;EACA,WAAA;EACA,YAAA;EACA,SAAA;EACA,eAAA;EACA,gBAAA;AANF;;AASA;EACE,6BAAA;EACA,iBAAA;EACA,iBAAA;EACA,kBAAA;AANF;;AASA;EACE,kBAAA;EACA,MAAA;EACA,QAAA;EACA,gBAAA;EACA,YAAA;EACA,eAAA;EACA,eAAA;EACA,WAAA;EACA,gCAAA;AANF;;AASA;EACE,qBAAA;AANF;;AASA;EACE,8BAAA;EACA,YAAA;EACA,kBAAA;AANF;;AASA;EACE,aAAA;EACA,8BAAA;EACA,SAAA;EAEA,YAAA;AAPF;;AAUA;EACE,mBAAA;AAPF;;AAUA;EACE,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,SAAA;EACA,YAAA;AAPF;;AASA;EACE,mBAAA;EACA,kBAAA;AANF;;AASA;EACE,aAAA;EACA,8BAAA;EACA,YAAA;AANF;;AASA;EACE,aAAA;EACA,sBAAA;EACA,SAAA;AANF;;AASA;EACE,uBAAA;EACA,YAAA;EACA,kBAAA;AANF;;AASA;EACE,sCAAA;AANF;;AASA,YAAA;AAEA;EACE,gBAAA;EACA,WAAA;EACA,aAAA;EACA,qCAAA;EACA,yCAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,SAAA;AAPF;;AAUA;EACE,UAAA;AAPF;;AAUA;EACE,WAAA;AAPF;;AAUA;EACE,aAAA;EACA,sBAAA;EACA,WAAA;AAPF;;AAUA;;EAEE,YAAA;EACA,uCAAA;EACA,eAAA;EACA,WAAA;EACA,kBAAA;EACA,kBAAA;AAPF;;AASA;EACE,uCAAA;AANF;;AASA;;EAEE,wCAAA;AANF;;AASA,kBAAA;AACA;EACE,WAAA;EACA,aAAA;EACA,uBAAA;EACA,SAAA;AANF;;AASA;;EAEE,uCAAA;EACA,eAAA;EACA,eAAA;EACA,kBAAA;EACA,kBAAA;EACA,YAAA;AANF;;AASA;;EAEE,qCAAA;EACA,wBAAA;AANF;;AASA,YAAA;AACA;EACE,eAAA;EACA,MAAA;EACA,OAAA;EACA,WAAA;EACA,YAAA;EACA,qCAAA;EACA,UAAA;EACA,aAAA;AANF;;AASA;EACE,aAAA;EACA,WAAA;AANF;;AASA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,gBAAA;EACA,gBAAA;AANF;;AASA;EACE,YAAA;EACA,uCAAA;AANF;;AASA;;;EAGE,eAAA;AANF;;AASA;;;EAGE,uBAAA;EACA,eAAA;EACA,kBAAA;AANF;;AASA;EACE,kBAAA;EACA,SAAA;AANF;;AASA;EACE,mBAAA,EAAA,6BAAA;EACA,qBAAA;AANF;;AASA;EACE,aAAA;EACA,sBAAA;AANF;;AASA;EACE,aAAA;EACA,SAAA;EACA,mBAAA;AANF;;AASA;EACE,YAAA;EACA,eAAA;EACA,uCAAA;EACA,kBAAA;EACA,kBAAA;EACA,eAAA;AANF;;AAQA;EACE,wCAAA;AALF;;AAQA;EACE,UAAA;EACA,WAAA;EACA,eAAA;EACA,QAAA;EACA,SAAA;EACA,wBAAA;EACA,gCAAA;EACA,YAAA;EACA,aAAA;EACA,kBAAA;EACA,aAAA;EACA,uCAAA;EACA,UAAA;AALF;;AAQA;EACE,WAAA;EACA,YAAA;EACA,eAAA;EACA,MAAA;EACA,QAAA;EACA,WAAA;EACA,iBAAA;EACA,6BAAA;EACA,kBAAA;EACA,eAAA;AALF;;AAQA;EACE,aAAA;EACA,mBAAA;EACA,aAAA;EACA,sBAAA;AALF;;AAQA;EACE,aAAA;EACA,WAAA;AALF;;AAQA;EACE,oBAAA;EACA,eAAA;EACA,QAAA;EACA,gBAAA;EACA,WAAA;AALF;;AAQA;EACE,YAAA;AALF;;AAQA,UAAA;AACA;EACE,qBAAA;AALF","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');\n\n:root {\n  --backgroundColor: #475569;\n  --primaryColor: #334155;\n  --secondaryColor: #4682b4;\n  --textBackground: #94a3b8;\n  --hoverColor: #4682b4;\n  --hoverTextColor: #334155;\n  --textBoxColor: white;\n}\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  font-family: 'Roboto', sans-serif;\n}\n\nhtml,\nbody {\n  height: 100%;\n  margin: 0;\n}\n\nbody {\n  display: flex;\n  flex-direction: column;\n  background-color: var(--backgroundColor);\n}\n\nmain {\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--backgroundColor);\n  overflow-x: hidden;\n}\n\n.main-container {\n  display: flex;\n  height: 100%;\n  flex: 1;\n  justify-content: center;\n}\n\n.main-form-container {\n  margin: 12px;\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n}\n\ninput {\n  background-color: var(--textBoxColor);\n  border-style: none;\n}\n\ninput[type='text'],\noption {\n  height: 20px;\n  padding: 5px;\n}\n\nsection {\n  border-bottom: solid black 1px;\n  margin-bottom: 6px;\n  padding-bottom: 10px;\n}\n\nbutton.generate-notes {\n  padding: 8px;\n  background-color: var(--backgroundColor);\n  color: white;\n  border-radius: 8px;\n  margin-top: 4px;\n  cursor: pointer;\n  font-size: 11px;\n}\n\nbutton.generate-notes:hover {\n  color: var(--backgroundColor);\n  background-color: #94a3b8;\n}\n\n.transaction-title {\n  pointer-events: none;\n}\n\n/* Header */\nheader {\n  height: 40px;\n  display: flex;\n  width: 100%;\n  background-color: var(--primaryColor);\n}\n\n.nav-form,\n.nav-saved {\n  flex: 1; /* Distribute the space evenly */\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 10px;\n  cursor: pointer;\n}\n\n/* Specific styles for each tab */\n.nav-form {\n  background-color: var(--backgroundColor);\n  border-radius: 8px 8px 0px 0px;\n}\n\n.nav-saved {\n  background-color: var(--primaryColor);\n}\n\n/* Optional: Add hover effects for better user experience */\n.nav-form:hover,\n.nav-saved:hover {\n  background-color: var(\n    --hoverColor\n  ); /* Define a hover color in your variables */\n  color: var(--hoverTextColor); /* Optional: Change text color on hover */\n}\n\n/* Section 1 */\n.section-1 {\n  display: grid;\n  grid-template-columns: auto 1fr;\n  gap: 10px; /* Adjust the gap between labels and inputs as needed */\n  align-items: center; /* Center align labels and inputs vertically */\n  padding: 8px;\n}\n\n.section-1 label {\n  justify-self: end; /* Align labels to the right */\n}\n\n/* Section 2 */\n\n.section-2 {\n  display: grid;\n  grid-template-columns: 1fr;\n  gap: 10px; /* Adjust the gap as needed */\n  padding: 8px;\n}\n\n.checkbox-container-title {\n  font-weight: bold;\n}\n\n.checkboxes {\n  display: grid;\n  grid-template-columns: repeat(3, auto 1fr);\n  gap: 10px; /* Adjust the gap between labels and checkboxes as needed */\n  align-items: center; /* Center align labels and checkboxes vertically */\n}\n\n.checkbox {\n  display: contents; /* Use contents to make the children directly in the grid */\n}\n\n.checkbox label {\n  justify-self: end; /* Align labels to the right */\n}\n\n.checkbox input[type='checkbox'] {\n  width: 20px; /* Set the desired width of checkbox */\n  height: 20px; /* Set the desired height of checkbox */\n  margin: 0; /* Remove default margin */\n  cursor: pointer;\n}\n\n/* Section 3 */\n\n.section-3,\n.section-4 {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  gap: 10px; /* Adjust the gap between elements as needed */\n  align-items: center;\n  max-width: 600px; /* Adjust the width as needed */\n  margin: auto; /* Center the section */\n}\n\n.checkbox-restrictions {\n  display: flex;\n  gap: 12px;\n  align-items: end;\n  justify-content: center;\n  width: 100%;\n  height: 100%;\n}\n\n.checkbox-restrictions input[type='checkbox'] {\n  cursor: pointer;\n  width: 20px;\n  height: 20px;\n}\n\n.checkbox-restrictions label {\n  font-size: 18px;\n}\n\n.text-box {\n  display: flex;\n  flex-direction: column;\n}\n\n.text-box label {\n  margin-bottom: 5px;\n}\n\n.text-box input {\n  width: 100%;\n  box-sizing: border-box;\n}\n\n/* Notes Container */\n\n.notes-container {\n  padding: 8px;\n  min-height: 400px;\n  flex: 1;\n  display: flex;\n}\n\n.notes {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background-color: var(--textBackground);\n  border-radius: 8px;\n  flex: 1;\n}\n\ntextarea {\n  width: 100%;\n  height: 100%;\n  margin: 8px;\n  color: black;\n  border-style: none;\n  background-color: transparent;\n  padding: 6px;\n  flex: 1;\n}\n\ntextarea:focus {\n  border-style: none;\n  outline: none;\n}\n\n/* Second Container */\n\n.second-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  border: solid black 1px;\n  border-radius: 8px;\n  width: 450px;\n  overflow-y: auto;\n  margin: 12px;\n}\n\n.add-transaction {\n  padding: 6px;\n  text-align: center;\n}\n\n.add-transaction-button {\n  cursor: pointer;\n  transition: transform 0.3s ease-in-out;\n  border-style: none;\n  background-color: transparent;\n  font-size: 1.1rem;\n  font-weight: 250;\n}\n\n.add-transaction-button:hover {\n  transform: scale(1.2);\n}\n\n.buttons-container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  gap: 12px;\n  margin: 12px;\n}\n\n.buttons-container button {\n  padding: 8px;\n  background-color: var(--secondaryColor);\n  border-style: none;\n  border-radius: 8px;\n  cursor: pointer;\n}\n\n/* Transaction Forms */\n\n#transaction-container {\n  display: flex;\n  flex-direction: column;\n}\n.transaction-card {\n  background-color: var(--secondaryColor);\n  padding: 10px;\n  margin: 8px;\n  border-radius: 8px;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n}\n\n.transaction-card:focus,\n.transaction-card:active {\n  border: solid black 1px;\n}\n\n.secondary-card-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.transaction-checkbox {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin: 6px;\n}\n\n.transaction-checkbox label {\n  justify-self: start;\n}\n\n.transaction-checkbox input {\n  justify-self: start;\n  width: 20px;\n  height: 20px;\n  margin: 0;\n  cursor: pointer;\n  margin-left: 6px;\n}\n\n.transaction-title {\n  background-color: transparent;\n  font-size: 1.2rem;\n  font-weight: bold;\n  text-align: center;\n}\n\n.close-card {\n  position: absolute;\n  top: 0;\n  right: 0;\n  background: none;\n  border: none;\n  font-size: 1rem;\n  cursor: pointer;\n  margin: 6px;\n  transition: transform 1s ease-in;\n}\n\n.close-card:hover {\n  transform: scale(1.5);\n}\n\n.transaction-card h3 {\n  border-bottom: solid black 1px;\n  padding: 4px;\n  margin-bottom: 6px;\n}\n\n.option-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 10px;\n\n  padding: 6px;\n}\n\n.option-container label {\n  justify-self: start;\n}\n\n.text-input-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  align-items: center;\n  gap: 10px;\n  padding: 6px;\n}\n.text-input-container label {\n  justify-self: start;\n  padding-right: 6px;\n}\n\n.radio-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  padding: 6px;\n}\n\n.radios {\n  display: flex;\n  justify-content: start;\n  gap: 12px;\n}\n\n.tax-witholding-container {\n  border: solid black 1px;\n  padding: 6px;\n  border-radius: 6px;\n}\n\n.text-input-container.three {\n  grid-template-columns: 1fr 0.9fr 0.1fr;\n}\n\n/* Footer  */\n\nfooter {\n  position: sticky;\n  width: 100%;\n  padding: 10px;\n  background-color: var(--primaryColor);\n  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  bottom: 0;\n}\n\n.persistent-note {\n  width: 60%;\n}\n\ntextarea#persistent-notes {\n  width: 100%;\n}\n\n.important-buttons {\n  display: flex;\n  flex-direction: column;\n  margin: 8px;\n}\n\n#save-persistent-button,\n#reset-persistent-button {\n  padding: 8px;\n  background-color: var(--secondaryColor);\n  cursor: pointer;\n  margin: 6px;\n  border-style: none;\n  border-radius: 6px;\n}\n#reset-persistent-button {\n  background-color: var(--textBackground);\n}\n\n#save-persistent-button:hover,\n#reset-persistent-button:hover {\n  background-color: var(--backgroundColor);\n}\n\n/* Submit Button */\n.submit-reset-buttons {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  gap: 16px;\n}\n\n#submit-button,\n#reset-button {\n  background-color: var(--secondaryColor);\n  cursor: pointer;\n  font-size: 16px;\n  border-style: none;\n  border-radius: 8px;\n  padding: 8px;\n}\n\n#submit-button:hover,\n#reset-button:hover {\n  background-color: var(--primaryColor);\n  color: var(--hoverColor);\n}\n\n/* Overlay */\n#overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: var(--primaryColor);\n  z-index: 2;\n  display: none;\n}\n\n#overlay .header {\n  display: flex;\n  width: 100%;\n}\n\n#overlay-notes-container {\n  width: 100%;\n  height: 100%;\n  padding: 24px;\n  font-size: 1.3rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  overflow-y: auto;\n  overflow-x: auto;\n}\n\ntable {\n  margin: 1rem;\n  background-color: var(--textBackground);\n}\n\ntr,\ntd,\nth {\n  padding: 0.5rem;\n}\n\ntable,\nth,\ntd {\n  border: 1px solid black;\n  font-size: 16px;\n  text-align: center;\n}\n\n#overlay-notes-container ul {\n  padding-left: 24px;\n  margin: 0;\n}\n\n#overlay-notes-container ul li {\n  margin-bottom: 16px; /* Space between list items */\n  list-style-type: disc;\n}\n\n.overlay-note {\n  display: flex;\n  flex-direction: column;\n}\n\n.note-title {\n  display: flex;\n  gap: 12px;\n  align-items: center;\n}\n\n.expand-modal-btn {\n  padding: 5px;\n  font-size: 1rem;\n  background-color: var(--secondaryColor);\n  border-radius: 8px;\n  border-style: none;\n  cursor: pointer;\n}\n.expand-modal-btn:hover {\n  background-color: var(--backgroundColor);\n}\n\n.note-modal {\n  width: 80%;\n  height: 80%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  transform-origin: center;\n  transform: translate(-50%, -50%);\n  margin: 12px;\n  padding: 12px;\n  border-radius: 8px;\n  display: none;\n  background-color: var(--textBackground);\n  opacity: 0;\n}\n\n.close-modal-btn {\n  width: 24px;\n  height: 24px;\n  position: fixed;\n  top: 0;\n  right: 0;\n  margin: 8px;\n  font-size: 1.5rem;\n  background-color: transparent;\n  border-style: none;\n  cursor: pointer;\n}\n\n.note-modal.show {\n  opacity: 100%;\n  pointer-events: all;\n  display: flex;\n  flex-direction: column;\n}\n\n.note-print {\n  padding: 12px;\n  width: 100%;\n}\n\n.backdrop {\n  pointer-events: none;\n  position: fixed;\n  inset: 0;\n  background: #000;\n  opacity: 0%;\n}\n\n.backdrop.show {\n  opacity: 30%;\n}\n\n/* Misc. */\n.red-text {\n  color: rgb(185, 7, 7);\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4797,7 +4802,7 @@ class GenerateCard {
       this.transactionComponent.injectAuthorizedToTrade(this.cardId) +
       this.transactionComponent.injectOrders() +
       this.transactionComponent.injectAutoInvestments(this.cardId) +
-      this.transactionComponent.injectComission() +
+      this.transactionComponent.injectCommission() +
       this.transactionComponent.injectAction3(this.cardId) +
       `</div>`;
     return html;
@@ -4811,7 +4816,7 @@ class GenerateCard {
       this.transactionComponent.injectAuthorizedToTrade(this.cardId) +
       this.transactionComponent.injectOrders() +
       this.transactionComponent.injectAutoInvestments(this.cardId) +
-      this.transactionComponent.injectComission() +
+      this.transactionComponent.injectCommission() +
       this.transactionComponent.injectNumOfLegs() +
       `</div>`;
     return html;
@@ -5039,19 +5044,19 @@ class TransactionComponent {
   /**
    * For Option Trade
    */
-  injectComission() {
+  injectCommission() {
     return `  
     <div class = "option-container">
-      <label for="${this.cardId}-comission">Comission:</label>
-      <select id="${this.cardId}-comission" name="Comission" data-label = "Comission">
+      <label for="${this.cardId}-commission">Commission:</label>
+      <select id="${this.cardId}-commission" name="commission" data-label = "Commission">
           <option value="none">Select Option:</option>
           <option value="waived">Waived</option>
           <option value="discussed">Discussed</option>
       </select>
     </div>
-    <div id = "reason-text-box" class = "text-input-container" style = "display: none">
-      <label for = "${this.cardId}-comission-reason" >Reason:</label>
-      <input type = "text" id = "${this.cardId}-comission-reason" name = "comission-reason" data-label="Reason:">
+    <div id = "${this.cardId}-reason-text-box" class = "text-input-container" style = "display: none">
+      <label for = "${this.cardId}-commission-reason" >Reason:</label>
+      <input type = "text" id = "${this.cardId}-commission-reason" name = "commission-reason" data-label="Reason:">
     </div>
   `;
   }
@@ -5081,9 +5086,9 @@ class TransactionComponent {
   injectAction3() {
     return `  
     <div class = "option-container">
-    <label for="${this.cardId}-action" data-label="Action:" >Action:</label>
+    <label for="${this.cardId}-action"  >Action:</label>
     <select id="${this.cardId}-action" name="Action" data-label = "Action">
-        <option value="null">Select Option:</option>
+        <option value="none">Select Option:</option>
         <option value="buy">Buy</option>
         <option value="sell">Sell</option>
         <option value="buy-to-cover">Buy To Cover</option>
@@ -5267,6 +5272,7 @@ class ActionComponents {
       this.injectMinimums() +
       this.injectNonFidelityFunds() +
       this.injectOver2Mil() +
+      this.injectEnterOrderInRWOE() +
       this.injectCheckOrderReview() +
       this.injectUpdateOrderLog() +
       this.injectEnterSFNotes();
@@ -5548,7 +5554,19 @@ class ActionComponents {
   }
 
   injectCheckMarginReq() {
-    return this.createCheckbox('Check Margin Req', 'check-margin-req');
+    return `
+      <div class="transaction-checkbox">
+        <label for="${this.cardId}-check-margin-req" class="red-text">
+          Check Margin Req
+        </label>
+        <input
+          type="checkbox"
+          id="${this.cardId}-check-margin-req}"
+          name="check-margin-req"
+        />
+      </div>
+    `;
+    // return this.createCheckbox('Check Margin Req', 'check-margin-req');
   }
 
   injectProvideQuote() {
@@ -5590,18 +5608,27 @@ class ActionComponents {
 
   // TODO This one is more complicated than I thought. Come back later.
   injectNonFidelityFunds() {
-    const options = {
-      'Load?': 'Yes: transfer to specialty trading',
-      'NFT = Y': 'Buy: No Fee',
-      'NFT = N': "Buy: Transaction fee charged (don't overbuy)",
-    };
-    const htmlString = this.createDropDown(
-      'non-fidelity-funds',
-      'Non-Fidelity-Funds - NFT?',
-      options,
-      'Non-Fidelity Funds'
-    );
-    return htmlString;
+    // const options = {
+    //   'Load?': 'Yes: transfer to specialty trading',
+    //   'NFT = Y': 'Buy: No Fee',
+    //   'NFT = N': "Buy: Transaction fee charged (don't overbuy)",
+    // };
+    // const htmlString = this.createDropDown(
+    //   'non-fidelity-funds',
+    //   'Non-Fidelity-Funds - NFT?',
+    //   options,
+    //   'Non-Fidelity Funds'
+    // );
+    return `
+      <div class="option-container">
+        <label for="${this.cardId}-non-fidelity-funds">Non-Fidelity-Funds - NFT?</label>
+        <select id="${this.cardId}-non-fidelity-funds" name="non-fidelity-funds">
+          <option value="Yes: transfer to specialty trading">Load?</option>
+          <option value="Buy: No Fee">NFT = Y</option>
+          <option value="Buy: Transaction fee charged (don't overbuy)">NFT = N</option>
+        </select>
+      </div>
+    `;
   }
 
   injectDIAPenny() {
@@ -5618,7 +5645,18 @@ class ActionComponents {
       'Over $2mil needs approval',
       'over-2mill'
     );
-    return htmlString;
+    return `
+      <div class="transaction-checkbox red-text">
+        <label for="${this.cardId}-over-2mil">
+          Over $2mil needs approval
+        </label>
+        <input
+          type="checkbox"
+          id="${this.cardId}-over-2mil"
+          name="over-2mil"
+        />
+      </div>
+    `;
   }
 
   injectEnterOrderInRWOE() {
@@ -5662,7 +5700,7 @@ class ActionComponents {
 
   injectCheckBalances() {
     return `
-    <div class="transaction-checkbox">
+    <div class="transaction-checkbox red-text">
       <label for="${this.cardId}-negative-balance">
         Check Balances - Negative Balance?
       </label>
@@ -5670,7 +5708,6 @@ class ActionComponents {
         type="checkbox"
         id="${this.cardId}-negative-balance"
         name="negative-balance"
-        data-label="Negative Balance?"
         value="Yes"
       />
     </div>`;
@@ -5796,6 +5833,7 @@ class ActionComponents {
                   id="${this.cardId}-contribution-CYC"
                   name="contribution-year"
                   value="CYC"
+                  data-label ="Contribution Year"
                 />
               </div>
               <div class="radio">
@@ -5805,6 +5843,7 @@ class ActionComponents {
                   id="${this.cardId}-contribution-PYC"
                   name="contribution-year"
                   value="PYC"
+                  data-label ="Contribution Year"
                 />
               </div>
             </div>
@@ -6678,14 +6717,14 @@ function handleOptionsTrade(cardElement, cardId) {
   // Next, you need to handle the number of legs option container. It's still called 'action-container' so you can call that. Then add the action forms to it. build them in actionComonents.
   const actionComponents = new _components_actionComponents_mjs__WEBPACK_IMPORTED_MODULE_1__["default"](cardId);
   const actionContainer = cardElement.querySelector('.action-container');
-  const comission = cardElement.querySelector(`#${cardId}-comission`);
-  const reasonTextBox = cardElement.querySelector(`#reason-text-box`);
+  const commission = cardElement.querySelector(`#${cardId}-commission`);
+  const reasonTextBox = cardElement.querySelector(`#${cardId}-reason-text-box`);
   // select #oflegs
   const numLegs = cardElement.querySelector(`#${cardId}-num-of-legs`);
 
-  comission.addEventListener('change', () => {
-    let comissionValue = comission.value;
-    if (comissionValue === 'waived') {
+  commission.addEventListener('change', () => {
+    let commissionValue = commission.value;
+    if (commissionValue === 'waived') {
       reasonTextBox.style.display = 'grid';
     } else {
       reasonTextBox.style.display = 'none';
@@ -6723,6 +6762,16 @@ function handleEquityTrade(cardElement, cardId) {
   const actionComponents = new _components_actionComponents_mjs__WEBPACK_IMPORTED_MODULE_1__["default"](cardId);
   const actionContainer = cardElement.querySelector('.action-container');
   const action = cardElement.querySelector(`#${cardId}-action`);
+  const commission = cardElement.querySelector(`#${cardId}-commission`);
+  const reason = cardElement.querySelector(`#${cardId}-reason-text-box`);
+
+  commission.addEventListener('change', () => {
+    if (commission.value === 'waived') {
+      reason.style.display = 'grid';
+    } else {
+      reason.style.display = 'none';
+    }
+  });
 
   action.addEventListener('change', () => {
     let actionValue = action.value;
