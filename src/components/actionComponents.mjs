@@ -96,6 +96,7 @@ export default class ActionComponents {
       this.injectMinimums() +
       this.injectNonFidelityFunds() +
       this.injectOver2Mil() +
+      this.injectEnterOrderInRWOE() +
       this.injectCheckOrderReview() +
       this.injectUpdateOrderLog() +
       this.injectEnterSFNotes();
@@ -377,7 +378,19 @@ export default class ActionComponents {
   }
 
   injectCheckMarginReq() {
-    return this.createCheckbox('Check Margin Req', 'check-margin-req');
+    return `
+      <div class="transaction-checkbox">
+        <label for="${this.cardId}-check-margin-req" class="red-text">
+          Check Margin Req
+        </label>
+        <input
+          type="checkbox"
+          id="${this.cardId}-check-margin-req}"
+          name="check-margin-req"
+        />
+      </div>
+    `;
+    // return this.createCheckbox('Check Margin Req', 'check-margin-req');
   }
 
   injectProvideQuote() {
@@ -419,18 +432,27 @@ export default class ActionComponents {
 
   // TODO This one is more complicated than I thought. Come back later.
   injectNonFidelityFunds() {
-    const options = {
-      'Load?': 'Yes: transfer to specialty trading',
-      'NFT = Y': 'Buy: No Fee',
-      'NFT = N': "Buy: Transaction fee charged (don't overbuy)",
-    };
-    const htmlString = this.createDropDown(
-      'non-fidelity-funds',
-      'Non-Fidelity-Funds - NFT?',
-      options,
-      'Non-Fidelity Funds'
-    );
-    return htmlString;
+    // const options = {
+    //   'Load?': 'Yes: transfer to specialty trading',
+    //   'NFT = Y': 'Buy: No Fee',
+    //   'NFT = N': "Buy: Transaction fee charged (don't overbuy)",
+    // };
+    // const htmlString = this.createDropDown(
+    //   'non-fidelity-funds',
+    //   'Non-Fidelity-Funds - NFT?',
+    //   options,
+    //   'Non-Fidelity Funds'
+    // );
+    return `
+      <div class="option-container">
+        <label for="${this.cardId}-non-fidelity-funds">Non-Fidelity-Funds - NFT?</label>
+        <select id="${this.cardId}-non-fidelity-funds" name="non-fidelity-funds">
+          <option value="Yes: transfer to specialty trading">Load?</option>
+          <option value="Buy: No Fee">NFT = Y</option>
+          <option value="Buy: Transaction fee charged (don't overbuy)">NFT = N</option>
+        </select>
+      </div>
+    `;
   }
 
   injectDIAPenny() {
@@ -447,7 +469,18 @@ export default class ActionComponents {
       'Over $2mil needs approval',
       'over-2mill'
     );
-    return htmlString;
+    return `
+      <div class="transaction-checkbox red-text">
+        <label for="${this.cardId}-over-2mil">
+          Over $2mil needs approval
+        </label>
+        <input
+          type="checkbox"
+          id="${this.cardId}-over-2mil"
+          name="over-2mil"
+        />
+      </div>
+    `;
   }
 
   injectEnterOrderInRWOE() {
@@ -491,7 +524,7 @@ export default class ActionComponents {
 
   injectCheckBalances() {
     return `
-    <div class="transaction-checkbox">
+    <div class="transaction-checkbox red-text">
       <label for="${this.cardId}-negative-balance">
         Check Balances - Negative Balance?
       </label>
@@ -499,7 +532,6 @@ export default class ActionComponents {
         type="checkbox"
         id="${this.cardId}-negative-balance"
         name="negative-balance"
-        data-label="Negative Balance?"
         value="Yes"
       />
     </div>`;
@@ -625,6 +657,7 @@ export default class ActionComponents {
                   id="${this.cardId}-contribution-CYC"
                   name="contribution-year"
                   value="CYC"
+                  data-label ="Contribution Year"
                 />
               </div>
               <div class="radio">
@@ -634,6 +667,7 @@ export default class ActionComponents {
                   id="${this.cardId}-contribution-PYC"
                   name="contribution-year"
                   value="PYC"
+                  data-label ="Contribution Year"
                 />
               </div>
             </div>

@@ -622,3 +622,8 @@ td {
 .backdrop.show {
   opacity: 30%;
 }
+
+/* Misc. */
+.red-text {
+  color: rgb(185, 7, 7);
+}

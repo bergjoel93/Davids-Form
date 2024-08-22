@@ -90,14 +90,14 @@ function handleOptionsTrade(cardElement, cardId) {
   // Next, you need to handle the number of legs option container. It's still called 'action-container' so you can call that. Then add the action forms to it. build them in actionComonents.
   const actionComponents = new ActionComponents(cardId);
   const actionContainer = cardElement.querySelector('.action-container');
-  const comission = cardElement.querySelector(`#${cardId}-comission`);
-  const reasonTextBox = cardElement.querySelector(`#reason-text-box`);
+  const commission = cardElement.querySelector(`#${cardId}-commission`);
+  const reasonTextBox = cardElement.querySelector(`#${cardId}-reason-text-box`);
   // select #oflegs
   const numLegs = cardElement.querySelector(`#${cardId}-num-of-legs`);
 
-  comission.addEventListener('change', () => {
-    let comissionValue = comission.value;
-    if (comissionValue === 'waived') {
+  commission.addEventListener('change', () => {
+    let commissionValue = commission.value;
+    if (commissionValue === 'waived') {
       reasonTextBox.style.display = 'grid';
     } else {
       reasonTextBox.style.display = 'none';
@@ -135,6 +135,16 @@ function handleEquityTrade(cardElement, cardId) {
   const actionComponents = new ActionComponents(cardId);
   const actionContainer = cardElement.querySelector('.action-container');
   const action = cardElement.querySelector(`#${cardId}-action`);
+  const commission = cardElement.querySelector(`#${cardId}-commission`);
+  const reason = cardElement.querySelector(`#${cardId}-reason-text-box`);
+
+  commission.addEventListener('change', () => {
+    if (commission.value === 'waived') {
+      reason.style.display = 'grid';
+    } else {
+      reason.style.display = 'none';
+    }
+  });
 
   action.addEventListener('change', () => {
     let actionValue = action.value;

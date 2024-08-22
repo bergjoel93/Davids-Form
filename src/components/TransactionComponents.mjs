@@ -89,19 +89,19 @@ export default class TransactionComponent {
   /**
    * For Option Trade
    */
-  injectComission() {
+  injectCommission() {
     return `  
     <div class = "option-container">
-      <label for="${this.cardId}-comission">Comission:</label>
-      <select id="${this.cardId}-comission" name="Comission" data-label = "Comission">
+      <label for="${this.cardId}-commission">Commission:</label>
+      <select id="${this.cardId}-commission" name="commission" data-label = "Commission">
           <option value="none">Select Option:</option>
           <option value="waived">Waived</option>
           <option value="discussed">Discussed</option>
       </select>
     </div>
-    <div id = "reason-text-box" class = "text-input-container" style = "display: none">
-      <label for = "${this.cardId}-comission-reason" >Reason:</label>
-      <input type = "text" id = "${this.cardId}-comission-reason" name = "comission-reason" data-label="Reason:">
+    <div id = "${this.cardId}-reason-text-box" class = "text-input-container" style = "display: none">
+      <label for = "${this.cardId}-commission-reason" >Reason:</label>
+      <input type = "text" id = "${this.cardId}-commission-reason" name = "commission-reason" data-label="Reason:">
     </div>
   `;
   }
@@ -131,9 +131,9 @@ export default class TransactionComponent {
   injectAction3() {
     return `  
     <div class = "option-container">
-    <label for="${this.cardId}-action" data-label="Action:" >Action:</label>
+    <label for="${this.cardId}-action"  >Action:</label>
     <select id="${this.cardId}-action" name="Action" data-label = "Action">
-        <option value="null">Select Option:</option>
+        <option value="none">Select Option:</option>
         <option value="buy">Buy</option>
         <option value="sell">Sell</option>
         <option value="buy-to-cover">Buy To Cover</option>

@@ -78,7 +78,7 @@ export default class GenerateCard {
       this.transactionComponent.injectAuthorizedToTrade(this.cardId) +
       this.transactionComponent.injectOrders() +
       this.transactionComponent.injectAutoInvestments(this.cardId) +
-      this.transactionComponent.injectComission() +
+      this.transactionComponent.injectCommission() +
       this.transactionComponent.injectAction3(this.cardId) +
       `</div>`;
     return html;
@@ -92,7 +92,7 @@ export default class GenerateCard {
       this.transactionComponent.injectAuthorizedToTrade(this.cardId) +
       this.transactionComponent.injectOrders() +
       this.transactionComponent.injectAutoInvestments(this.cardId) +
-      this.transactionComponent.injectComission() +
+      this.transactionComponent.injectCommission() +
       this.transactionComponent.injectNumOfLegs() +
       `</div>`;
     return html;
