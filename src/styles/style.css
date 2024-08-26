@@ -140,7 +140,8 @@ header {
 
 /* Section 2 */
 
-.section-2 {
+.section-2,
+.section-4 {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px; /* Adjust the gap as needed */
@@ -175,8 +176,7 @@ header {
 
 /* Section 3 */
 
-.section-3,
-.section-4 {
+.section-3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px; /* Adjust the gap between elements as needed */
@@ -626,4 +626,13 @@ td {
 /* Misc. */
 .red-text {
   color: rgb(185, 7, 7);
+}
+.NFT-information {
+  border: solid black 1px;
+  border-radius: 8px;
+  font-size: 11px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }

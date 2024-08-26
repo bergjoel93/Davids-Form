@@ -21,8 +21,8 @@ class DataManager {
       Restrictions: 'no',
       MID: null,
       'Interaction-Model': [],
-      notes: null,
       Transactions: {},
+      Notes: null,
     };
     this.transactionCount = 0;
     this.addTransactions = addTransactions;
@@ -227,19 +227,18 @@ class DataManager {
   resetForm() {
     this.data = {};
     this.data = {
-      Date: this.formatDate(new Date()),
+      Date: this.currentDate,
       'Cosmo-Whisper': null,
       'Client-Name': null,
       'Additional-Callers': null,
       'Internal-FC': null,
       Verification: [],
       'Account-Number': null,
-      Restrictions: null,
+      Restrictions: 'no',
       MID: null,
-      COTM: null,
-      Notes: null,
-      'SF-Notes': null,
+      'Interaction-Model': [],
       Transactions: {},
+      Notes: null,
     };
     // Clear all text input fields
     document.querySelectorAll('input[type="text"]').forEach((input) => {

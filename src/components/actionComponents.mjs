@@ -447,10 +447,17 @@ export default class ActionComponents {
       <div class="option-container">
         <label for="${this.cardId}-non-fidelity-funds">Non-Fidelity-Funds - NFT?</label>
         <select id="${this.cardId}-non-fidelity-funds" name="non-fidelity-funds">
+          <option value="none">Select an option</option>
           <option value="Yes: transfer to specialty trading">Load?</option>
           <option value="Buy: No Fee">NFT = Y</option>
           <option value="Buy: Transaction fee charged (don't overbuy)">NFT = N</option>
         </select>
+      </div>
+      <div class = "NFT-information">
+        <p>Load? = Yes - transfer to specialty trading. </p>
+        <p>NFT = Y - Buy: No Fee </p>
+        <p>NFT = N - Buy: Transaction Fee Charged <span class="red-text">Don't Over Buy!</span> </p>
+
       </div>
     `;
   }
@@ -753,7 +760,7 @@ export default class ActionComponents {
           <input 
           type="radio" 
           id="${this.cardId}-${option}" 
-          name="${option}" 
+          name="${label}" 
           value="${option}" 
           ${dataLabelAttribute}/>
         </div>`;

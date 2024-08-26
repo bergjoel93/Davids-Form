@@ -41,14 +41,15 @@ function formatNoteObject(noteObject) {
   for (let noteKey in noteObject) {
     if (noteObject.hasOwnProperty(noteKey)) {
       let note = noteObject[noteKey];
-      formattedString += `${noteKey}\n---------------\n`;
+      formattedString += `${noteKey}\n--------------------------------\n`;
 
       for (let key in note) {
         if (note.hasOwnProperty(key)) {
           if (key === 'Verification' || key === 'Interaction-Model') {
             formattedString += `${key}: ${note[key].join(', ')}\n`;
           } else if (key === 'Transactions') {
-            formattedString += 'Transactions\n----------------\n';
+            formattedString +=
+              '\nTransactions\n--------------------------------\n';
             for (let transactionKey in note[key]) {
               if (note[key].hasOwnProperty(transactionKey)) {
                 let transaction = note[key][transactionKey];
