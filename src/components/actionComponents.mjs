@@ -554,7 +554,7 @@ export default class ActionComponents {
           <input 
             type="radio" 
             id="${this.cardId}-cash" 
-            name="cash-or-in-kind" 
+            name="${this.cardId}-cash-or-in-kind" 
             value="cash" 
             data-label= "Cash or In-Kind" />
         </div>
@@ -563,7 +563,7 @@ export default class ActionComponents {
           <input
             type="radio"
             id="${this.cardId}-in-kind"
-            name="cash-or-in-kind"
+            name="${this.cardId}-cash-or-in-kind"
             value="in-kind"
             data-label= "Cash or In-Kind"
           />
