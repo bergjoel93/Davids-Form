@@ -662,7 +662,7 @@ export default class ActionComponents {
                 <input
                   type="radio"
                   id="${this.cardId}-contribution-CYC"
-                  name="contribution-year"
+                  name="${this.cardId}-contribution-year"
                   value="CYC"
                   data-label ="Contribution Year"
                 />
@@ -672,7 +672,7 @@ export default class ActionComponents {
                 <input
                   type="radio"
                   id="${this.cardId}-contribution-PYC"
-                  name="contribution-year"
+                  name="${this.cardId}-contribution-year"
                   value="PYC"
                   data-label ="Contribution Year"
                 />
@@ -760,7 +760,7 @@ export default class ActionComponents {
           <input 
           type="radio" 
           id="${this.cardId}-${option}" 
-          name="${label}" 
+          name="${label + this.cardId}" 
           value="${option}" 
           ${dataLabelAttribute}/>
         </div>`;

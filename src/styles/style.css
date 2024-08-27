@@ -40,7 +40,6 @@ main {
 
 .main-container {
   display: flex;
-  height: 100%;
   flex: 1;
   justify-content: center;
 }
@@ -261,6 +260,7 @@ textarea:focus {
   border: solid black 1px;
   border-radius: 8px;
   width: 450px;
+  height: 950px;
   overflow-y: auto;
   margin: 12px;
 }

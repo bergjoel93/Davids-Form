@@ -16,6 +16,7 @@ export default class NoteGenerator {
       const dataLabels = document.querySelectorAll('[data-label]'); // selects all of the elements with a data label
 
       let result = `\n\nGenerated Notes \n--------------------------------------`;
+      console.log(dataLabels);
 
       dataLabels.forEach((element) => {
         let key = element.getAttribute('data-label'); // Correctly access the data-label attribute
@@ -54,22 +55,6 @@ export default class NoteGenerator {
             result += `\n${key}: ${value}`;
           }
         }
-
-        // if (element.type === 'checkbox') {
-        //   value = element.checked ? 'Yes' : 'No';
-        // } else {
-        //   if (element.type === 'radio' && !element.checked) {
-        //     key = 'SKIP';
-        //   }
-        //   value = element.value;
-        // }
-
-        // if (key.includes('Transaction')) {
-        //   result += `\n`;
-        // }
-        // if (value !== '' || value !== 'No' || value !== null) {
-        //   result += `${key}: ${value} \n`;
-        // }
       });
       this.notesElement.value += result;
     });
