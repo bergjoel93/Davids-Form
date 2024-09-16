@@ -89,7 +89,7 @@ class AddTransaction {
         //console.log(card);
         //console.log(`${choice} clicked`);
         if (card) {
-          transactionContainer.appendChild(card);
+          transactionContainer.insertAdjacentElement('afterbegin', card);
           // increase count on option
           this.options[choice].count++;
           this.buttonsContainer.innerHTML = ``;
