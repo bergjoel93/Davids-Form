@@ -463,11 +463,7 @@ export default class ActionComponents {
   }
 
   injectDIAPenny() {
-    return this.createCheckbox(
-      'DIA Penny Stock',
-      'DIA-penny-stock',
-      'DIA Penny Stock Restrictions?'
-    );
+    return this.createCheckbox('DIA Penny Stock', 'DIA-penny-stock');
   }
 
   // TODO add data label functionality
