@@ -9,6 +9,7 @@ export default class NoteGenerator {
     this.salesForceNote = {};
     this.notesElement = document.querySelector('#notes');
   }
+
   handleGenerateNotesBtn() {
     this.generateNotesBtn.addEventListener('click', () => {
       //console.log('note generator button clicked!');
@@ -20,6 +21,8 @@ export default class NoteGenerator {
 
       dataLabels.forEach((element) => {
         let key = element.getAttribute('data-label'); // Correctly access the data-label attribute
+        console.log(key);
+        console.log('value:', element.value);
         if (
           element.value !== null &&
           element.value !== '' &&
@@ -28,7 +31,8 @@ export default class NoteGenerator {
           element.value !== 'none'
         ) {
           if (key.includes('Verification')) {
-            result += `\nVerification:`;
+            console.log('test');
+            result += `\n Verification:`;
           } else if (
             key.includes('MyVoice') ||
             key.includes('Outbound Verified') ||

@@ -176,6 +176,7 @@ export default class ActionComponents {
       this.injectTimeInForce() +
       this.injectCheckBalances() +
       this.injectProvideQuote() +
+      this.injectDIAPenny() +
       this.injectOver2Mil() +
       this.injectEnterOrderInRWOE() +
       this.injectCheckOrderReview() +
@@ -215,6 +216,7 @@ export default class ActionComponents {
       this.injectTimeInForce() +
       this.injectCheckBalances() +
       this.injectProvideQuote() +
+      this.injectDIAPenny() +
       this.injectOver2Mil() +
       this.injectEnterOrderInRWOE() +
       this.injectCheckOrderReview() +
@@ -576,7 +578,7 @@ export default class ActionComponents {
         type="text"
         id="${this.cardId}-to-where"
         name="To-Where"
-        data-label="From where"
+        data-label="To where"
       />
     </div>`;
   }

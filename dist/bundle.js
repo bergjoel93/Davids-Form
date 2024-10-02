@@ -5362,6 +5362,7 @@ class ActionComponents {
       this.injectTimeInForce() +
       this.injectCheckBalances() +
       this.injectProvideQuote() +
+      this.injectDIAPenny() +
       this.injectOver2Mil() +
       this.injectEnterOrderInRWOE() +
       this.injectCheckOrderReview() +
@@ -5401,6 +5402,7 @@ class ActionComponents {
       this.injectTimeInForce() +
       this.injectCheckBalances() +
       this.injectProvideQuote() +
+      this.injectDIAPenny() +
       this.injectOver2Mil() +
       this.injectEnterOrderInRWOE() +
       this.injectCheckOrderReview() +
@@ -5762,7 +5764,7 @@ class ActionComponents {
         type="text"
         id="${this.cardId}-to-where"
         name="To-Where"
-        data-label="From where"
+        data-label="To where"
       />
     </div>`;
   }
@@ -6480,6 +6482,8 @@ class DataManager {
     document.querySelectorAll('textarea').forEach((textarea) => {
       textarea.value = '';
     });
+    // Add back value for verification.
+    document.querySelector('#verification-data-label').value = 'verification';
     console.log('Form and data object have been reset');
     this.handlePersistantNotes();
 
@@ -6542,6 +6546,7 @@ class NoteGenerator {
     this.salesForceNote = {};
     this.notesElement = document.querySelector('#notes');
   }
+
   handleGenerateNotesBtn() {
     this.generateNotesBtn.addEventListener('click', () => {
       //console.log('note generator button clicked!');
@@ -6553,6 +6558,8 @@ class NoteGenerator {
 
       dataLabels.forEach((element) => {
         let key = element.getAttribute('data-label'); // Correctly access the data-label attribute
+        console.log(key);
+        console.log('value:', element.value);
         if (
           element.value !== null &&
           element.value !== '' &&
@@ -6561,7 +6568,8 @@ class NoteGenerator {
           element.value !== 'none'
         ) {
           if (key.includes('Verification')) {
-            result += `\nVerification:`;
+            console.log('test');
+            result += `\n Verification:`;
           } else if (
             key.includes('MyVoice') ||
             key.includes('Outbound Verified') ||

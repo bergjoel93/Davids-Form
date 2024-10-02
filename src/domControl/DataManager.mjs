@@ -258,6 +258,8 @@ class DataManager {
     document.querySelectorAll('textarea').forEach((textarea) => {
       textarea.value = '';
     });
+    // Add back value for verification.
+    document.querySelector('#verification-data-label').value = 'verification';
     console.log('Form and data object have been reset');
     this.handlePersistantNotes();
 
